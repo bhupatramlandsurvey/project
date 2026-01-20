@@ -1,0 +1,4763 @@
+{
+  "Siddipet": {
+    "Wargal": {
+      "Gauramaram": {
+        "Yelameru Kunta": "871",
+        "Yellappa cheruvu": "872"
+      },
+      "Nacharam": {
+        "Kummari kunta": "807",
+        "Chintala Kunta": "810",
+        "Nyalakunta": "811",
+        "Saddali kunta": "815",
+        "Mondi Kunta": "808",
+        "Krishna samudrm": "812",
+        "Peddha cheruvu": "805",
+        "Venkatadri Kunta": "813",
+        "Gidde Kunta": "814",
+        "APPAYAGANI KUNTA": "816",
+        "Murarai Kunta": "806"
+      },
+      "Masidpalli": {
+        "Todella Kunta": "820",
+        "Mela kunta": "821",
+        "Kummari kunta": "822",
+        "Bandam kunta": "823",
+        "Erra kunta": "825",
+        "Barrenkala kunta": "826",
+        "Chintala Kunta": "819",
+        "KOTHA KUNTA": "800-EN-10"
+      },
+      "Nintur": {
+        "syamala cheruvu": "828",
+        "Mera cheruvu": "829",
+        "Gutla cheruvu": "831",
+        "Pedda cheruvu": "832",
+        "Nemali kunta": "834",
+        "Yatham cheruvu": "800/N/001",
+        "Govindamma kunta": "833",
+        "KUNTA": "836"
+      },
+      "Jabbapur": {
+        "Barlakani kunta": "837",
+        "Thurkavani kunta": "839",
+        "Manchi kunta": "838",
+        "Banda Kunta": "840"
+      },
+      "Wargal": {
+        "Mella kunta": "876",
+        "Buchireddy kunta": "877",
+        "Pothani kunta": "878",
+        "Avusaloni kunta": "879",
+        "Arappagani kunta": "881",
+        "Chakali kunta": "882",
+        "Bandam cheruvu": "884",
+        "Bommala kunta": "888",
+        "Pedda cheruvu": "890",
+        "Kotha kunta": "892",
+        "Sheri kunta": "893",
+        "Bavandla kunta": "894",
+        "Anantha kunta": "897",
+        "LACHAYA KUNTA": "883",
+        "RAYALA KUNTA": "887",
+        "Kummari kunta": "895",
+        "LINGARAJU KUNTA": "898",
+        "AYYAVARI KUNTA": "880",
+        "SONNAILA KUNTA": "886",
+        "NAGULA KUNTA": "889",
+        "Samboni Kunta": "891"
+      },
+      "Chandapuram": {
+        "Bandam kunta": "818",
+        "THUNGA KUNTA": "817"
+      },
+      "Minajipet": {
+        "Thelu cheruvu": "800/36",
+        "Dumbalavani kunta": "800/N/006",
+        "Chinna Rayan Cheruvu": "800/34",
+        "KOTHA CHERUVU": "800-EN-14",
+        "BUDDA KUNTA": "800-N-008",
+        "SILONI KUNTA": "800-EN-17",
+        "CHEMAS KUNTA": "800-N-009",
+        "Thata Kunta": "800/35",
+        "Sunnam Garella Kunta": "800/EN/18"
+      },
+      "Meenaji pet": {
+        "Durgamma Kunta (kalal cheruvu)": "800/37",
+        "KAMUNI KUNTA": "800-EN-13",
+        "SHATTONI KUNTA": "800-EN-15",
+        "Hamsavani Kunta": "800/EN/07",
+        "LakshmanRao kunta": "800-N-007"
+      },
+      "Tunki Khalsa": {
+        "Gudi kunta": "800/43",
+        "sakara kunta": "800/54",
+        "Barpatala kunta": "800/55",
+        "Erra Kunta (Singamani kunta)": "800/56",
+        "Marri kunta": "800/50",
+        "Eudula kunta": "800/42",
+        "Bommidi kunta": "800/40",
+        "Pedda kunta": "800/39",
+        "SINGAMANENI KUNTA": "800-EN-16",
+        "Kindhisakari Kunta": "800-53",
+        "CHINTAL CHERUVU": "800-38",
+        "NARSINGARAO KUNTA": "800-EN-11",
+        "Handreddi Kunta": "800/49",
+        "Handreddy Kunta": "800/49",
+        "Brahmandla Kunta": "800/46"
+      },
+      "Shakharam": {
+        "Darmai cheruvu": "800/5",
+        "Mallai kunta": "800/N/002",
+        "Shanmai kunta": "800/N/003",
+        "KOTHA KUNTA": "800-06",
+        "MASJIDH KUNTA": "800-N-004"
+      },
+      "Ambarpet": {
+        "Thette unta": "800/7",
+        "Girmai cheruvu": "800/9",
+        "Nalla kunta": "800/10",
+        "Khan cheruvu": "800/8"
+      },
+      "Ramchandrapuram": {
+        "Barloni Kunta (Bandam cheruvu)": "800/19"
+      },
+      "Sitarampalli": {
+        "Janigala kunta": "800/17",
+        "Akkala kunta": "800/15",
+        "Ankani kunta": "800/16",
+        "Bodduvani Kunta": "800/18"
+      },
+      "Girmapur": {
+        "Pochamma kunta": "800/2",
+        "Mothula Kunta": "800-3"
+      },
+      "Welur": {
+        "Rangam cheruvu": "800/23",
+        "Rajamma Cheruvu (Rajumala cheruvu)": "800/25",
+        "Devuni Kunta": "800/21"
+      },
+      "Anantagiripalli": {
+        "Devara cheruvu": "800/27",
+        "Krishnamma kunta": "800/30",
+        "Bondelu kunta": "800/31",
+        "Hindava Kunta": "800/EN/01",
+        "Makkai kunta": "800/28",
+        "ANANTHARAM KUNTA": "800-29"
+      },
+      "Veluru": {
+        "Nakkaraju kunta": "800/N/005",
+        "Patel cheruvu": "800/26",
+        "KOTHA KUNTA": "800-EN-09"
+      },
+      "Singaipalli": {
+        "Ura/Voora cheruvu": "875"
+      },
+      "Govindapuram": {
+        "Thammalakunt/Thummala kunta": "800/1",
+        "Reddy Kunta": "899"
+      },
+      "Nemtur": {
+        "KOTTHA KUNTA": "835",
+        "Kotha Cheruvu": "827"
+      },
+      "Madaram": {
+        "HAMSANI KUNTA": "800-11",
+        "ERRA KUNTA": "800-13",
+        "Kotha Kunta": "800/12"
+      },
+      "Mailaram": {
+        "CHINTALA CHERUVU": "847",
+        "Chinthala Kunta": "850",
+        "Medi Kunta": "848",
+        "Pulichetla Kunta": "849",
+        "Atlonialwal Kunta": "845",
+        "Roti Banda Kunta": "853",
+        "Malkabai Kunta": "844",
+        "Yatham Kunta": "852"
+      }
+    },
+    "Markook": {
+      "Pamalaparti": {
+        "Brahman cheruvu": "856",
+        "Pedda cheruvu": "859",
+        "Patel cheruvu": "864",
+        "Karreni Kunta (kannerao kunta)": "867",
+        "Bheesani kunta": "866",
+        "Reddy kunta": "857",
+        "Veerla cheruvu": "869",
+        "Mettu Kunta": "860",
+        "Bommala Kunta": "858"
+      },
+      "Damarakunta": {
+        "Bulishamma Kunta": "1300/84",
+        "Mogulla Kunta": "1300/90",
+        "Tippati Vani Kunta": "1300/87",
+        "Kandi Vani Kunta": "1300/82",
+        "PIRLA KUNTA": "1300-89",
+        "DHANARONI KUNTA": "1300-EN-07",
+        "Sakalipadi Kunta": "1300-93",
+        "GANDI KUNTA": "1300-EN-10",
+        "BOJAIAH KUNTA": "1300-83",
+        "CHAKALLOLLA KUNATA": "1300-EN-02",
+        "PITLAMALLESHAM KUNTA": "1300-EN-03",
+        "THETTE KUNTA": "1300-EN-18",
+        "POCHIAH KUNTA": "1300-EN-19",
+        "Mydaravani Kunta (Visham Kunta)": "1300-N-0058",
+        "Sakali Ramaswamy Kunta": "1300/86",
+        "Totalla Kunta": "1300/EN/04"
+      },
+      "Karkapatla": {
+        "Yerrakunta shikam": "1300/72",
+        "Antamma Kunta": "1300/78",
+        "Turaikunta shikam": "1300/75",
+        "Hanmaiah kunta": "1300/N/00/57",
+        "RAMASAMUDRAM KUNTA": "1300-N-0054",
+        "ACHANARI KUNTA": "1300-73",
+        "GARIGELA KUNTA": "1300-EN-05",
+        "PAANCHALI KUNTA SIKHAM": "1300-N-0055",
+        "PARTHAPURAM KUNTA": "1300-51",
+        "LINGAMBAVI KUNTA": "1300-EN-06",
+        "Burthavani kuntashikam/kunta shikam": "1300/N/00/56"
+      },
+      "Markook": {
+        "Patha cheruvu": "1300/61",
+        "Banjara kunta": "1300/67",
+        "Kammarivani kunta shikam": "1300/N/0051",
+        "Kotha cheruvu": "1300/N/00/53",
+        "yerra kunta shikam": "1300/N/00/48",
+        "Ganneru vani kunta shikam": "1300/62",
+        "KAMMARIVANI KUNTA": "1300-60",
+        "UDUTAVANI KUNTA": "1300-69",
+        "JARIGELA KUNTA": "1300-N-0050",
+        "Banda Kunta": "1300/66",
+        "Kotha Kunta/Krishna Kunta": "1300-71",
+        "Eppala Kunta": "1300-EN-15",
+        "MONDI KUNTA SHIKAM": "1300-N-0046",
+        "Khajavani Kunta": "1300/N/0049",
+        "KORNA GUNDU KUNTA": "1300-EN-20",
+        "Kassatala Kunta": "1300/EN/21",
+        "Chitteda kunta shikam": "1300/N/00/52"
+      }
+    },
+    "Mulugu": {
+      "Chinna Thimmapur": {
+        "Mondi Kunta": "1367",
+        "THIMMANA KUNTA": "1368"
+      },
+      "Achaipalle": {
+        "Naga Samudram": "1349",
+        "Pala Kunta": "1350",
+        "peddamar/perumandla chervu": "1300/N/0014",
+        "NIMMA KUNTA": "1300-N-0013",
+        "VAILA KUNTA": "1351"
+      },
+      "Aliabad (Adivimasjid)": {
+        "Kundu Kunta": "1300/38",
+        "Gubari Kunta": "1300/39",
+        "Kothavani Kunta": "1300/40"
+      },
+      "Banda Thimmapur": {
+        "chinthala cheruvu": "1313",
+        "Palasamudram": "1315",
+        "Jabab Kunta": "1300/EN/01",
+        "konam cheruvu": "1314"
+      },
+      "Baswapuram": {
+        "Karrem kunta": "1332",
+        "Majid kunta": "1330"
+      },
+      "Bhilampur": {
+        "Kamunicheruvushikam": "1300/26"
+      },
+      "Gangadharpalle": {
+        "Moudi kunta": "1396",
+        "Bramhandla Cheruvu": "1397",
+        "Pupa kunta": "1300-N-0026"
+      },
+      "Kothur": {
+        "Chilloni Kunta": "1325",
+        "Bommala kunta": "1322",
+        "Eddulla cheruvu": "1323"
+      },
+      "Kotyala": {
+        "Patha cheruvu": "1300/49",
+        "Bodaribanda": "1300/53",
+        "Grimik kunta": "1300/55",
+        "Shekar Kunta": "1300/N/0035",
+        "Mula kunta": "1300/N/00/45",
+        "Paramaya kunta": "1300-45",
+        "Chinna Thunga Kunta(Sakar kunta)": "1300-EN-08",
+        "Marri kunta": "1300-N-0041",
+        "Errathunga Kunta/Meedhi Kunta": "1300-EN-09",
+        "Nemalla Cheruvu": "1300/N/037",
+        "Budda Kunta": "1300/47",
+        "Edula kunta": "1300/48",
+        "Mangali Vani Kunta": "1300-N-0038",
+        "Rangamma Kunta": "1300/EN/22",
+        "Kotha Cheruvu": "1300/N/0040",
+        "Pithiri Kunta": "1300/N/0042",
+        "Patel Kunta": "1300/N/0043",
+        "Kurma kunta": "1300/N/0044",
+        "Lingala cheruvu": "1300/N/00/34"
+      },
+      "Mamidyala": {
+        "Yerra kunta": "1300/32",
+        "Eppala kunta": "1300/33",
+        "Nalkcheruvu(Nalla cheruvu)": "1300/31"
+      },
+      "Mulugu": {
+        "Tandanala chervu": "1372",
+        "Pedda cheruvu kunta shikam": "1375",
+        "Yerrakunta shikam": "1377",
+        "Komati kunta shikam": "1380",
+        "Kudda kunta shikam": "1381",
+        "Yatani kunta shikam": "1300/N/0023",
+        "Kamuni kunta shikam": "1376",
+        "Brahmala kunta": "1300-N-0021",
+        "Srinivasula kunta": "1300-N-0025",
+        "TATA KUNTA": "1382",
+        "Edigavani Kunta Shikam": "1300/N/0020",
+        "Banjara kunta": "1300/N/00/24"
+      },
+      "Narsampalle": {
+        "Amma kunta": "1300/16",
+        "Narsam cheruvu": "1300/18"
+      },
+      "Narsapur": {
+        "Uracheruvu": "1338",
+        "Komati Kunta": "1300/EN/24"
+      },
+      "Srirampur": {
+        "Permadla kunta": "1341",
+        "Chakai kunta": "1300/N/00/12"
+      },
+      "Tuniki Bollaram": {
+        "Thitti kunta": "1356",
+        "Venkatadri cheruvu": "1364",
+        "Shakari kunta": "1300/N/0018",
+        "Pakalkunta(patel)": "1300/N/00/17",
+        "Erla kunta": "1362",
+        "Maisamma Kunta": "1363",
+        "Thammadi Kunta/Thammali Kunta": "1365",
+        "Andaala Kunta": "1300-N-0016",
+        "Kalimerla Kunta": "1300/EN/23"
+      },
+      "Zapthi Singaipalle": {
+        "kullu kunta": "1393",
+        "Nerrala kunta": "1392",
+        "Patel Paadi Kunta": "1390",
+        "Nalla Kunta/Janneru Kunta": "1391",
+        "Ayala Kunta": "1300-EN-11"
+      },
+      "Kokkonda": {
+        "Yerra kunta": "1300/N/002",
+        "Bejugamoni kunta": "1300-N-004",
+        "Pethala Kunta": "1306",
+        "Papa Kunta": "1311",
+        "Jalamai Kunta": "1302",
+        "Bokkala Kunta": "1303",
+        "Pujula Kunta": "1307",
+        "Barasu Kunta": "1300-N-003",
+        "Pujula kunta(pujarla kunta)": "1300/N/00/1",
+        "pothidi kunta(Pothireddy kunta)": "1305"
+      },
+      "Thanedharpalle": {
+        "Venkataiah kunta shikam": "1300/29"
+      },
+      "Singannaguda": {
+        "Yellamcheuvu": "1337",
+        "Nakkala kunta": "1336",
+        "Singanaasu Kunta/Singarasi": "1300-EN-17",
+        "GUNDLAVANI KUNTA": "1300-N-0011"
+      },
+      "Banda Mailaram": {
+        "Regadi kunta": "1300/N/006",
+        "Maisamma Kunta": "1318",
+        "Kotha Cheruvu": "1319",
+        "Didde Kunta": "1300-EN-14",
+        "LACHAMMA KUNTA": "1300-N-008",
+        "Patel Kunta": "1300-N-005",
+        "Badri Kunta": "1317",
+        "Thinamma Kunta": "1300/N/007"
+      },
+      "Lakshmakkapalle": {
+        "Chintala Kunta": "1300/N/00/19",
+        "Motukula Kunta": "1369"
+      },
+      "Baswapur": {
+        "Janmal kunta": "1333",
+        "Azeem Kunta": "1329"
+      },
+      "Chilla Sagar": {
+        "Gummad Kunta Shikam": "1300-1",
+        "Kongarani kunta": "1300-11",
+        "Dammai Cheruvu Shikam": "1300-14",
+        "Golla Kunta": "1300-EN-16",
+        "Venkatadri Venkataiah Kunta": "1300-05"
+      },
+      "Mustafaguda": {
+        "Thette kunta": "1387"
+      },
+      "Dasarlapalle": {
+        "Lodda Kunta/Lodhi Kunta": "1344",
+        "Perumandla Kunta": "1300-EN-12",
+        "Mondi Kunta": "1300-EN-13",
+        "Rai Kunta": "1346"
+      },
+      "Ksheerasagar": {
+        "Kaatloni Kunta": "1300/13",
+        "Annareddi kunta shikam": "1399",
+        "Pailuvaani cheruvu shikam": "1300/8"
+      }
+    }
+  },
+  "Medchal-Malkajgiri": {
+    "Shamirpet": {
+      "Majeedpur": {
+        "Gairan Nela Kunta": "1825",
+        "Balejolla kunta": "1828",
+        "Mera kunta": "1800/EN/15",
+        "Gidde Kunta": "1826",
+        "HanumandlaKunta": "1823",
+        "Sandru Kunta": "1824"
+      },
+      "Ponnal": {
+        "Chittaramma Kunta": "1850",
+        "Avusuloni kunta": "1858",
+        "Mangal kunta": "1856",
+        "Kandla kunta": "1852",
+        "Sheshar kunta": "1857",
+        "Yerra Kunta": "1855",
+        "Yakar Kunta": "1851",
+        "Velma Kunta (Yelma Kunta)": "1853"
+      },
+      "Turkapalle": {
+        "Mella Kunta (Yella Kunta)": "1800",
+        "Sakaroni Kunta": "1807",
+        "Komati kunta": "1800/EN/09",
+        "Sadur Kunta": "1800/EN/23",
+        "RALLAKAYA KUNTA": "1800-EN-34",
+        "Ratnabai Cheruvu": "1803",
+        "Tarugula Cheruvu": "1802",
+        "Gundla Kunta": "1801"
+      },
+      "Potharam": {
+        "Chinnavari Kunta": "1899",
+        "Barkas Kunta": "1898"
+      },
+      "Yakhatpura": {
+        "Kunta (Peetri Kunta)": "1800/10",
+        "Jitampade Kunta (Jittemvani Kunta)": "1800/13",
+        "Kamuni Kunta": "1800/11"
+      },
+      "Kothur": {
+        "Danaveri Kunta (Danamaina Kunta)": "1800/N/0011",
+        "Pedda Cheruvu": "1873",
+        "Kotta Kunta": "1874"
+      },
+      "Muraharipally": {
+        "Raini Kunta Shikam": "1700/13",
+        "MURAHARI CHERU SHIKAM": "1700/8",
+        "BANDAM KUNTA": "1700-10"
+      },
+      "Thumkunta": {
+        "Kamman Kunta": "1800/EN/04",
+        "Chinthalayaguda Kunta": "1800/EN/06",
+        "Thetta kunta": "1837",
+        "Ramreddy Kunta": "1800/33",
+        "Nava Kunta (Nalla Kunta)": "1800/31",
+        "Banthi Kunta": "1800/35",
+        "Thumma Kunta lake": "1800/26"
+      },
+      "Shamirpet": {
+        "Shameerpet Lake Jillasaab Kunta": "1829",
+        "Anna Bandam kunta": "1800/EN/21",
+        "AMMABONDA KUNTA": "1834",
+        "Abuthbai kunta": "1800-EN-26",
+        "Monesh kunta": "1800/N/006",
+        "Gandamala kunta": "1800/N/008",
+        "Yerra Kunta": "1800/N/004",
+        "Baroog Cheruvu": "1833",
+        "Palle Cheruvu": "1835",
+        "Upperpalli Cheruvu (Udallabai Kunta)": "1800/24",
+        "Bailoni Kunta": "1800/EN/12"
+      },
+      "Antaipalle": {
+        "Bandam Kunta": "1800/EN/05",
+        "Thom Kunta(Antaipally Kunta)": "1800/27",
+        "Anthaipalli Cheruvu": "1800/38",
+        "Banamma Cheruvu": "1800/36"
+      },
+      "Lalgadimalakpet": {
+        "Aliyan Kunta": "1800/EN/17",
+        "Melka Kunta": "1800/EN/10",
+        "ANDAYALA KUNTA": "1800-EN-29",
+        "Badepally cheruvu": "1808",
+        "Mogulla Kunta": "1813",
+        "Yella Reddy Cheruvu": "1818",
+        "Sunnam Kunta": "1816",
+        "Vanamaakula kunta": "1815",
+        "Oota Kunta": "1819",
+        "Kudi Cheruvu": "1817"
+      },
+      "Aliabad": {
+        "Ramulori Kunta - 2": "1800/EN/14",
+        "Kotta kunta": "1831",
+        "Loddi Kunta": "1800-EN-27",
+        "Yellamraju Kunta": "1800/N/009",
+        "Mangali Kunta": "1800/N/010"
+      },
+      "Kolthur": {
+        "Abati Kunta": "1800/EN/08",
+        "Patel cheruvu": "1867",
+        "CHINTALA KUNTA": "1868",
+        "Kaluva(Panchargandi)": "1866",
+        "Makta Cheruvu": "1865"
+      },
+      "Anantharam": {
+        "Lingala kunta": "1800/EN/18",
+        "Boina kunta": "1876",
+        "Turakavani Kunta": "1875",
+        "Sangabai Kunta (Sangavani Kunta)": "1877"
+      },
+      "Bomraspet": {
+        "Peddanna unta": "1800/EN/19",
+        "Kothakunta": "1800-EN-25",
+        "PUSSALONI KUNTA": "1800-EN-28",
+        "Assar Kunta": "1843",
+        "Bomraspet Cheruvu": "1842"
+      },
+      "Shameerpet": {
+        "Golloni kunta": "1800/EN/20",
+        "Narabai kunta": "1800/EN/22",
+        "Kancharoni kunta": "1800/EN/13",
+        "Shameerpet Tank": "1800/EEN/02"
+      },
+      "Uddemarri": {
+        "Kotha kunta": "1800/EN/24",
+        "Kummari Kunta": "1800/7",
+        "Attelli Kunta": "1800/8",
+        "Pedda Cheruvu": "1800/5"
+      },
+      "Yadaram": {
+        "SESHIAH KUNTA": "1700-N-0041",
+        "Mysamma Kunta": "1723",
+        "Jaganakunta Shikam/ jaqgamma kunta": "1700/7",
+        "Kotha Kunta": "1700/EEN/12",
+        "Allareddy Kunta": "1700/EN/22"
+      },
+      "Kesavaram": {
+        "Sannai Kunta": "1800-2",
+        "GIRAKABAI KUNTA": "1800-EN-32",
+        "Kollavani Cheruvu": "1800/4"
+      },
+      "Lakshimapur": {
+        "JUVVALA KUNTA": "1800-EN-31",
+        "RAMULORI KUNTA": "1800-EN-35",
+        "DONTULA KUNTA": "1800-EN-38"
+      },
+      "parvathapur": {
+        "VUTU CHERUVU": "1800-EN-36"
+      },
+      "Lingapur": {
+        "Panthul Cheruvu": "1895",
+        "Racherla Kunta (Rasarla Kunta)": "1896",
+        "Janned Kunta": "1896"
+      },
+      "Muduchintalapally": {
+        "Sheru kunta": "1893",
+        "Saloni kunta": "1891",
+        "Batukamma Kunta": "1892"
+      },
+      "Narayanpur": {
+        "Pooru kunta": "1879",
+        "Chintala Kunta": "1878"
+      },
+      "Mandaipalle": {
+        "Mothukula Kunta": "1800/EN/02",
+        "Gundla kunta": "1839"
+      },
+      "Jagganguda": {
+        "Yelagalla kunta": "1859",
+        "Molani Kunta": "1860",
+        "Somanna Kunta (Sayanna Kunta)": "1861"
+      },
+      "Devar Yamjal": {
+        "Turkavani kunta": "1841",
+        "Singaipally Cheruvu": "1800/32",
+        "Turkola Kunta": "1800/37",
+        "Devarayamjal Cheruvu": "1800/23"
+      },
+      "Keshawaram": {
+        "Nalla Kunta": "1800/EN/01"
+      },
+      "Adraspalle": {
+        "Brahmana Kunta": "1845",
+        "Indulavani Kunta": "1848"
+      },
+      "Sampanbole": {
+        "Budda Kunta": "1800/N/001",
+        "Sangai Kunta": "1862",
+        "Ubu Kunta": "1800/N/002"
+      },
+      "Kesavapur": {
+        "Kotha Kunta/ Nadi Kunta": "1800/19",
+        "Bodan Cheruvu (Bandela Cheruvu)": "1800/15",
+        "Regula Kunta": "1800/16",
+        "Parigidda Cheruvu": "1800/21",
+        "Kunta/ Thummala Kunta": "1800/17"
+      },
+      "Jawahar Nagar": {
+        "Indiramma Cheruvu": "1800/28",
+        "Mallegudem Kunta Lake": "1800/29"
+      },
+      "Pothaipalle": {
+        "Pothayapally Cheruvu": "1800/25"
+      },
+      "HARIDASPALLY": {
+        "Haridaspally Cheruvu": "1800/30"
+      }
+    },
+    "Medchal": {
+      "Raj Bollaram": {
+        "Mondikunta Shikam": "1700/N/008",
+        "Nagasani kunta": "1700/N/0036",
+        "Patel Cheruvu": "1700/N/0037",
+        "Pedda Cheruvu": "1779",
+        "Bandham Kunta": "1700/N/0035",
+        "Mondi Kunta": "1700/0N/008",
+        "Madigala Kunta": "1700/N/010"
+      },
+      "Srirangavaram": {
+        "Gopala Kunta Shikam": "1706",
+        "Upparavani Kunta": "1700/N/005",
+        "Devuni Kunta": "1700/N/001",
+        "Yetti Thungale Kunta": "1700/N/006",
+        "Pedda Thammala Kunta": "1700/N/004",
+        "Chinna Thammadi Kunta": "1704",
+        "Nagula kunta shikam": "1703",
+        "Jeerla Kunta": "1705",
+        "Korivani Kunta": "1700/N/002",
+        "Bandham Kunta": "1700/EN/13",
+        "Palerula kunta Shikam": "1700/N/03"
+      },
+      "Muraharipalle": {
+        "Pochamma Kunta": "1700/12"
+      },
+      "Medchal": {
+        "Mala Kunta": "1700/N/0021",
+        "Yamjal Kunta (Padevara Kunta Shikam)": "1700/N/0022",
+        "Nalla Kunta": "1700-N-0020",
+        "Erra Kunta": "1753",
+        "RangaRayaniKunta": "1700/EN/03",
+        "Medchal Cheruvu": "1700/21"
+      },
+      "Suthariguda": {
+        "Suthsri Cheruvu": "1749"
+      },
+      "Ravalkole": {
+        "Vanadibavi Kunta": "1700/EN/23",
+        "Ghuadi kunta": "1700/EN/25",
+        "Kudi cheruvu": "1788",
+        "Gadhval Kunta": "1791",
+        "Sakaloni Kunta": "1790",
+        "Maisamma Kunta": "1700/EN/01",
+        "Kummari Kunta": "1700/EN/02",
+        "Aavusolani Kunta": "1786",
+        "Pulicheruvu Kunta": "1700/EEN/08",
+        "Nallavani Kunta": "1700/EWN/10",
+        "Chinta Ralekunta": "1700/EEN/09",
+        "Pagidivani Kunta": "1700/EEN/06",
+        "Kusaravi Kunta": "1700/EEN/07",
+        "Katwal Kunta": "1700/EEN/11"
+      },
+      "Poodur": {
+        "Pandula kunta": "1767",
+        "Mala Kunta": "1700/N/0032",
+        "Erra Cheruvu Kunta": "1769",
+        "Mothkulakunta Shikam": "1772",
+        "Banda Kunta": "1700/N/0031"
+      },
+      "Girmapur": {
+        "DATHARI CHERUVU SHIKAM": "1700/N/0043",
+        "KUMMARI KUNTA": "1700-EN-26",
+        "Shivamma Kunta": "1738",
+        "Machakunt Shikam": "1736",
+        "Paigavani Cheruvu": "1735",
+        "Jaligala Kunta": "1700/EN/15",
+        "Yelgala Kunta": "1700/EN/17",
+        "Thummala Bhandam Kunta": "1700/EN/21",
+        "Anantharam Kunta": "1700/EN/16",
+        "Panthulu cheruvu": "1700/EN/06",
+        "Thurkoni Kunta": "1700/EN/07"
+      },
+      "Shahazadiguda": {
+        "PEDDA CHERUVU SHIKAM": "1700/1"
+      },
+      "Gowdavelly": {
+        "PEDDA CHERUVU SHIKAM": "1747",
+        "Bommaicheruvu": "1700/17",
+        "Suthari Cheru Shikam": "1744",
+        "Elleru Cheruvu": "1700/18",
+        "Burugu Kunta": "1700/33"
+      },
+      "Dabilpur": {
+        "GOUSHALA KUNTA": "1700-EN-25",
+        "Mallamma Cheruvu": "1700/N/0016",
+        "Kudi Cheruvu": "1728",
+        "Vavilla Kunta": "1700/EN/10"
+      },
+      "Somaram": {
+        "POCHAMMA KUNTA": "1700-EN-27",
+        "Chintal Cheruvu": "1724",
+        "Budukunta": "1700/N/0040",
+        "Erra Cheruvu": "1725"
+      },
+      "Ghanpur": {
+        "BEGARI KUNTA": "1700-N-0017",
+        "Ghanapur Kunta (Patel Cheruvu)": "1777",
+        "Thimmai Cheruvu": "1776"
+      },
+      "Railapur": {
+        "PEDDA BOJA KUNTA": "1700-N-34",
+        "Banaiah Kunta": "1708",
+        "Chinna Bojar Kunta": "1700/N/0033",
+        "Appani Cheruvu": "1708-1",
+        "Talla Kunta": "1700/EN/18",
+        "Jaganna Bandham Kunta": "1700/EN/20"
+      },
+      "Dabirpur": {
+        "Kurvani kunta / Guroni kunta": "1730"
+      },
+      "Bandakunta": {
+        "Bandakunta": "1700/N/007"
+      },
+      "Atevelle": {
+        "Buduma Kunta": "1700/16"
+      },
+      "Banda Madharam": {
+        "Pedda Cheruvu": "1700/N/0015",
+        "Peddagundla kunta": "1700/N/0013",
+        "Chinnagundla Kunta": "1700/N/0011",
+        "Maria Kunta": "1700/N/0012",
+        "Yellamma Kunta": "1700/EN/04"
+      },
+      "Athevelli": {
+        "Pedda Cheruvu": "1700/15"
+      },
+      "Konaipalle": {
+        "Nalla Cheruvu": "1700/N/0019",
+        "Bansoni Kunta": "1700/EN/11"
+      },
+      "Yellampet": {
+        "Maisamma Kunta": "1700/N/0042",
+        "Bandam Kunta": "1700/N/0039",
+        "Kummari Kunta": "1700/EN/05"
+      },
+      "Mysireddipally": {
+        "Veerana Kunta": "1718",
+        "Akkasoni Kunta": "1719",
+        "Saru Kunta": "1700/EEN/03",
+        "Donthula Cheruvu": "1721"
+      },
+      "Nuthankal": {
+        "Kotha Kunta": "1700/N/0027",
+        "Mammarla Kunta": "1700/EEN/02",
+        "Pedda Cheruvu": "1715",
+        "Chetti Kunta": "1700/N/0024",
+        "Kandironi Kunta": "1700/N/0026",
+        "Mylu Kunta": "1700/N/0028",
+        "Marri Kunta": "1700/N/0029",
+        "Bajroni Kunta": "1714",
+        "Patel Kunta": "1700/N/0030",
+        "Devoni Kunta": "1700/EN/19"
+      },
+      "Gosaiguda": {
+        "Nelli Kunta": "1773"
+      },
+      "Kandlakoi": {
+        "Polkamma Kunta": "1700/20",
+        "Marri Kunta": "1700/19",
+        "Erra Kunta": "1700/EN/24"
+      },
+      "Arkal Kunta": {
+        "Komati Kunta": "1700/14"
+      },
+      "Pudoor": {
+        "Moggula Cheruvu (Moggula Kunta Shikam)": "1700/N/0032-1",
+        "Thipponi Kunta": "1700/EN/12",
+        "Gouroni Kunta": "1700/EN/09",
+        "Mashovani Kunta": "1700/EN/14"
+      },
+      "GOUDAVELLY": {
+        "Thungalla Kunta": "1700/EN/08"
+      },
+      "Gundla Pochampalle": {
+        "Narayan Cheruvu": "1700/24",
+        "Neragonikunta": "1700/28",
+        "Dodoni Kunta": "1700/22",
+        "Neela Cheruvu": "1700/25",
+        "Gundla Kunta": "1700/26",
+        "Sokayakunta": "1700/23"
+      },
+      "Mysammaguda": {
+        "Kotha Kunta": "1700/29",
+        "Komati Kunta": "1700/27",
+        "Golloni kunta": "1700/30"
+      },
+      "gudemgadda thanda": {
+        "Pedda Kunta": "1795",
+        "Yellamma Cheruvu": "1796"
+      }
+    },
+    "Keesara": {
+      "Keesara": {
+        "Regula Kunta": "2700/E/19",
+        "Lingala Kunta": "2700/N/00/10",
+        "Korumula Vani kunta": "2700/N/00/21",
+        "Jangam Cheruvu": "2700/N/00/22",
+        "Tammala kunta": "2700/N/00/6",
+        "Darmi Kunta": "2700/N/0011",
+        "Posani Kunta (Shikam Kunta)": "2700/N/00/12",
+        "Gangireddy Kunta": "2700/N/007",
+        "Abbasani Kunta": "2700/N/00/8",
+        "Peddamma Cheruvu (Rayani Pedda Cheruvu)": "2728",
+        "Erra Kunta": "2700/EN/04",
+        "KALIMILA KUNTA": "2700-EN-19",
+        "Rangaiah kunta": "2727",
+        "Noor Mohammed Kunta": "2733",
+        "Tamara Kunta": "2700/E/20",
+        "Tippaya Kunta": "2700/EN/11"
+      },
+      "Ahmadguda": {
+        "Thummala kunta": "2700/E/30"
+      },
+      "Ankireddy Pally": {
+        "Samala Cheruvu": "2700/E/21",
+        "Ram Reddy Kunta": "2700/N/00/15",
+        "Mondi Kunta": "2700/N/0017",
+        "Patha Kunta": "2700/N/00/19",
+        "Pedda Cheruvu": "2700/N/00/20",
+        "Nakka Ramanna Kunta": "2700/EN/09",
+        "Kanamani Kunta": "2700/EN/07",
+        "Raman Cheruvu": "2700/EN/08",
+        "Tippavani Kunta": "2700/EN/10",
+        "Thimmareddy palle cheruvu": "2731"
+      },
+      "Bogaram": {
+        "Yellareddy Kunta": "2700/N/001",
+        "Ramasagaram Cheruvu": "2721",
+        "Regivani Kunta": "2719"
+      },
+      "Cheeriyal": {
+        "Ubbala Kunta": "2700/N/0023",
+        "CHINNA CHERUVU": "2700-E-28",
+        "Komatigiri kunta": "2700-EN-18",
+        "Pedda Cheruvu": "2700/N/0023"
+      },
+      "Unniguda": {
+        "Shirigiri Kunta (Chiluguru Kunta)": "2700/N/0014",
+        "TETLA KUNTA": "2700-EN-16"
+      },
+      "Keesara Daira": {
+        "Chakali Kunta": "2700/N/00/28",
+        "Chakali Lakshamma Kunta": "2700/EN/12",
+        "Kammari Cheruvu": "2700/EN/13"
+      },
+      "Yadgarpalle (East)": {
+        "Brahmani Kunta": "2700/N/00/27",
+        "Masam Cheruvu": "2740"
+      },
+      "Yadgarpalle (West)": {
+        "Kummari Kunta": "2700/N/00/26",
+        "SARONI KUNTA": "2700-EN-17",
+        "DITLANI KUNTA": "2702",
+        "Ghandi Cheruvu.1": "2742"
+      },
+      "Thimmaipalle": {
+        "Bhaseermiya Kunta": "2700/E/05",
+        "PEDDA CHERUVU": "2700/EN/06",
+        "Pinna Cheruvu": "2748",
+        "Singamal Kunta": "2743"
+      },
+      "Nagaram": {
+        "Annarayani Cheruvu": "2700/EN/02",
+        "Jalbai Kunta": "2700/EN/03",
+        "Dhayar Kunta": "2750",
+        "Komativani Kunta": "2749",
+        "Nasin Cheruvu": "2739",
+        "Medubai Kunta": "2751",
+        "Kopula Kunta": "2744"
+      },
+      "Keshvapuram": {
+        "Lingala Kunta": "1800/EN/11",
+        "Yellareddy Kunta": "1800/EN/07"
+      },
+      "Rampally Daira": {
+        "Gurram Kunta": "2714",
+        "Malka Kunta": "2700/EN/05",
+        "Gandi Kunta": "2700/EN/15",
+        "Sankaraiah Kunta": "2700-EN-14"
+      },
+      "Godmakunta": {
+        "GOKARA KUNTA": "2700/E/13",
+        "GODUMA KUNTA": "2700/E/14",
+        "ESAI KUNTA": "2700/E/15"
+      },
+      "Dharmaram": {
+        "Darmaram kunta": "2700-E-08"
+      },
+      "Rampalle": {
+        "Rampally Cheruvu": "2734",
+        "KGR Lake": "2745",
+        "Dayara Kunta": "2741",
+        "Suryanarayana Cheruvu": "2700/E/23"
+      },
+      "Haridaspalle": {
+        "Natikan Cheruvu": "2738",
+        "Kothavani Kunta": "2747"
+      },
+      "Kundanpalle": {
+        "Pedda Cheruvu-3": "2746",
+        "Theegalnarayan Cheruvu": "2737"
+      },
+      "Keshawapur": {
+        "Tummala kunta": "1800/18",
+        "Kunta": "1800/20"
+      }
+    },
+    "Ghatkesar": {
+      "Madharam": {
+        "Thette Cheruvu": "2613",
+        "Uyyalamma kunta": "2600/EN/06"
+      },
+      "PADAMATISAIGUDA": {
+        "Saigunda Kunta": "2600"
+      },
+      "Kondapur": {
+        "Mirjalvani Kunta": "2607",
+        "Thetta Kunta": "2600/EN/03",
+        "Nidisetu Kunta": "2630"
+      },
+      "Aushapur": {
+        "Patel Kunta": "2600/EN/01",
+        "Gundla Kunta": "2611",
+        "Nyala Kunta": "2610",
+        "Aushapur Kunta": "2621"
+      },
+      "Edulabad": {
+        "Godhuma kunta": "2632",
+        "Pothuraj Kunta": "2617",
+        "Laxminarayana Cheruvu": "2618",
+        "Gundla Kunta Shikam": "2616",
+        "Jala Kunta": "2600/EN/04"
+      },
+      "Ghatkesar": {
+        "Rai Kunta": "2605",
+        "Setair Kunta": "2637",
+        "Pulcheri Kunta": "2633"
+      },
+      "korremala": {
+        "Kummari Kunta": "2623"
+      },
+      "Nerrapally": {
+        "Raa Chruvu": "2624"
+      },
+      "Badesahebguda": {
+        "Nadem Cheruvu": "2625"
+      },
+      "Annojiguda": {
+        "Annojiguda Lake": "2634"
+      },
+      "VENTAPURAM": {
+        "Thalla Kunta": "2626"
+      },
+      "Cherlapally": {
+        "Cherlapally Tank": "2600/E/08"
+      },
+      "Ankushapur": {
+        "Lothu Kunta": "2635"
+      }
+    },
+    "Kapra": {
+      "KAPRA": {
+        "Mangavai Kunta/ ECIL Lake": "3814",
+        "Oora Cheruvu": "2735"
+      },
+      "Cherlapally": {
+        "Judar Cheruvu": "2640",
+        "Cherlapally Tank": "3813"
+      },
+      "JAWAHARNAGAR": {
+        "Chennapuram Cheruvu": "1800/34",
+        "Malkaram Cheruvu": "1800/41"
+      }
+    },
+    "Quthbullapur": {
+      "Gajularamaram": {
+        "Kotha Kunta": "2800/E/02",
+        "Bandam Kunta": "2800/EN/12",
+        "Jagambandam Kunta": "2800/EN/13",
+        "madyala cheruvu": "2800_EN_15",
+        "Madyala cheruvu": "2800-EN-15",
+        "Kalmana kunta": "2800-E-03",
+        "Vadlavani kunta": "2800-E-01",
+        "BOGAMDANI KUNTA": "2800-EN-14",
+        "RAMANNA CHERUVU": "2818",
+        "Peddacheruvu": "2800/EEN/01"
+      },
+      "Suraram": {
+        "Lingam Cheruvu": "2819",
+        "Panthul Cheruvu": "2873",
+        "Chinna Bandham": "2844",
+        "Mahaboob Kunta": "2800/En/07",
+        "Pedda Bandham": "2845"
+      },
+      "Petabashirabad": {
+        "ALLAM CHERUVU": "2800-EN-19"
+      },
+      "Bowrampet": {
+        "Chenna Cheruvu": "2837",
+        "Komati Kunta": "2827"
+      },
+      "Jeedimetla": {
+        "Venna Cheruvu": "2840",
+        "Fox Sagar": "2839"
+      },
+      "Nizampet": {
+        "Papaiah Kunta": "2847"
+      },
+      "Bachupally": {
+        "Komati Kunta": "2822",
+        "Patti Kunta": "2800/E/12",
+        "Yellamma Kunta": "2800/E/08",
+        "Anthireddy Kunta": "2800/EEN/02",
+        "Pavakaran Cheruvu": "2800/EEN/04"
+      },
+      "Dundigal": {
+        "Rahamatulla Kunta": "2800/EN/06",
+        "Pellavani Kunta": "2800/EN/04",
+        "Chetta Kunta": "2800/EN/03",
+        "Kummari Kunta": "2800/EEN/05",
+        "Golla Kunta": "2824",
+        "Upparalakunta": "2800/EN/01"
+      }
+    },
+    "Uppal": {
+      "Ramanthapur": {
+        "Mohini Cheruvu": "3815",
+        "Ramanthapur Pedda Cheruvu": "3811",
+        "Chinna Cheruvu": "3802"
+      },
+      "Nacharam": {
+        "Patel Cheruvu": "3800/EN/01",
+        "Nacharam Kunta(Erra Kunta)": "3806",
+        "Pedda Cheruvu": "3803"
+      },
+      "Peerzadiguda": {
+        "Pedda Cheruvu": "3800/EN/01"
+      },
+      "Nagole": {
+        "Nagole": "3800/E/02",
+        "Bandlaguda Cheruvu": "3801"
+      },
+      "Uppal": {
+        "Nalla Cheruvu": "3804"
+      }
+    },
+    "Bachupally": {
+      "Bachupally": {
+        "Bandam Kunta": "2858",
+        "Erra Kunta": "2800/E/17",
+        "Maddala Kunta": "2800/E/15",
+        "Kindi Kunta": "2800/E/14",
+        "Mondi Kunta": "2800/E/09",
+        "Chandranna Kunta": "2800/EN/09",
+        "Bongulla Kunta": "2800/EN/10",
+        "Dayyala Kunta": "2800/EN/11",
+        "Meddi Kunta": "2823",
+        "Pedda Kunta (Bin Cheruvu)": "2821",
+        "Karnal Kunta": "2857",
+        "PochenKunta": "2860",
+        "Mullabandam Kunta": "2859"
+      },
+      "Nizampet": {
+        "ACHARYA KUNTA": "2874",
+        "Turka Kunta": "2846",
+        "Dastagiri Kunta": "2849",
+        "Sriram Kunta": "2848"
+      }
+    },
+    "Medipally": {
+      "Boduppal": {
+        "Almas Kunta": "2600/E/07",
+        "Rama Cheruvu": "3808",
+        "Boduppal Kunta": "3805"
+      },
+      "Peerzadiguda": {
+        "Pulicherla Kunta": "2600/EN/02",
+        "Pochamma Cheruvu": "3812"
+      },
+      "CHENGICHERLA": {
+        "Chintal Cheruvu": "2622",
+        "Perumala Cheruvu": "2636",
+        "Pochamma Kunta": "2638",
+        "Narapally Kunta": "2639"
+      }
+    },
+    "Dundigal Gandimaisamma": {
+      "DUNDIGAL": {
+        "Pedda Cheruvu": "2875",
+        "Chinna Damera Cheruvu": "2811",
+        "Randu Jamalla Kunta": "2809",
+        "Nakkala Kunta": "1977"
+      },
+      "Gagillapur": {
+        "MD Usmankunta": "2800/EN/16",
+        "Kothinaru Cheruvu": "2815",
+        "Burja Kunta": "2813"
+      },
+      "Shambhipur": {
+        "Abdul miya kunta": "2800-EN-17",
+        "Pothin Cheruvu": "2802",
+        "Sakim Kunta": "2800/EN/05"
+      },
+      "Bowrampet": {
+        "Saravani Kunta": "2864",
+        "Ramanna Kunta": "2866",
+        "Ramaji Kunta": "2824",
+        "Kamini Kunta": "2867",
+        "Markamma Kunta": "2826",
+        "Chintavani Kunta": "2861",
+        "Naria Kunta": "2828",
+        "Pedda Cheruvu (Bowrampet Kunta)": "2829",
+        "Mondi Kunta": "2842",
+        "Kamalla Kunta": "2862",
+        "Baljavani Kunta": "2863",
+        "Mallampet Cheruvu (Katwa Kunta)": "2830"
+      },
+      "Mallampet": {
+        "Kotha Cheruvu": "2836"
+      },
+      "Bahadurpally": {
+        "Babakhan Kunta": "2856",
+        "Sandu Kunta(Canday Kunta)": "2854",
+        "Peerzadi Kunta": "2855"
+      },
+      "Dommara Pochampalli": {
+        "Narla Kunta": "2835",
+        "Chinna Ganganna Kunta": "2868",
+        "Chintal Kunta": "2833",
+        "Pedda Gangaram Kunta": "2869",
+        "Kamballa Kunta": "2832",
+        "Padaga Samudram": "2870",
+        "Kudi kunta": "2834",
+        "Mallanna Kunta": "2865",
+        "Meddi Mullavani Kunta (Kudi Mula bavi)": "2800/E/07",
+        "Meedi Mullavani Kunta": "2800/E/18",
+        "Errala Kunta": "2831"
+      },
+      "Nagulur": {
+        "Cheruvu Shikam (Syed Khan Cheruvu)": "2816"
+      },
+      "Kompally": {
+        "Mogalla Kunta": "2851",
+        "Oora Cheruvu": "2850"
+      },
+      "Baharpally": {
+        "Neerla Cheruvu": "2800/E/05"
+      },
+      "Dulapally": {
+        "Lingai Kunta": "2852",
+        "Sumar Kunta": "2853"
+      }
+    },
+    "MC Pally": {
+      "Laxmapur": {
+        "Budda Kunta": "1885",
+        "Poolucheruvu Kunta": "1880",
+        "Edula kunta": "1881",
+        "Pedda Cheruvu": "1882",
+        "Bindana kunta": "1884",
+        "Udugula kunta": "1886",
+        "thummala kunta": "1888",
+        "Tadam kunta": "1890",
+        "Kotha kunta": "1800-EN-16",
+        "BAPAN KUNTA": "1887"
+      },
+      "Turkapally": {
+        "Malka cheruvu": "1804"
+      },
+      "Muduchintalapally": {
+        "SURAPPA KUNTA": "1800-EN-37",
+        "MONDI KUNTA": "1800-EN-39"
+      },
+      "Kesavaram": {
+        "JONABANDA KUNTA": "1800-EN-33",
+        "Erra Kunta": "1800/EN/40"
+      },
+      "Potharam": {
+        "Kotha kunta": "1800/1"
+      }
+    },
+    "Kukatpally": {
+      "Kukatpally": {
+        "Bhimuni Kunta": "4811",
+        "Rangadhamini Kunta": "4808",
+        "Yellamma Cheruvu": "4810",
+        "Parki Cheruvu": "4801",
+        "Nalla Cheruvu": "4809",
+        "Mysamma Cheruvu": "4800",
+        "Khaja kunta": "4803"
+      },
+      "Moosapet": {
+        "Kamuni Cheruvu": "4804",
+        "Mundla Katwa": "4807",
+        "Kaithlapur Kunta": "4800/EN/01"
+      },
+      "Hydernagar": {
+        "Kindi Kunta": "4806",
+        "Ali Talab": "4800/E/01"
+      },
+      "Allahpur": {
+        "Sunnem Cheruvu": "4805"
+      },
+      "Baghameer": {
+        "Amber Cheruvu": "4802"
+      }
+    },
+    "Balanagar": {
+      "Hashmatpet": {
+        "Boin Cheruvu": "4812"
+      }
+    },
+    "Alwal": {
+      "Kowkur": {
+        "Bison Kunta": "4705",
+        "Kowkoor Cheruvu": "3700/EN/03",
+        "Mysamma Kunta": "4704"
+      },
+      "Machabollaram": {
+        "Mannevari Kunta": "4714",
+        "Mothukulla Kunta": "4706"
+      },
+      "Alwal": {
+        "Chinnarayana Cheruvu": "4708",
+        "Nagireddy Kunta (Yapral)": "4703",
+        "Kotta Cheruvu": "4707"
+      }
+    },
+    "Malkajgiri": {
+      "Malkajigiri": {
+        "Mukkidi Cheruvu": "4700",
+        "Banda Cheruvu": "4701",
+        "Nadimi Cheruvu": "4702"
+      }
+    }
+  },
+  "Sangareddy": {
+    "Jinnaram": {
+      "Vailal": {
+        "Baman Kunta": "1000/53",
+        "Upparivani kunta": "1000-56",
+        "Pathi Kunta": "1000/58",
+        "Patnamvani Kunta": "1000-N-006",
+        "Kashi Kunta": "1000-57",
+        "Fathekan kunta": "1000/55",
+        "Veeruseti Kunta": "1000/54",
+        "Lingam Cheruvu": "1000/52",
+        "Perusha Cheruvu": "1000/50",
+        "New Arukunderi kunta": "1000/EN/01"
+      },
+      "Amdoor": {
+        "Golani kunta": "1000/12",
+        "GUDEM CHERUVU": "1000/13",
+        "KINDI BANDHAM": "1000/19",
+        "Nalla Cheruvu": "1000/17",
+        "Vangari Kunta": "1000/22",
+        "Kunta": "1000-15 & 1000-16",
+        "kommari Kunta": "1000/EN/28",
+        "Ayilavani Kunta": "1000-20",
+        "Tekula kunta": "1000-EN-09",
+        "Pedda Cheruvu": "1000/21",
+        "Midibandham kunta": "1000/18"
+      },
+      "Kodakanchi": {
+        "Devuni Cheru": "1000/N/005",
+        "Chandru Kunta": "1000/30",
+        "GUNDLLA KUNTA": "1000/31",
+        "Addagutta kunta": "1000-N-004",
+        "Narayanivani Kunta": "1000-28",
+        "Gidde Kunta": "1000-29",
+        "Amma Cheruvu": "1000/26",
+        "Mangali kunta": "1000/32"
+      },
+      "Puttaguda": {
+        "Nalla Kunta": "1000/33",
+        "Golla Kunta": "1000/34",
+        "Rangaiah kunta": "1000/35"
+      },
+      "Bollaram": {
+        "Rella Kunta (Rela vani kunta)": "1000/88",
+        "Damera cheruvu": "1000/87",
+        "Orre Kunta (Varra Kunta)": "1000/89",
+        "Kudi Kunta": "1000/90",
+        "Mothukula kunta": "1000/EN/04",
+        "Medhi kunta": "1000/EN/06",
+        "komati Kunta": "1000-98",
+        "Mannevani Kunta": "1000-EN-10",
+        "Gandigudem": "1000/93",
+        "Gandhi Nagar Cheruvu": "1000/95",
+        "Mallampet Cheruvu": "1000/94",
+        "Meerabai Kunta": "1000/100",
+        "Vassana Kunta Lake": "1000/96"
+      },
+      "Ootla": {
+        "Chatan Cheruvu": "1092",
+        "VENKATAY KUNTA (DADUVAI VANI KUNTA)": "1084",
+        "CHINTA KUNTA (CHINTHALA KUNTA)": "1086",
+        "KUMMARI VANI KUNTA": "1083",
+        "Kotha Cheruvu": "1000/EN/26",
+        "Dudekula Kunta": "1000/EN/27",
+        "Bayilla Kunta": "1089",
+        "Kummari Kunta": "1078",
+        "Salavamani Kunta": "1085",
+        "Mella Kunta": "1091",
+        "Anthaiah kunta": "1087",
+        "Parasavani kunta": "1082",
+        "Pedda Cheruvu": "1079"
+      },
+      "Kanukunta": {
+        "Narasimhakunta": "1051",
+        "Nagula Kunta": "1000/EN/16",
+        "NAKKAVANI KUNTA": "1045"
+      },
+      "Domadugu": {
+        "KUKKAVONI KUNTA": "1000/EN/14"
+      },
+      "Annaram": {
+        "RAMESHWARAM KUNTA": "1000/47",
+        "Kotha Cheruvu": "1000/42",
+        "Pothuraju Kunta": "1000/40"
+      },
+      "Solakpalle": {
+        "Eerla Kunta": "1099",
+        "KUMMARI KUNTA": "1095",
+        "MADIGIVANI KUNTA": "1000/4",
+        "RAI KUNTA": "1000/N/002",
+        "SHIVUNI KUNTA": "1000/5",
+        "Vayili Kunta": "1098",
+        "Yerra Kunta": "1000/7",
+        "Narsareddy Kunta": "1000/EN/24",
+        "Chandrappa Kunta": "1000-1",
+        "Kotha Cheruvu": "1000/3",
+        "Chintala Kunta": "1000/6",
+        "Nalla kunta": "1000/9",
+        "Abbanna kunta": "1000/8",
+        "Pedda Cheruvu": "1000/2",
+        "Bandenavajula cheruvu": "1097",
+        "Kasani Kunta": "1000/N/003",
+        "Thippamma Cheru": "1096"
+      },
+      "Nalthur": {
+        "CHINTALA KUNTA": "1000/66",
+        "Goudla Vani Kunta": "1000/N/0013",
+        "Sydelli Kunta": "1000/68",
+        "Pithiri Kunta": "1000/70A",
+        "Narmuvani Kunta": "1000-N-0010",
+        "Vadlavani kunta": "1000-N-0014",
+        "Thunkini Cheruvu": "1000/67",
+        "Yerra Kunta": "1000/69"
+      },
+      "Kajipalli": {
+        "Yatavani Kunta": "1000/81",
+        "Kazi Cheruvu": "1000/N/0015"
+      },
+      "Madharam": {
+        "Venkataiah Kunta": "1000-76",
+        "Boppan Cheruvu": "1000-70",
+        "Duvva Kunta": "1000/73",
+        "Sangam Kunta": "1000/74",
+        "Yelasani Kunta": "1000/75",
+        "LonkBanda Kunta": "1000/77",
+        "Baman Cheruvu": "1000/71",
+        "Mantri Kunta": "1000/72"
+      },
+      "Kishtaipalle": {
+        "Balram Kunta": "1000-N-008",
+        "Dammana Kunta": "1000-64",
+        "Mannevani Kunta": "1000-65",
+        "Mallamma Cheruvu": "1000/63"
+      },
+      "Lakshmapur": {
+        "Shangari Kunta": "1000-14"
+      },
+      "Jinnaram": {
+        "Boyina Kunta": "1000-38",
+        "Akkamma Cheru": "1036"
+      },
+      "Khazipalle": {
+        "Mangalivani kunta": "1000-82",
+        "Chinta Kunta": "1000/N/0018",
+        "Dharama Kunta": "1000/85",
+        "Puram Kunta": "1000/83",
+        "Bandam Kunta": "1000/80",
+        "New Viska Cheruvu": "1000/EN/02",
+        "Chatlavani Kunta": "1000/N/0019"
+      },
+      "Kashipur": {
+        "Vaddala kunta": "1515",
+        "Udugula Kunta": "1521"
+      },
+      "Chetlapotharam": {
+        "Bandam Kunta": "1000/60",
+        "Bhaman Kunta": "1000/59"
+      },
+      "Sivanagar": {
+        "Shivalingam kunta": "1000/24",
+        "Chelkhani kunta": "1000/23"
+      },
+      "Mangampet": {
+        "Omanna Kunta": "1074",
+        "Doravani Kunta": "1073",
+        "Gandhevani kunta": "1072"
+      }
+    },
+    "Gummadidala": {
+      "Gummadidala": {
+        "Erra Cheruvu": "1025",
+        "Gollani Kunta": "1000/EN/17",
+        "Yellaiah Kunta": "1000-EN-11",
+        "Yelka Cheru": "1033",
+        "Ragati Kunta": "1030",
+        "Nayanna Cheruvu": "1027"
+      },
+      "Nallavalli": {
+        "Sayangari kunta": "1016",
+        "Ragidi kunta": "1014",
+        "Macha Kunta": "1010",
+        "Bommana Kunta": "1009",
+        "Budda Kunta": "1008",
+        "Mallana Kunta": "1007",
+        "Yerra Cheruvu": "1011",
+        "Dabba Cheruvu": "1012",
+        "Pathi kunta": "1013",
+        "Nalla Cheru": "1015"
+      },
+      "Domadugu": {
+        "Molla kunta": "1063",
+        "Rajana Cheru": "1062",
+        "Nalla kunta": "1064",
+        "Ummani kunta": "1061"
+      },
+      "Kanukunta": {
+        "CHENNA KUNTA (CHINNURI KUNTA)": "1052",
+        "Banjavani Kunta": "1000-EN-07",
+        "Kudi Kunta": "1047",
+        "Masoni kunta": "1041",
+        "Talarivani Kunta": "1000/EN/08",
+        "Dayala Kunta": "1000/EN/18",
+        "Kukataya Cheruvu": "1046",
+        "Vangavani Kunta": "1000/EN/15",
+        "Thiramallaiah Cheruvu": "1044",
+        "Peddavani Kunta": "1039",
+        "Erra Kunta": "1000/EN/21",
+        "Patel Cheruvu": "1000/EN/19",
+        "Bandlavani Kunta": "1048",
+        "Lingam Kunta": "1000/EN/20",
+        "Varendani Cheruvu": "1043",
+        "Nalla Kunta": "1040",
+        "Kotha Kunta": "1038",
+        "Gudem kunta": "1050",
+        "Pedda kunta": "1047"
+      },
+      "Laxmapur": {
+        "Anthanna Kunta": "1001",
+        "Pedda kunta": "1000"
+      },
+      "Mambapur": {
+        "Pochetigani kunta": "1000/EN/29",
+        "Mamba Cheruvu": "1022",
+        "Kunnevani kunta": "1020",
+        "Vudgola Kunta": "1019",
+        "Patel Cheruvu": "1017"
+      },
+      "Annaram": {
+        "Pedda kunta": "1000/45"
+      },
+      "Kottapalli": {
+        "Mella Kunta": "1000-N-001",
+        "Burugu Kunta": "1004",
+        "Mamidi kunta": "1005"
+      },
+      "Anantharam": {
+        "Oora cheru": "1034"
+      },
+      "Bonthapalli": {
+        "Veranna Cheruvu": "1068"
+      }
+    },
+    "Patancheruvu": {
+      "Rudraram": {
+        "Gatla kunta": "1277",
+        "Komati Kunta": "1285",
+        "Pedda Cheruvu": "1283",
+        "Peddha Kunta": "1274",
+        "Kotha Cheruvu": "1278"
+      },
+      "Sultanpur": {
+        "Boini Kunta": "1238",
+        "Boman Kunta": "1237",
+        "Gutta Kinda Kunta": "1296"
+      },
+      "Ameenapur": {
+        "BHEL Township Lake": "1200/45",
+        "Bandham Komma Cheruvu": "1200/43",
+        "Ummar Kunta Cheruvu": "1200/48",
+        "Pochamma Kunta": "1200/33",
+        "Dubbakunta": "1200/31",
+        "Pishakbowli": "1200/32"
+      },
+      "Lakdaram": {
+        "Bhavanash kunta": "1250",
+        "Posani masani tank (Bhommaraja Kunta)": "1254",
+        "Sangameshwara Kunta": "1260",
+        "Laxmidevi Kunta": "1267",
+        "Jangamvani Kunta": "1268",
+        "Gandiveeranna Kunta": "1272",
+        "Edigavani Kunta": "1251",
+        "Gadidala Kunta - Gadudula Kunta": "1263",
+        "Allahari kunta": "1262",
+        "Dantella kunta": "1261",
+        "Devarcheru": "1253",
+        "Madigawani Kunta": "1258",
+        "Gowri Kunta": "1256",
+        "Ramadhas Kunta": "1255",
+        "Parigivani kunta": "1252",
+        "Sarvani kunta": "1264",
+        "Boya kunta": "1265",
+        "Lingasani kunta": "1266",
+        "Pedda Cheruvu": "1271"
+      },
+      "Chinnakanjarla": {
+        "Gundlavanikunta": "1200",
+        "Kotankunta": "1200/N/004",
+        "Kopu Cheruvu": "1201",
+        "Thummala kunta": "1204",
+        "Nan cheruvu": "1205"
+      },
+      "Peddakanjerla": {
+        "Nallakunta": "1209",
+        "Sarampalli Kunta (Sarampallivanikunta)": "1211",
+        "Bhamala Kunta": "1200/EN/01",
+        "Mangali Kunta": "1214",
+        "Yerra Kunta": "1208",
+        "Nirudi Cheruvu": "1210",
+        "Mamidi cheruvu": "1213",
+        "Gundlakunta": "1212"
+      },
+      "Inole": {
+        "Bachuvani Kunta (Bachuvani Kunta-bhajoni Kunta)": "1215",
+        "YerraKunta": "1217",
+        "Lothu Kunta": "1218",
+        "Pedda cheruvu": "1216",
+        "Tegita kunta": "1222"
+      },
+      "Pashamylaram": {
+        "Banda Kunta": "1299"
+      },
+      "Bhanoor": {
+        "Yellaiah Kunta": "1200/6",
+        "Vaila kunta": "1200/4"
+      },
+      "Chinnakanjerla": {
+        "Kotha kunta": "1200/N/0015",
+        "Chinta Kunta": "1203",
+        "Nalla Kunta": "1207",
+        "Kudi Kunta": "1206",
+        "Merupu Chervu": "1202",
+        "Appashetti Kunta": "1200/N/003"
+      },
+      "Kardanur": {
+        "Mala Kunta": "1200/EN/01",
+        "Nalla Kunta": "1200-EN-03",
+        "Choudari kunta": "1200/14"
+      },
+      "Isnapur": {
+        "Mammarathi kunta": "1290",
+        "Malleshuni Kunta": "1293",
+        "Edula Kunta Lake": "1289",
+        "Singaraju Kunta Lake": "1288",
+        "Kummari Kunta": "1291",
+        "Yerra Kunta": "1294",
+        "Peddacheru": "1287"
+      },
+      "Chitkul": {
+        "Gandi Kunta": "1200-N-0010",
+        "Kangula Kunta": "1200-12",
+        "Yerra kunta": "1248",
+        "Golla Kunta": "1247",
+        "Pedda Cheruvu": "1245"
+      },
+      "Nandigaon": {
+        "Gudepuvani kunta": "1200-7"
+      },
+      "Patighanpur": {
+        "Shallon kunta": "1200-N-007",
+        "Edula kunta": "1200/N/006",
+        "Tetya kunta": "1200/N/008"
+      },
+      "Muthangi": {
+        "Tellakunta": "1200/N/0012",
+        "Yanke Cheruvu": "1200/17",
+        "Pochanna Cheruvu": "1200/16"
+      },
+      "Indresham": {
+        "Choudary Cheruvu": "1223",
+        "Annaiah kunta": "1224",
+        "Sai kunta": "1226",
+        "Mayadari kunta": "1227",
+        "Gidee kunta": "1225",
+        "Edigevanikunta": "1200/N/009"
+      },
+      "Patancheruvu": {
+        "Teegala Sagar Cheruvu": "1200/37",
+        "Patla Cheruvu": "1200/36",
+        "Patanchakki Cheruvu": "1200/35",
+        "Timmakka Cheruvu": "1200/38"
+      },
+      "patelguda": {
+        "Krishnareddy Lake": "1200/46"
+      },
+      "Bachuguda": {
+        "Nalla Cheruvu": "1219"
+      },
+      "Rameshwar Banda": {
+        "Kummineni cheruvu": "1231",
+        "Vardakunta": "1232",
+        "Gidda kunta": "1233",
+        "Peddavagulajalukunta": "1229",
+        "Chandamamakunta": "1230"
+      },
+      "Pocharam": {
+        "Gouranna Kunta": "1244"
+      }
+    },
+    "Sangareddy": {
+      "Kothlapur": {
+        "DUMMALA KUNTA": "1500/3",
+        "Venkataiah Cheruvu": "1500/EN/08",
+        "ERRA KUNTA CHERUVU": "1500/EN/007",
+        "Pocamma Kunta": "1500/4"
+      },
+      "Fasalwada": {
+        "Gidda Cheru": "1583",
+        "Montanam Kunta": "1500/EN/15",
+        "Pedda Cheruvu": "1584",
+        "Mallam Cheruvu": "1582",
+        "Nara kunta": "1500/EN/13"
+      },
+      "Chillaguda cheru": {
+        "Chillaguda Cheruvu Lake": "1500/EN/10"
+      },
+      "Kulabgoor": {
+        "Pulvani Kunta": "1587",
+        "PEDDHA CHERU": "1594",
+        "Reni Kunta": "1500-EN-22"
+      },
+      "Tadlapalle": {
+        "Kapu Kunta": "1591"
+      },
+      "Sangareddy": {
+        "KESUGANI KUNTA": "1500/13",
+        "DEVUNI KUNTA": "1598"
+      },
+      "Kalavakunta": {
+        "karmaani kunta": "1596"
+      },
+      "Pothreddipalle": {
+        "Nalla Kunta Sikham": "1500/5"
+      },
+      "Ismailkahnpet": {
+        "BANDHAM CHERUVU": "1544",
+        "Komati Cheruvu": "1545"
+      }
+    },
+    "Hathnoor (Part)": {
+      "Borpatla": {
+        "Pattikunta": "1434",
+        "Karnala Kunta": "1400/N/010",
+        "Nyarenti kunta": "1432",
+        "Bagili kunta": "1400/25",
+        "Patel Kunta": "1431",
+        "Bheemuni Cheruvu": "1400-N-009",
+        "Kamsani Kunta": "1433"
+      },
+      "Chinthalcheru": {
+        "Tallacheruvu": "1400/10",
+        "Venkatrayicheruvu": "1400/9",
+        "Musavani Kunta": "1400/N/050",
+        "Yerrakunta": "1400/12",
+        "Hanumanthukunta": "1400/13",
+        "Bathukammakunta": "1400/19",
+        "Kindikunta": "1400/20",
+        "Ambativanikunta": "1400/24",
+        "Jakkalakunta": "1400/27",
+        "Vavila Kunta": "1400/N/0051",
+        "SaleVani Kunta": "1400/N/052",
+        "Burugu Kunta": "1400/N/053",
+        "DEVUNI CHERUVU": "1400/N/0054",
+        "SHETTI KUNTA": "1400/N/0049",
+        "Nadappagari kunta": "1400/23",
+        "Pedda Cheruvu": "1400/15"
+      },
+      "Acwanchaguda": {
+        "Turkavani kunta": "1400/8",
+        "AYYAMA KUNTA": "1400-N-0048"
+      },
+      "Gundlamachunur": {
+        "Kativani Kunta": "1400/N/o15",
+        "Papavanikunta": "1438",
+        "Gulla Kunta": "1400/N/0016",
+        "Karnalakunta": "1444",
+        "Yerra kunta": "1400/N/0014",
+        "GARLASAHADEV KUNTA": "1443",
+        "Masdevuni kunta": "1446",
+        "Peenugula Kunta": "1400-N-0013",
+        "Cheegula Kunta": "1442",
+        "Butti cheruvu": "1474"
+      },
+      "Kodipaka": {
+        "Kotta Kunta": "1400/N/0019",
+        "Hanumanthu Kunta": "1400/N/0020",
+        "Chintal kunta": "1400/N/0018"
+      },
+      "Nagaram": {
+        "Mangalivanikunta": "1400/N/0024",
+        "Kotha cheruvu": "1495",
+        "Maktha kunta": "1491",
+        "Golla vani kunta": "1494"
+      },
+      "Palapnoor": {
+        "Gundla Kunta (Gudla Kunta)": "1400/N/0026",
+        "Gidde Kunta": "1400-N-0025",
+        "BOMMALA KUNTA": "1400-N-0027",
+        "Pedda Cheruvu": "1437",
+        "Karnala Kunta": "1400/N/0028"
+      },
+      "Reddy khanpur": {
+        "Yerra Kunta": "1400/N/0031",
+        "Yellamma kunta": "1400/N/0033",
+        "SunkariKunta": "1400/N/034",
+        "Kummari kunta": "1400/N/035",
+        "Bommanakunta": "1426",
+        "NALLA KUNTA": "1428",
+        "Mamidi Cheruvu": "1425",
+        "Patti Kunta": "1425",
+        "Siddanna Kunta": "1400-N-0029",
+        "Gollavani kunta": "1400/N/030",
+        "Chaki Cheruvu": "1400-N-0032"
+      },
+      "Royyapally": {
+        "Maisammacheruvu": "1400/N/o36",
+        "Lodivani Kunta": "1400/N/o37",
+        "KARNALA KUNTA": "1400-005",
+        "Kotha Kunta": "1400/N/056"
+      },
+      "Sadullanagar": {
+        "Gaddamvani Cheruvu": "1400/N/038"
+      },
+      "Taharkhanpet": {
+        "Oora Kunta": "1400/N/o39",
+        "Sarkarkunta": "1476",
+        "Bathukamma Kunta": "1400-N-0040"
+      },
+      "Thurkahala Khanapur": {
+        "Vuracheruvu": "1400/N/o41",
+        "Thalla Kunta": "1400/N/042",
+        "Madannagarikunta": "1463",
+        "Buddamayikunta": "1464",
+        "Mayikunta": "1466",
+        "Upparivanikunta": "1461",
+        "Turkavanikunta": "1462",
+        "MANNEVANI KUNTA": "1460",
+        "Erra Kunta": "1469",
+        "Shettivani Kunta": "1400-N-0044",
+        "Peenugula Kunta": "1468",
+        "Meeraj Kunta": "1463",
+        "Shetti Cheruvu": "1472",
+        "Begarivani kunta": "1400/N/0045"
+      },
+      "Yellammaguda": {
+        "Patlolla Kunta": "1400/N/o46",
+        "KAKSHYANI KUNTA": "1400/N/047",
+        "Jagganna gari kunta": "1482",
+        "Dhuravani Kunta": "1483",
+        "Yellamma Kunta": "1400/N/057",
+        "Pedda Cheruvu": "1484"
+      },
+      "Nastipur": {
+        "Kotha Cheruvu": "1411",
+        "Peddacheruvu": "1412"
+      },
+      "Kasala": {
+        "Errakunta": "1416",
+        "Rethivanikunta": "1421",
+        "Somasamudram": "1400/N/007",
+        "Kummari Kunta": "1400-N-008",
+        "Pedda Cheruvu": "1400/N/006"
+      },
+      "Mangapur": {
+        "Ramasamudram": "1400/N/001",
+        "Nagireddikunta": "1400/N/003",
+        "Mallareddy Kunta": "1400-N-002"
+      },
+      "Doultabad": {
+        "Pedda cheruvu": "1400/N/004",
+        "Itikela kunta": "1400/N/005",
+        "Vanappa kunta": "1405",
+        "Inam kunta": "1401",
+        "Chalamala Kunta": "1403",
+        "Chakari Kunta": "1402"
+      },
+      "Chandapur": {
+        "DAROMOJI KUNTA": "1455",
+        "Mundari Cheruvu": "1400-N-0012",
+        "Pathabavi Nalla kunta": "1400/N/058",
+        "Peenugula Kunta": "1400-N-0011",
+        "Marri Kunta": "1452",
+        "Venuka cheruvu": "1456"
+      },
+      "--Select Village--": {
+        "Mustafagari kunta": "1400-N-0043"
+      },
+      "Mucherla": {
+        "TAMMALA KUNTA": "1400-N-0022",
+        "Nageti Kunta": "1400-N-0023",
+        "Tammala Kunta": "1400/N/ 0022",
+        "Pedda Cheruvu": "1400/N/0021"
+      }
+    },
+    "Kandi": {
+      "Kandi": {
+        "Masani Kunta": "1514",
+        "Nagasamudram Cheru": "1519",
+        "Kunta Lakshmi Nagar": "1500/EN/06",
+        "Kishansagar": "1500/EN/09",
+        "JOSHIKUNTA SHIKAM LAKE": "1538",
+        "kisan sagar": "1500-EN-09",
+        "Kaman Kunta": "1506",
+        "Devuni Cheruvu": "1518",
+        "Erra Kunta": "1539",
+        "Lakki Kunta": "1567"
+      },
+      "Koulampet": {
+        "Udan Cheru": "1527"
+      },
+      "Mamidipally": {
+        "Kotha Kunta": "1530",
+        "Bairan Cheru": "1531",
+        "Panthula Kunta": "1528",
+        "Vura Kunta Shikam": "1534",
+        "Himmathali kunta": "1535",
+        "Alluvani kunta": "1536",
+        "Mangamma kunta": "1532"
+      },
+      "Erdanoor": {
+        "Thurka Cheru": "1533",
+        "Thumu Kunta": "1547",
+        "Edula Kunta (Alli Kunta)": "1548",
+        "3 Kunta Erdanoor": "1500/EN/03",
+        "Harasam sagar": "1500/EN/04",
+        "Bhagyamma Kunta": "1552",
+        "Gutta Kunta": "1546"
+      },
+      "Byathole": {
+        "Mallam Kunta": "1554",
+        "Siddanna Kunta": "1555",
+        "Gaddamma cheruvu": "1556",
+        "Narayana Cheruvu": "1557"
+      },
+      "Arutla": {
+        "Palle Cheru": "1561",
+        "Siddamma Kunta": "1500/EN/12",
+        "ARUTLA KUNTA": "1500/EN/17",
+        "Suryavani kunta": "1500/EN/05",
+        "Bayyanna kunta": "1558",
+        "Pedda cheruvu Arutla": "1559"
+      },
+      "Chidruppa": {
+        "Pedda Cheruvu (Chidruppa Cheruvu)": "1570",
+        "(Gaddamanu Kunta) Godavani Kunta": "1571",
+        "Edgivani Kunta Shikam": "1572",
+        "Kannavani Kunta": "1569",
+        "Thulvani Kunta": "1566",
+        "Sivanna Kunta/Begamsani Kunta": "1579",
+        "Mukhur kunta": "1500/EN/19",
+        "Chithu Kunta": "1578",
+        "Baganna Kunta": "1500/EN/25",
+        "Gowrgare Kunta": "1576"
+      },
+      "Makyha Allur": {
+        "Pedda Cheru": "1500/6",
+        "Timmali Kunta": "1500/7"
+      },
+      "Aratla": {
+        "Mallagiri Kunta": "1500/EN/20"
+      },
+      "Uttharapalli": {
+        "Uttharapalli": "1500/EN/21",
+        "Kotha Cheruvu": "1500-8"
+      },
+      "Cheriyal": {
+        "GANTHARA KUNTA": "1500/EN/11",
+        "Udukula Kunta": "1500-EN-16",
+        "Venkatareddy Kunta": "1516",
+        "Devuni Kunta shikam": "1512"
+      }
+    },
+    "Ameenpur": {
+      "Wadakpalle": {
+        "Nalla Cheruvu": "1236",
+        "Thimma Reddy Kunta": "1200/29",
+        "Kummari Kunta": "1200/22",
+        "Madeela kunta": "1200/24",
+        "Mathkula kunta": "1200/25",
+        "Yerra kunta": "1200/26",
+        "Dhevara Kunta": "1200/27",
+        "Kotha cheru": "1200/23"
+      },
+      "Ameenpur": {
+        "Shikam Kunta": "1200-N-0013",
+        "Uppaaravani Kunta": "1200-N-0017",
+        "Sambi Cheruvu": "1200/N/0018",
+        "Shambuni Kunta": "311",
+        "Koneti kunta": "1200/N/0014",
+        "Gandikunta (Beeraguda cheruvu)": "1200/47",
+        "Pedda cheruvu": "1200/34"
+      },
+      "KISTA REDDY PET": {
+        "Nakkalapadu kunta": "1200-N-0016",
+        "Kumari Kunta": "1200/53"
+      },
+      "Sulthanpur": {
+        "Nalla Kunta": "1236",
+        "Rajamgari kunta": "1200-N-002",
+        "Nagula Cheruvu": "1239",
+        "Jangamma kunta": "1200/EN/02"
+      },
+      "ILAPUR": {
+        "Chamboon Kunta": "1200-50",
+        "Chambun Kunta": "1200-52",
+        "PeddaThanda cheruvu": "1200/44",
+        "Eerla Cheruvu": "1200/40"
+      },
+      "\"Rameshwarbanda (Rendlagadda)\"": {
+        "Machukunta": "1234"
+      }
+    },
+    "Ramachandrapuram": {
+      "MANMOLE": {
+        "ICRISAT Lake": "610"
+      },
+      "Kollur": {
+        "Pedda cheruvu": "601",
+        "Talla Cheruvu": "603"
+      },
+      "Velimela": {
+        "Maktha Kunta": "604",
+        "RAI KUNTA": "602-600/N/002",
+        "Suravani Kunta": "605"
+      },
+      "Edunagulapally": {
+        "Nagula Kunta": "612"
+      },
+      "Ramachandrapuram": {
+        "Raisamudra Cheruvu": "606"
+      }
+    }
+  },
+  "Yadadri-Bhongiri": {
+    "Choutuppal": {
+      "Allahpur": {
+        "Chinna Regula Kunta": "3100/EN/01",
+        "Pedda Regula Kunta": "3100/EN/03"
+      },
+      "Malkapur": {
+        "Chepala Cheruvu": "3100/EN/02",
+        "Pedda Kunta": "3105",
+        "Shesuraju Kunta": "3101",
+        "Kumari kunta": "3102",
+        "Pedda Cheruvu": "3104",
+        "Khaitapur Cheruvu.": "3106",
+        "Goutappa kunta": "3100"
+      },
+      "Nelapatla": {
+        "Ambavi Kunta": "3124"
+      },
+      "Tallasingaram": {
+        "Gandi Kunta": "3114",
+        "DuvyaCheruvu": "3113"
+      },
+      "Pipalpahad": {
+        "Pedda Sai Mallanna Kuntaa": "3100/EN/05",
+        "Chinna Sai Mallanna Kunta": "3137",
+        "Cheruvu shikam": "3139",
+        "VenkatRao Cheruvu": "3136"
+      },
+      "Venkataboi Thanda": {
+        "Reddy Malla Kunta": "3100/EN/06"
+      },
+      "Choutuppal": {
+        "Nagula Kunta": "3112",
+        "Baindlavani": "3109",
+        "Dooracheruvu": "3110"
+      },
+      "Koyalagudem": {
+        "Nimmai Kunta": "3100/EN/04"
+      },
+      "Panthangi": {
+        "Nelamala kunta": "3116",
+        "Bairavanicheruvu": "3115"
+      },
+      "Lakkaram": {
+        "Pedda Cheruvu": "3108"
+      },
+      "Devalammanagaram": {
+        "Devalamma Cheruvu": "3131"
+      },
+      "Chinnakondur": {
+        "Chinnakondur Cheruvu": "3127",
+        "AnnerubhaiKunta": "3129",
+        "Bommalakunta": "3128",
+        "Ekbai Kunta": "3100/N/04",
+        "Bosa kunta": "3100/N/01"
+      },
+      "Jaikesaram": {
+        "Thumonikunta": "3119",
+        "Marricheruvu": "3118"
+      },
+      "Swamulavarilingitam": {
+        "Garlakunta": "3117"
+      },
+      "Thangadapalli": {
+        "Reddy Kunta": "3100/N/03"
+      },
+      "Sherilla": {
+        "Cheralla kunta": "3100/N/02"
+      }
+    },
+    "Pochampally": {
+      "Donthigudem": {
+        "Esurla Kunta": "3500/EN/02",
+        "Mathadi Kunta": "3500/EN/03"
+      },
+      "Pochampally": {
+        "GAJULAVANI KUNTA": "3543",
+        "UTA Cheruvu": "3544",
+        "Pedda Cheruvu": "3542"
+      },
+      "Juloor": {
+        "MELLA CHERUVU": "3511",
+        "Dubbala Kunta": "3513",
+        "Kotha Cheruvu": "3516",
+        "Rangareddy Kunta": "3514",
+        "Ramaswami Kunta": "3515"
+      },
+      "Kapuraipally": {
+        "CHENGA CHERUVU": "3520",
+        "Tirupari Cheruvu": "3519",
+        "Thippapuram": "3518"
+      },
+      "Mukthapur": {
+        "Pochamma kunta": "3522",
+        "Kunta": "3521",
+        "Narsappa Cheruvu": "3523"
+      },
+      "Abdullanagar": {
+        "kunta": "3524"
+      },
+      "Indriyala": {
+        "Voora Cheruvu Shikkim": "3530",
+        "Indriyala Cheruvu": "3531",
+        "Kunta": "3532"
+      },
+      "Gousekonda": {
+        "Voora Cheruvu": "3525"
+      },
+      "Ramalingampally": {
+        "Kunta Shikkim": "3528"
+      },
+      "Vankamamidi": {
+        "Voora Cheruvu": "3535",
+        "Chintalakunata Cheruvu": "3534"
+      },
+      "Dharmareddypally": {
+        "Voora Cheruvu Shikkim": "3533"
+      },
+      "Dantur": {
+        "Kunta": "3537",
+        "Narsanna Cheruvu": "3538"
+      },
+      "Revanpally": {
+        "Kunta": "3541",
+        "Voora Cheruvu": "3539"
+      },
+      "Bhemanapally": {
+        "Voora Cheruvu": "3549",
+        "Rama Kunta": "3550"
+      },
+      "Pillaipalli": {
+        "Kunta": "3507",
+        "Pillapally cheruvu": "3509",
+        "Mugulla Cheruvu": "3506",
+        "Yerra Kunta": "3508"
+      },
+      "Meharnagar": {
+        "Yelmaikunta shikam": "3546",
+        "Siddappa Cheruvu": "3548"
+      },
+      "Peddaravalpally": {
+        "Pratapasagar Cheruvu": "3527"
+      },
+      "Deshmukhi": {
+        "Deshmuki Cheruvu": "3503",
+        "Chakalavani Cheruvu": "3504",
+        "Eduni Cheruvu": "3500"
+      },
+      "Jabilakpalli": {
+        "Voora Cheruvu": "3500/N/01"
+      },
+      "Alinagar": {
+        "Narinja Kunta": "3517"
+      }
+    },
+    "Bhongir": {
+      "Rayagiri": {
+        "Erra Kunta": "3322"
+      },
+      "Cheemalakondur": {
+        "Kotha Cheruvu": "3362",
+        "Chouta Kunta": "3364",
+        "Kunta (Pedda Erra Kunta)": "3360",
+        "Kunta (Chinna Erra Kunta)": "3361",
+        "Voora Cheruvu": "3365"
+      },
+      "Bhongir": {
+        "Yadeneni Kunta": "3344",
+        "Pedda Cheruvu": "3347",
+        "Voora cheruvu": "3337",
+        "Theenieti Cheruvu": "3343",
+        "Nalla Kunta": "3300/N/02"
+      },
+      "Penchikalpahad": {
+        "KURMA KUNTA": "3339",
+        "Sangorani Kunta": "3341",
+        "Voora Cheruvu": "3340",
+        "Gangadevi Kunta": "3338"
+      },
+      "Bandasomaram": {
+        "Yerra Kunta": "3374",
+        "Patel Kunta": "3375"
+      },
+      "Mustyalapally": {
+        "Kunta": "3367",
+        "Thurkavani Kunta": "3366",
+        "Kunta Turukhadani Kunta": "3300/EN/03",
+        "Pedda Banda Kunta": "3369"
+      },
+      "Chandupatla": {
+        "Nalla cheruvu": "3357",
+        "Sanai Kunta": "3356",
+        "Nalla Cheruvu": "3358"
+      },
+      "Hussainabad": {
+        "Sampi kunta": "3313"
+      },
+      "Hanmapur": {
+        "Kunta": "3309",
+        "Somanaraju Kunta": "3348"
+      },
+      "Wadaparthi": {
+        "Madina Cheruvu": "3303",
+        "Aaga Cheruvu": "3300"
+      },
+      "Baswapur": {
+        "Voora cheruv": "3314"
+      },
+      "Rayagiri (Rural)": {
+        "Pedda Cheruvu": "3319",
+        "Voora Cheruvu": "3320",
+        "Gachubavi Kunta": "3325",
+        "Maasu Kunta": "3300/EN/05"
+      },
+      "Kunoor": {
+        "NallaCheruvu": "3328",
+        "Komati kunta": "3329"
+      },
+      "Kesaram": {
+        "Salvani Kunta": "3334",
+        "Kunta": "3333"
+      },
+      "Anantharam": {
+        "Voora Cheruvu": "3349",
+        "Inkunta": "3350",
+        "ErraKunta": "3351"
+      },
+      "Anajipur": {
+        "Pedda Cheruvu": "3354"
+      },
+      "Tukkapuram": {
+        "Voora Cheruvu": "3355"
+      },
+      "Gouse Nagar": {
+        "Garla Kunta": "3377",
+        "Bhoopathi Kunta": "3300/EN/01",
+        "Nanchari Kunta": "3376"
+      },
+      "bollepally": {
+        "Pedda Cheruvu": "3383",
+        "Kunta": "3387",
+        "Koothara Mallaya Kunta": "3386",
+        "Makthabavi Kunta": "3384",
+        "Nandagirivani Kunta": "3388"
+      },
+      "Surepalli": {
+        "Voora Cheruvu": "3390",
+        "Padmavani Kunta": "3389"
+      },
+      "Nandanam": {
+        "Pedda Cheruvu": "3380",
+        "Marri Cheruvu": "3378",
+        "Chandra Reddy Cheruvu": "3379",
+        "Komati Kunta": "3381"
+      },
+      "B.N.Thimmapur": {
+        "Amina Cheruvu": "3305",
+        "Kotha Cheruvu": "3300/EN/04",
+        "Masedu Bavi Kunta": "3308"
+      },
+      "Veeravelli": {
+        "Komati Kunta": "3372",
+        "Kunta": "3371",
+        "Voora Cheruvu": "3370"
+      },
+      "Pagidipalli": {
+        "Voora Cheruvu": "3352"
+      },
+      "Bommaipally": {
+        "Pedda Cheruvu": "3300/N/01"
+      }
+    },
+    "Bommala Ramaram": {
+      "Bommalaramaram": {
+        "KAZIPET CHERUVU": "3476",
+        "Nalla Cheruvu": "3479",
+        "Patel Cheruvu": "3478"
+      },
+      "Mariyala": {
+        "Jodimetla Cheruvu": "3431",
+        "Vakamala Cheruvu": "3441",
+        "Edukunta Cheruvu": "3437",
+        "Malreddy Cheruvu": "3433",
+        "Double Kunta Shikam": "3432",
+        "Mysamma Kunta": "3442",
+        "Mysammakunta": "3435",
+        "Godugumari Kunta": "3429",
+        "Nammak Maisamma Kunta": "3430",
+        "Rajjakani Thanda": "3400/EN/01"
+      },
+      "Rangapuram": {
+        "Rusthum Cheruvu": "3492",
+        "Merupu Cheruvu": "3491"
+      },
+      "Malyala": {
+        "Voora Cheruvu": "3474"
+      },
+      "Maisireddypalle": {
+        "Ashani Kunta": "3472"
+      },
+      "Hazipur": {
+        "Meedi Cheruvu": "3461",
+        "Kumari Thanda": "3400/EN/03"
+      },
+      "Ramlingampalle": {
+        "Ramaiah Cheruvu": "3499",
+        "Obulai Kunta": "3493",
+        "Upparivani Kunta": "3494",
+        "Antham Cheruvu": "3497"
+      },
+      "Jalalpur": {
+        "Voora Cheruvu": "3400/4"
+      },
+      "Cheekatimamidi": {
+        "Chouta Cheruvu": "3424",
+        "yeraCheruvu": "3427",
+        "Mysammacheruvu": "3422",
+        "Thumalabhavicheruvu": "3466",
+        "Nalla Kunta": "3428",
+        "Mancha Thanda Kunta": "3400/EN/05",
+        "Rambai Kunta": "3400/EN/04"
+      },
+      "Thimmapuram": {
+        "Gudam Cheruvu": "3400",
+        "Peddacheruvu": "3403"
+      },
+      "Naginenipalle": {
+        "Voorakuntacheruvu": "3465"
+      },
+      "Mailaram": {
+        "Thangalkunta": "3452",
+        "Borabandakunta": "3400/N/05",
+        "Kumarikunta": "3400/N/06",
+        "Kumbalkunta": "3400/N/07",
+        "Pambaikunta": "3400/N/08",
+        "ErraKunta": "3400/N/12"
+      },
+      "Munirabad": {
+        "Mallannacheruvu": "3417"
+      },
+      "Maied Pally": {
+        "Pedda Cheruvu": "3400/N/03",
+        "Chinnacheruvu": "3400/N/13"
+      },
+      "Tirumalagiri": {
+        "Appai Kunta": "3400/N/04",
+        "Vooracheruvu": "3400/N/10"
+      },
+      "Solipeta": {
+        "Vooracheruvu": "3400/N/09"
+      },
+      "Samajpalli": {
+        "Selma": "3400/N/11"
+      },
+      "Peddhaparvatapuram": {
+        "Vaddola Cheruvu": "3400/N/14"
+      },
+      "Peddharamaram": {
+        "Cheruvu": "3400/N/02"
+      },
+      "Laxmi Thanda": {
+        "Valluthanda Kunta": "3400/EN/02"
+      },
+      "Thumkunta": {
+        "Thumu Kunta Cheruvu": "3400/N/01"
+      }
+    },
+    "Bibinagar": {
+      "Jameelapet": {
+        "Uppari Kunta": "3205",
+        "Alma Cheruvu": "3200/N/03",
+        "Ayla Kunta": "3200/EN/02"
+      },
+      "Kondamadugu": {
+        "Thalman Kunta": "3224",
+        "B.Cheruvu": "3200/N/10",
+        "Kotha Cheruvu": "3225",
+        "Tette Kunta": "3220",
+        "Potu Kunta": "3219"
+      },
+      "Jainapally": {
+        "Vura Cheruvu": "3229",
+        "Gundla Cheruvu": "3222",
+        "Nalla Kunta": "3200/N/01"
+      },
+      "Gudur": {
+        "Vura Cheruvu": "3231"
+      },
+      "Bibinagar": {
+        "Pedda Cheruvu": "3233",
+        "Israpally Kunta": "3234"
+      },
+      "Brahmana Palle": {
+        "Nalla Cheruvu": "3242",
+        "Thirman Kunta": "3241"
+      },
+      "Chinaraval Palle": {
+        "Chintal Cheruvu": "3246"
+      },
+      "Venkiryal": {
+        "Edhula Cheruvu": "3249",
+        "Pedda Cheruvu": "3250"
+      },
+      "Raghavapur": {
+        "Barloni Kunta": "3240",
+        "Bibisaheb Cheruvu": "3238"
+      },
+      "Jayapally": {
+        "Yeku Cheruvu": "3208",
+        "Voora cheruvu": "3200/N/06",
+        "Gopal Cheruvu": "3200/N/07",
+        "Lingareddy Kunta": "3200/EN/01"
+      },
+      "Nemarugomula": {
+        "Kava Cheruvu": "3200/N/02",
+        "Boppai Kunta": "3200/EN/03"
+      },
+      "Padamati Somaram": {
+        "Somaram Cheruvu": "3200/N/04",
+        "Yepula Cheruvu": "3237"
+      },
+      "Anantharam (Maktha)": {
+        "Yerra Kunta": "3200/N/05"
+      },
+      "Mahadevpur": {
+        "Ellama Karadi": "3200/N/09",
+        "Chintal cheruvu": "3200/N/08"
+      },
+      "Rairaopet": {
+        "Voora cheruvu": "3200"
+      },
+      "Raheem Khanguda": {
+        "Lingamaiah Kunta": "3216"
+      }
+    }
+  },
+  "Rangareddy": {
+    "Farooqnagar (Part)": {
+      "Mogilligidda": {
+        "Gampala Cheruvu": "102",
+        "Gidde Kunta": "104",
+        "Komati Kunta": "103",
+        "Dhosam Kunta (Joshwani kunta)": "105"
+      },
+      "Koddannaguda": {
+        "Kommoni Kunta": "148"
+      },
+      "Chatanpally": {
+        "Kangula kunta": "100/N/00/2",
+        "Thunga kunta": "130",
+        "POCHAN CHERUVU": "100-N-004",
+        "Soora Samudram": "100/N/005"
+      },
+      "Elikatta": {
+        "Ladam Cheruvu": "114",
+        "KUNTA SHIKHAM": "117",
+        "Poolkam Kunta": "112",
+        "Chama Kunta": "113",
+        "Masoni Kunta": "116",
+        "Mala kunta": "118",
+        "Pulicherla Kunta": "109",
+        "Gaddabhavi kunta": "119"
+      },
+      "Nagulapally": {
+        "Ana kunta": "125",
+        "Oora Cheruvu": "128",
+        "Siddoni Kunta": "123",
+        "Moddu Kunta": "129",
+        "Hanuman Kunta": "124",
+        "Pedda arla kunta": "127"
+      },
+      "Dooskal": {
+        "Permandla Kunta": "134",
+        "Pedda Cheruvu": "135"
+      },
+      "Buchiguda": {
+        "Goova Kunta": "136",
+        "Nagireddy Kunta": "137"
+      },
+      "Veligerla": {
+        "Kakarathumu Kunta": "138",
+        "Yatham Kunta": "143"
+      },
+      "Chetanpalle": {
+        "Peddin Cheruvu": "100/N/003"
+      },
+      "Farooqnagar (Shadnagar)": {
+        "Jannamma kunta": "100-N-006",
+        "kisan sagar": "122",
+        "kotha kunta": "142"
+      },
+      "Veljerla.II Suryaraoguda": {
+        "pinnamma kunta": "139",
+        "Thalla Cheruvu (Sury Rao Guda)": "140"
+      }
+    },
+    "Nandigama": {
+      "Mamidipally": {
+        "Koneti Kunta": "201",
+        "Podala Kunta": "203",
+        "Kotha cheruvu": "202",
+        "Parvathi kunta": "206",
+        "Margamvani kunta": "208",
+        "Thette kunta": "200/N/00/1",
+        "Kangula Kunta": "200/N/00/2",
+        "Yennem Cheruvu": "200/N/00/3",
+        "KAMMAROLLA KUNTA": "200-N-0030"
+      },
+      "Edulapally": {
+        "Nalla Cheruvu": "209",
+        "Ramaswamy Kunta": "210",
+        "Edulacheruvu": "214",
+        "Mothkula Kunta": "200/N/00/4"
+      },
+      "Veerlapally": {
+        "Gundla Kunta": "218",
+        "Anthu Kunta": "220",
+        "Mogulla Kunta": "221",
+        "Ula Kunta": "223"
+      },
+      "Nandigama": {
+        "Chennalah Cheruvu": "228",
+        "Marri Kunta": "229",
+        "Mallaiah Cheruvu": "235",
+        "Nallakunta": "225",
+        "Singireddikunta": "231",
+        "Sakera kunta": "234",
+        "Kashireddi Kunta": "230",
+        "Mekavanibavi Kunta": "238",
+        "Thungakunta": "232",
+        "Kolbaikunta": "233",
+        "Bojyakunta": "237",
+        "Yangannagari Vampu Kunta": "239",
+        "Raikunta": "242",
+        "Nakkerakunta": "200/N/0010",
+        "Chiravani kunta": "200/N/008",
+        "Ambapuram Cheruvu": "227",
+        "Malloni cheruvu": "240",
+        "Basigudem cheruvu": "200-N-007",
+        "BOORGU KUNTA": "200-N-006",
+        "Lingamkunta": "200/N/009"
+      },
+      "Chegur": {
+        "Akkamma Cheruvu": "278",
+        "Chinna Modem Kunta": "279",
+        "Chinna Joshivani Kunta": "283",
+        "Chinna Rangoni Kunta": "289",
+        "Chinna Komati Kunta": "200/N/00/15",
+        "Gantla kunta": "200/N/0020",
+        "Vankabai Kunta": "200/N/0021",
+        "Nakkaraju Kunta": "200/N/0024",
+        "Kanderao Kunta": "280",
+        "Varambai Kunta": "282",
+        "Raikantavanikunta": "285",
+        "Mangivanikunta": "288",
+        "Sunarkunta": "200/N/00/17",
+        "Muthyal Reddy Kunta": "200/N/00/18",
+        "Bokulakunta": "200/N/00/25",
+        "Chinna Kummari Kunta": "284",
+        "chinna raibai kunta": "281",
+        "PANCHAMIBAIKUNTA": "200-N-0016",
+        "MANCHILLABAI KUNTA": "200-N-0023",
+        "Poosala kunta": "200/N/0019"
+      }
+    },
+    "Kothur": {
+      "Penjerla": {
+        "Nagula Cheruvu": "248",
+        "Chinna Erra Kunta": "249",
+        "Pedda Erra Kunta": "250",
+        "Mamidi Kunta": "252",
+        "Marada Cheruvu": "243"
+      },
+      "Kodicherla": {
+        "Garla Cheruvu": "255",
+        "Urakunta": "254"
+      },
+      "SBPally": {
+        "Ramaiah Kunta": "256",
+        "Korna Kunta": "257",
+        "Kuppalabai kunta": "200/N/0011"
+      },
+      "Siddapur": {
+        "Gotla Cheruvu": "259",
+        "Erra Kunta": "200/N/00/12",
+        "Appakunta": "260"
+      },
+      "Kothur": {
+        "Goduma Kunta": "266",
+        "Bodhikunta": "200/N/00/13",
+        "Saireddi Cheruvu": "264",
+        "Kashna kunta": "265"
+      },
+      "Thimmapur": {
+        "Yellamma Kunta": "268",
+        "Gundla Kunta": "267"
+      },
+      "Gudur": {
+        "Ramaiah Cheruvu": "270",
+        "Kashoni Kunta": "272",
+        "Upparavani Kunta": "274",
+        "Kummari Kunta": "200/N/00/14",
+        "chintha kunta": "275"
+      },
+      "Inmulnarva": {
+        "Thummala Kunta": "290",
+        "Mamilla Cheruvu": "200/N/00/27",
+        "Peerla chervu": "200/N/026",
+        "Thathakunta": "292",
+        "Gorimilla Kunta": "200/N/0028",
+        "Chakalikunta": "294",
+        "PEDDA CHERUVU": "291"
+      },
+      "Theegapur": {
+        "Patel Kunta": "276"
+      },
+      "Mallapur": {
+        "Mangaloni Kunta": "200/EN/0029"
+      },
+      "Khajiguda": {
+        "Mannem kunta": "253"
+      }
+    },
+    "Hayathnagar": {
+      "ANMAGAL": {
+        "Bathula Kunta": "1957",
+        "Kummari Kunta": "1905"
+      },
+      "Omerkhandaira": {
+        "Gudem Cheruvu": "1928"
+      },
+      "Bandaravirala": {
+        "Kambala Kunta": "1900/N/008"
+      },
+      "Abdullapur": {
+        "Reddy kunta": "1919"
+      },
+      "Sahebnagar": {
+        "Bhatakamma Kunta": "1963"
+      },
+      "Turkayamjal": {
+        "Thurkayamjal Cheruvu": "1964"
+      },
+      "Manneguda": {
+        "Erra Kunta": "1972"
+      },
+      "Kalvancha": {
+        "Mayatri Kuteer Lake(Edonibai Kunta)": "1983"
+      },
+      "Tatti Annaram": {
+        "Annaram Cheruvu Lake": "1981"
+      },
+      "Uppaguda": {
+        "Chinna Cheruvu": "1962"
+      }
+    },
+    "Moinabad": {
+      "Chinna Mangalaram": {
+        "Chinna Cheruvu (Chinna chervu Magani)": "2021",
+        "Shikam talab/ Pedda cheruvu": "2020"
+      },
+      "Medipalle": {
+        "Kummari Kunta": "2022",
+        "Urimundhari Kunta": "2000/E/11"
+      },
+      "Nakkalapalle": {
+        "Akamma Cheruvu (Kattameedi Chimpu)": "2025"
+      },
+      "Bakaram Jagir": {
+        "Erra Kunta (Yerra Kunta Shikam)": "2004",
+        "Jambula kunta": "2006",
+        "Masai kunta": "2005"
+      },
+      "Peddamangalaram": {
+        "Pedda Chervu (Cheruvu)": "2019",
+        "Mudugulla Kunta": "2000/E/07",
+        "Yellamma kunta": "2013",
+        "Bijini Kunta": "2018",
+        "Mudugulla kunta": "2000/E/07",
+        "Urrimundhu Kunta (Sarkari Kunta)": "2017"
+      },
+      "Chilkur": {
+        "Bobbilikunta": "2000/E/05",
+        "Antappa Cheruvu": "2015"
+      },
+      "Kethireddipalle": {
+        "Venkatamma Cheruvu": "2000/E/06",
+        "Chakalisuda cheruvu": "2000/E/12"
+      },
+      "Surangal": {
+        "Mumilla Kunta": "2000/E/08",
+        "Pedda Bhavivadda Kunta": "2009"
+      },
+      "Yenkepalle": {
+        "Ledi Kunta": "2000/E/10",
+        "Ladikunta": "2000/E/10",
+        "Mulla kunta": "2001",
+        "Hala Kunta (Mala Kunta)": "2000"
+      },
+      "Nagireddiguda": {
+        "Abu Kunta": "2000/EN/01"
+      },
+      "Bangaliguda": {
+        "Bangali Kunta": "2000/E/04"
+      },
+      "Tolkatta": {
+        "Thoiukatta Kunta": "2000/E/09"
+      },
+      "Amdapur": {
+        "Alisagar Kunta": "2008",
+        "Patel kunta": "2007"
+      },
+      "Chilkoor": {
+        "Pedda Cheruvu": "2016"
+      }
+    },
+    "Kandukur": {
+      "Rachloor": {
+        "Venuka Kunta": "2500/37",
+        "Chimmalvani kunta": "2500/41",
+        "Mundari Kunta": "2500/50",
+        "Kantam Kunta": "2500/N/0050",
+        "Chouta Kunta": "2500/47",
+        "Kotha Kunta": "2500/39",
+        "ErraKunta": "2500/35"
+      },
+      "Gudur": {
+        "Chenge Cheruvu": "2500/42",
+        "Pucharla Kunta": "2500/40",
+        "Bapani Kunta": "2500/48"
+      },
+      "Mirkhanpet": {
+        "Batouni kunta": "2500/9",
+        "Vavila Kunta": "2500/5",
+        "Sandappa Kunta": "2500/7",
+        "Mailamma Chervu": "2500/11",
+        "Begari Kunta": "2500/03",
+        "Kotha Kunta": "2500/N/0051",
+        "Jala Kunta": "2500/N/0047",
+        "Venkatamma Kunta": "2500/N/0049",
+        "Rambai kunta": "2500-6",
+        "Raghupathi Reddy Kunta": "2500/10",
+        "Sudda Kunta": "2500/N/33",
+        "Chakalivani Kunta": "2500/N/35"
+      },
+      "Madhapur": {
+        "Kummari Kunta": "2500/20",
+        "Cheniga Cheruvu": "2500/N/0043"
+      },
+      "Panjaguda": {
+        "Pochanu Kunta (Pochel kunta )": "2500/1",
+        "Reddy Kunta": "2500/2",
+        "Ragi Cheruvu": "2500/12",
+        "Jinkabellam Kunta": "2599"
+      },
+      "Murlinagar": {
+        "Kadigani Kunta (Mamilla Kunta)": "2516",
+        "Regula Kunta": "2519",
+        "Pochamma Kunta": "2518",
+        "Chintala Kunta": "2514",
+        "Lingam Kunta": "2515"
+      },
+      "Kandukur": {
+        "Mangaloni Kunta": "2549",
+        "Nakkareddy Kunta": "2543",
+        "Chintal Cheruvu": "2568",
+        "Koshi Kunta": "2545",
+        "Somadevuni Chervu": "2544",
+        "Annusandaram": "2548",
+        "Sunnam Cheruvu": "2541",
+        "Thimmareddy Kunta": "2546",
+        "Edural Kunta": "2500/N/27",
+        "Peddayenni Gandi Kunta": "2500/N/29"
+      },
+      "Dasarlapalle": {
+        "Perumala kunta": "2555",
+        "Lothu Kunta": "2551",
+        "Kotha kunta": "2560",
+        "Gajural Kunta": "2500/N/22",
+        "Chowta Kunta": "2500/N/23",
+        "Yerra kunta": "2500/N/19",
+        "Nalla Kunta": "2554",
+        "Apparedi Kunta": "2556",
+        "Mallappa Kutna": "2559",
+        "Pedda Kunta": "2561"
+      },
+      "Thimmaipalle": {
+        "Perumallakunta": "2597",
+        "Byagaroni Cheruvu": "2598"
+      },
+      "Mucherla": {
+        "Pittaloni Kunta": "2500/N/13",
+        "Gundla Cheruvu (New)": "2500/N/16",
+        "Erakunta": "2500/N/24",
+        "Parla Kunta(new)": "2500/N/12",
+        "Parla Kunta (New)": "2500/N/12",
+        "Balappa Kunta(New)": "2500/N/14",
+        "Shegesh Kunta(New)": "2500/N/15",
+        "Ramudu Kunta": "2500/N/20",
+        "kotha kunta": "2500-N-25",
+        "Mangalavani kunta": "2585",
+        "Gorima Kunta-1": "2500/N/0053",
+        "GorimaKunta-2": "2500/N/0054",
+        "Mondi kunta": "2587",
+        "Jagamaiah Kunta": "2500/N/0037",
+        "Pothubanda Lake": "2500/N/0044",
+        "Thummouni Kunta": "2591",
+        "Pamuni Cheruvu": "2500/N/28",
+        "Marla Kunta": "2500/N/0039",
+        "Bajaru Kunta": "2579",
+        "Rammaiah Kunta": "2500/N/0048",
+        "Loya kunta": "2500/N/0052",
+        "Lingareddy Kunta": "2571",
+        "Lachi Reddy Kunta": "2577",
+        "Pothuraju Kunta": "2589",
+        "Ramuni Kunta": "2576"
+      },
+      "Meerkhanpet": {
+        "Mailamma Cheruvu": "2500-11"
+      },
+      "Nedunoor": {
+        "Dolluvani Kunta": "2521",
+        "Kotha Chervu": "2524",
+        "Gangoji Kunta": "2528",
+        "Pallilu Kunta": "2500/N/21",
+        "Kotha Kunta": "2525",
+        "Konda Chervu Kunta": "2523",
+        "Nalla Cheruvu": "2522",
+        "kancharam kunta": "2500-N-11",
+        "Kummala Kunta": "2529",
+        "Nakkala Kunta": "2500/N/05",
+        "Seetamma Kunta": "2500/N/01",
+        "Mukkuda Vagu": "2500/N/02",
+        "Yerra Kunta": "2500/N/03"
+      },
+      "Peruguguda": {
+        "Bachukunta": "2531"
+      },
+      "Kothur": {
+        "Pedda Chervu": "2537",
+        "Eerla": "2500-N-17",
+        "Dayala Kunta": "2500/N/0045",
+        "Jogu Kunta": "2536"
+      },
+      "Sarvaravulapalle": {
+        "Kopponibondha Kunta": "2594"
+      },
+      "Chippalpalle": {
+        "JAKUKLLA KUNTA": "2505",
+        "Guntavani Kunta": "2500/N/0038",
+        "Chintala Cheruvu": "2502",
+        "Dumpalamma Chruvu": "2501",
+        "Perumallkunta": "2503",
+        "Vantimamidi kunta": "2504"
+      },
+      "Akberja": {
+        "Mahanthini Kunta": "2500/8"
+      },
+      "Mohammadnagar": {
+        "PothuReddy Kunta (Atma Kunta)": "2547"
+      },
+      "Lemoor": {
+        "Dokaroni Kunta": "2500/25",
+        "Gundlakada Kunta": "2500/24",
+        "Pedda Kunta": "2500/N/0046",
+        "Burugu Kunta": "2500/31",
+        "Mundi Cheruvu": "2500/N/10",
+        "Barenka kunta": "2500/32",
+        "Tigala Kunta": "2500/N/26",
+        "Raggi Kunta": "2500/33",
+        "kanikala kunta": "2500/27"
+      },
+      "Pulumamidi": {
+        "OraKunta": "2512",
+        "Edhama Kunta": "2510",
+        "Laxmi Chervu": "2506",
+        "Eramma kunta": "2509",
+        "Mudala Kunta": "2500/N/30",
+        "Devuni Cheruvu": "2500/N/31",
+        "Thane Kunta": "2500/N/32"
+      },
+      "Jaithwaram (Khalsa)": {
+        "Nayanivani Chervu Katta": "2534"
+      },
+      "Pulimamidi": {
+        "Edhama Kunta": "2510",
+        "Nalla Cheruvu": "2507",
+        "Shalma Kunta": "2500/N/06"
+      },
+      "Gummadavalle": {
+        "Lalebai 1 Kunta": "2500/N/08",
+        "Mangali Kunta": "2500/15",
+        "Tulasibai Katwa": "2500/17",
+        "Lalebai Kunta": "2500/N/09",
+        "Ganagireddy Kunta": "2500/14",
+        "Varm Cheruvu": "2500/18",
+        "Kummari Kunta": "2500/16",
+        "Ramasamudram Kunta": "2500/N/34",
+        "Bandam kunta": "2500/13"
+      },
+      "Thimmapur": {
+        "Timmi Cheruvu": "2500/23"
+      },
+      "Chippalapalli": {
+        "Chintalla Kunta": "2500/N/04"
+      },
+      "Rachuloor": {
+        "Jagareddy Kunta": "2500/34"
+      },
+      "Rachaloor": {
+        "Chandamma Cheruvu": "2500/N/07",
+        "Mangalavani kunta": "2500/51"
+      },
+      "Dhannaram": {
+        "Nalla Kunta": "2513"
+      },
+      "Bachupalle": {
+        "Perumallkunta": "2532"
+      }
+    },
+    "Shabad": {
+      "Solipet": {
+        "Gandloni Kunta": "2202",
+        "Pedda Chervu": "2201",
+        "Chettu Kunta": "2200",
+        "Kotha Cheruvu": "2200/N/0024"
+      },
+      "Maddur": {
+        "Ragula Kunta": "2204",
+        "yamen Cheru": "2356"
+      },
+      "Peddavedu": {
+        "Savsulavani Kunta": "2209",
+        "Edhmambayi Kunta": "2200/N/0016"
+      },
+      "Bhongirpalle": {
+        "kasi kunta": "2226",
+        "Hanuman Chervu": "2227"
+      },
+      "Thallapally": {
+        "Erra Kunta": "2231",
+        "Lingareddy Chervu": "2230",
+        "Sangaiah Kunta": "2232",
+        "Komati Kunta": "2235",
+        "Dhommaradhani/Venkatamma Kunta": "2233",
+        "Nagula Cheru": "2229",
+        "Gadigela Kunta": "2236"
+      },
+      "Kesharam": {
+        "Nalla Kunta": "2261",
+        "Alimayi Kunta": "2200/N/0013",
+        "Nagireddy Chervu": "2259",
+        "Erra Kunta": "2260",
+        "Konreddy Kunta": "2200/EN/05"
+      },
+      "Antharam": {
+        "Nalla Kunta": "2244",
+        "Mogulla Kunta": "2246",
+        "Erra Kunta": "2245",
+        "Achamma kunta": "2247"
+      },
+      "Ananthawaram": {
+        "Kandi Kunta": "2249"
+      },
+      "Bobbilgam": {
+        "Mangaloni Kunta": "2200/N/0012"
+      },
+      "Manmarri": {
+        "Kunta": "2200/N/0015",
+        "Teluguvani Kunta": "2200/N/006",
+        "Pinchukula Kunta": "2200/EN/06"
+      },
+      "Pothugal": {
+        "Dharmanu Kunta": "2200/N/0017",
+        "Mamilla Kunta": "2228"
+      },
+      "Regadidoswada": {
+        "Mamindla Kunta": "2200/N/0019",
+        "Athi Kunta": "2200/N/0020",
+        "Modi Kunta": "2200/N/0021",
+        "maisamma kunta": "2239"
+      },
+      "Damerlapalle": {
+        "Erra Kunta": "2210",
+        "Devuni Chervu": "2223",
+        "Mallappa Cheruvu": "2221"
+      },
+      "Chandernvalle": {
+        "Gudavanikunta": "2212",
+        "Thungavani Kunta": "2213",
+        "Chenna Kesi Kunta/Chenna keshava kunta": "2214",
+        "Pedda Cheruvu": "2200-N-003",
+        "Cheguroni bayi kunta": "2200/N/029"
+      },
+      "Machanpalle": {
+        "Gudem Chervu": "2215",
+        "Nalla Chervu": "2218",
+        "DUSARA KUNTA": "2217"
+      },
+      "Nagarkunta": {
+        "Thakhi Bil Grami/akhil sagar kunta": "2219",
+        "Chelma/Sheelam Kunta": "2224"
+      },
+      "Etlaerravaly": {
+        "Gokara Kunta": "2237",
+        "Lella Kunta": "2200/EN/09",
+        "Chintal Kunta": "2200/EN/08"
+      },
+      "Rangapur": {
+        "Hanman Kunta": "2200/EN/07",
+        "Kolanguda Kunta": "2258",
+        "Naradhamanu Kunta": "2200/N/027"
+      },
+      "Shabad": {
+        "Komati Kunta": "2200/EN/01",
+        "Perumandla Kunta": "2200/N/0022",
+        "Pochamma Kunta": "2200/N/0023",
+        "Pochammakunta": "2200/N/0023",
+        "Perumandal Kunta": "2200/N/0022",
+        "peerla kunta": "2225"
+      },
+      "Uppareddyguda": {
+        "Edulan Kunta/pedda kunta": "2200/EN/03"
+      },
+      "Rudraram": {
+        "Kotha Kunta": "2200/EN/04"
+      },
+      "Mallareddygudem": {
+        "Mallanna Kunta/Kotha Kunta": "2200/N/0014"
+      },
+      "Thimmareddy Guda": {
+        "Ausuloni Kunta": "2200/N/0025"
+      },
+      "Kakloor": {
+        "EDULA KUNTA": "2200/N/008",
+        "Pedda Cheruvu": "2200-N-007",
+        "Mala Kunta": "2200/N/0011",
+        "Erra Kunta": "2200-N-0010",
+        "Mondi Kunta/ Kurvaguda Kunta": "2200/N/028",
+        "Barrenkula kunta": "2248"
+      },
+      "Obagunta": {
+        "Ubha Kunta": "2241"
+      },
+      "Hayathabad": {
+        "Nalla Kunta": "2200/EN/02",
+        "Pedda Cheruvu": "2200/N/001"
+      },
+      "Komerabanda": {
+        "Mangoli Kunta": "2200/N/027"
+      }
+    },
+    "Ibrahimpatnam": {
+      "Naganpalle": {
+        "Kistamoni Kunta": "500/N/0013",
+        "Petrtri Kunta (Shikam kunta)": "542",
+        "Mokayi Kunta": "500/EN/01",
+        "Kocheruvu": "500/EN/04",
+        "Kummari Kunta": "500/N/0014",
+        "Shikkam cheruvu": "540"
+      },
+      "Rainguda": {
+        "Rain Cheruvu": "500/N/0015",
+        "Mondi Kunta": "500/EN/12"
+      },
+      "Narrepalle": {
+        "Thummalla Kunta": "500/N/003",
+        "Jammadar Cheruvu": "500/EN/14"
+      },
+      "Mangalpalli": {
+        "Kummari Kunta": "500/N/004",
+        "Nalla Cheruvu": "500/N/005",
+        "Mungareddy Kunta (Chinthalkunta)": "500/N/009",
+        "Jeelamakhan Kunta (Jilanigoni Kunta)": "500/E/08"
+      },
+      "Kappapahad": {
+        "Katanam Kunta": "508",
+        "Thummai Kunta": "507",
+        "Mallanna Kunta": "509"
+      },
+      "Ibrahimpatnam (Bagath)": {
+        "Jakkamma Cheruvu": "520",
+        "Mogula Kunta": "500/N/0022",
+        "Kangula Kunta": "500/EN/27"
+      },
+      "Kongara Kalan": {
+        "Nallakunta": "527",
+        "Kotha Cheruvu": "529",
+        "Vodlavani Kunta": "530",
+        "Dathara Kunta": "531",
+        "Madhireddi Kunta": "500/EN/22",
+        "Kannarapa Kunta": "528",
+        "Edigoni Kunta": "500/EN/20"
+      },
+      "Raipole": {
+        "Nagoju Kunta": "543",
+        "Raipole Cheruvu (Raipole Tank)": "544",
+        "Komati Kunta": "500/EN/07"
+      },
+      "Muknoor": {
+        "Kotha Kunta": "546",
+        "Patel Kunta": "500/EN/06",
+        "Thippai Kunta": "547",
+        "Posani Kunta": "548"
+      },
+      "Yeliminedu": {
+        "Gannagapet Kunta": "513",
+        "Chakari Kunta": "500/EN/13",
+        "Thimmasani Kunta": "500/EN/17",
+        "Erra Kunta": "514",
+        "Yelsonikunta": "511",
+        "Amerigudeni Kunta": "500/EN/16",
+        "Mallanna Kunta": "500/EN/18",
+        "Lodhilla Kunta": "500/EN/19",
+        "Peddamma Gudi Kunta": "500/EN/21"
+      },
+      "Dandumailaram": {
+        "Pidgani Kunta": "551",
+        "Kamuni Cheruvu": "500/N/0019",
+        "Byruni Cheruvu": "550",
+        "Nallagundla Cheruvu": "549",
+        "Lingamoni Kunta": "500/EN/24",
+        "Pangadi Kunta": "500/N/0017",
+        "Utti Cheruvu": "500/N/0018",
+        "Chukkala Kathava": "500/N/0016"
+      },
+      "Tulekalan": {
+        "Kotha Cheruvu": "500/EN/02",
+        "Mella Kunta": "500/EN/03",
+        "Kotha Kunta": "500/EN/05",
+        "Errakunta": "505",
+        "Thette kunta": "504",
+        "Narsappa Kunta": "503",
+        "Chowta Cheruvu": "506"
+      },
+      "Ibrahimpatnam": {
+        "Chinna Cheruvu & Pedda Cheruvu": "526",
+        "Sidhaiah Kunta": "525",
+        "Alimiya Kunta": "500/N/0023",
+        "Yerra Kunta": "524",
+        "Edivonibai Kunta": "519"
+      },
+      "Polkampalle": {
+        "Thallari Kunta": "500/EN/08",
+        "Kathan Khan Check Dam": "559",
+        "Burugu Kunta": "557",
+        "Dhuba Gutta Kunta": "500/EN/09",
+        "Peddabai Kunta": "500/EN/10",
+        "Bapani Cheruvu": "500/EN/11"
+      },
+      "Ramdaspalle": {
+        "Mamidoni Kunta": "500/N/0012",
+        "Pithiri kunta": "500-N-0010",
+        "Porla Kunta": "500-N-0011"
+      },
+      "Sahebguda": {
+        "Sahebgudam Kunta": "500/N/008"
+      },
+      "Ibrahimpatnam (Khalsa)": {
+        "KOTHA CHERUVU": "521",
+        "Bonthapally Kunta": "560",
+        "Lingasamudram": "515",
+        "Somasamudram": "423",
+        "Mankaravani Kunta": "500/EN/25",
+        "Siddaveni Kunta": "500/EN/26"
+      },
+      "Ferozguda": {
+        "Allam thota kunta": "500-N-002",
+        "Surya Kunta": "500/EN/15"
+      },
+      "Cherla patel": {
+        "Chalmai kunta": "424"
+      },
+      "Polkampalli": {
+        "Nagulamma Cheruvu": "500/N/0020"
+      }
+    },
+    "Shamshabad": {
+      "Ammapalle": {
+        "Dubba Kunta": "2342",
+        "Mamilla Kunta": "2341",
+        "Brahmanala Kunta": "2300/N/0011",
+        "Modugala Kunta": "2343"
+      },
+      "Cherlaguda": {
+        "Mysamma Kunta": "2300/EN/04"
+      },
+      "Sultanpalle": {
+        "Korranimi Kunta": "2300/EN/06",
+        "Kotha kunta": "2336"
+      },
+      "Palmakole": {
+        "Palamakole Cheruvu": "2323",
+        "Chinna Yerra kunta": "2321",
+        "Karnam Kunta": "2319"
+      },
+      "Narkhuda": {
+        "Thambala Cheruvu": "2300-N-005",
+        "Mallevani kunta": "2300-N-003",
+        "Edgavani kunta": "2300-N-006",
+        "Mangarashi Kunta": "2300/N/007",
+        "Kummarivani Kunta": "2300/N/0010",
+        "Buru Kunta": "2300/N/008"
+      },
+      "Malkaram": {
+        "Nakkala Kunta": "2318"
+      },
+      "Ramanujapur": {
+        "Kankal Cheruvu": "2300-N-0012",
+        "Rekhula kunta": "2300-N-0013",
+        "Venkateshwar Kunta": "2355"
+      },
+      "Madanpalle": {
+        "Nalla Cheruvu Shikam": "2315",
+        "Garuguvani Kunta": "2317"
+      },
+      "Sanghiguda": {
+        "Yerra Cheruvu": "2304",
+        "Baru Kunta": "2305"
+      },
+      "Peddatopra": {
+        "Venkata Cheruvu": "2325"
+      },
+      "Shamshabad": {
+        "Pahilwan Cheru": "2240",
+        "Joshi Kunta": "2300/N/0014",
+        "Gurugu Kunta Lake": "2386",
+        "Kamuni Cheruvu": "2381",
+        "Narsimha Kunta": "2385"
+      },
+      "Jukal": {
+        "Venkataswamy Kunta": "2334",
+        "Nalla Cheruvu": "2333",
+        "Ali Kunta": "2320"
+      },
+      "Raikunta": {
+        "Errakunta": "2300/E/05"
+      },
+      "Golkondakhurd": {
+        "Bairamoni Kunta": "2302"
+      },
+      "Hamidullanagar": {
+        "Devara cheruvu": "2306"
+      },
+      "Bahadurguda": {
+        "pothireddy kunta": "2300"
+      },
+      "Chowderguda": {
+        "Ballevani Cheruvu": "2331",
+        "Erra Kunta": "2300/EN/07"
+      },
+      "Pedda Tupra": {
+        "Perumala Kunta": "2324"
+      },
+      "Peddashapur": {
+        "Kotta Cheruvu Shikam": "2314",
+        "Naga samudra": "2326",
+        "Buchi Kunta": "2313"
+      },
+      "Tondapalle": {
+        "Urakunta": "2300/N/001",
+        "Gollapalli Cheruvu": "2383",
+        "Thondapally Cheruvu Lake(Sandapally)": "2382"
+      },
+      "Nanajipur": {
+        "Bokkala Kunta": "2347"
+      },
+      "Madanapally": {
+        "Karnamoni Kunta": "2300/N/002",
+        "Kotha kunta": "2316"
+      },
+      "Manchinatal": {
+        "Jeelavani Kunta": "2300/EN/01"
+      },
+      "Sultanpalli": {
+        "Bodoni kunta": "2337"
+      },
+      "Rasheedguda": {
+        "Shama Kunta": "2384"
+      },
+      "Ananthareddy guda": {
+        "Amdulnagar Cheruvu": "2374"
+      }
+    },
+    "Shankarpalle": {
+      "Janwada": {
+        "Kodi Cheruvu": "1600/E/02",
+        "Thumasamudram Kunta": "1600/E/01",
+        "Pedda Cheruvu,": "1608"
+      },
+      "Kothapalle": {
+        "Allongari Katwa": "1603"
+      },
+      "Kondakal": {
+        "Chakali Kunta": "1612",
+        "Veeranna Cheruvu": "1613",
+        "Vallabhaswamy Kunta": "1614",
+        "Kotha Cheruvu": "1615",
+        "Meemsab Kunta": "1611"
+      },
+      "Donthanpalle": {
+        "Turka Cheruvu": "1604"
+      },
+      "Proddutur": {
+        "Pedda Cheruvu, Proddatur Village": "1607"
+      },
+      "Mokila": {
+        "Popara Katwa": "1602",
+        "Guthinukala Kunta": "1600/N/03"
+      }
+    },
+    "Maheswaram": {
+      "Mansanpalle": {
+        "Ramaiah Kunta (Ramanna Kunta)": "2454",
+        "Thummala Cheruvu Kunta": "2449",
+        "Kamam Kunta (Karnam kunta)": "2453",
+        "Janagoni Kunta (Jangam Kunta)": "2455"
+      },
+      "Akanpalle": {
+        "Varada Kunta": "2466",
+        "Chintal kunta": "2467"
+      },
+      "Sirigirpur": {
+        "Chota Kunta (Chouta Kunta)": "2400/N/0010"
+      },
+      "Nagaram": {
+        "Enugala Kunta (Enugu Cheruvu)": "2400/N/0013",
+        "Urakunta Cheruvu": "2400/N/0014",
+        "Kaja Kunta": "2400/N/0015",
+        "Reddy Sani Kunta": "2400/EN/27"
+      },
+      "Sirigiripuram": {
+        "Kotha Kunta": "2400/EN/01"
+      },
+      "Sreenagar": {
+        "Japal Kunta (Jakkula Kunta)": "2406",
+        "Bavandla Kunta": "2400",
+        "Thummala Kunta": "2408"
+      },
+      "Thummaloor": {
+        "Gandi Kunta": "2423",
+        "Pallavani Kunta": "2400/EN/02-1",
+        "Vatsa Kunta": "2422",
+        "Rajole Kunta": "2421",
+        "Edhoni Kunta": "2400/EN/20"
+      },
+      "Maheswaram": {
+        "Kothwal Cheruvu": "2428",
+        "Erra Kunta": "2425"
+      },
+      "Ghatpalle": {
+        "Yaseen Kunta": "2429",
+        "Gangipaadu Kunta": "2430",
+        "Talla Kunta": "2465",
+        "Ahmed kunta": "2463&2464",
+        "Kalubhai Kunta": "2400/EN/15"
+      },
+      "Raviryal": {
+        "Erra Kunta": "2400/N/007",
+        "Idla Kunta (Didde Kunta)": "2400/N/008",
+        "Didala Kunta": "2400/EN/26",
+        "Pedda Cheruvu": "2404"
+      },
+      "Mankhal": {
+        "Rai Kunta": "2412",
+        "Bommai Kunta": "2410"
+      },
+      "Kollapadkal": {
+        "Ramreddy Kunta": "2400/N/0016",
+        "Tummala Kunta": "2473",
+        "Lachanna Kunta": "2476",
+        "Pedda Kunta": "2474",
+        "Kudi Kunta": "2475",
+        "Fathesagar Cheruvu": "2477"
+      },
+      "Porandla": {
+        "Pedda Cheruvu": "2472",
+        "POLKAM CHERUVU": "2469",
+        "Ayyavani Kunta": "2468",
+        "Begarivani Kunta": "2400/EN/30",
+        "Nara reddy cheruvu": "2400/EN/10"
+      },
+      "Pendyala": {
+        "Kondeti Kunta": "2457",
+        "Ramreddy kunta": "2400-N-005",
+        "Mogilla Cheruvu": "2456",
+        "Kotha Kunta": "2458",
+        "Kole Kunta": "2400/N/004"
+      },
+      "Ayyavaripally": {
+        "Nalla Kunta": "2400/EN/21"
+      },
+      "Kongarakhurd": {
+        "Chinnaburugu Kunta": "2400/EN/14",
+        "Dammaiah Kunta": "2400/EN/16",
+        "Maisamma Kunta": "2400/EN/17",
+        "Pedda burugu Kunta": "2400/EN/18",
+        "Komati Kunta": "2400/EN/25",
+        "Kotha cheruvu": "2400/EN/12"
+      },
+      "Dabilguda": {
+        "Dabilguda cheruvu": "2450"
+      },
+      "Thupra Khurd": {
+        "Yerra Kunta": "2483",
+        "Garukunta": "2400/N/002",
+        "Choutakunta": "2482"
+      },
+      "Dubbacherla": {
+        "Yerra Kunta": "2485",
+        "Ramaiah kunta": "2461"
+      },
+      "Nagireddipalle": {
+        "Saddala Cheruvu": "2443",
+        "Somala Kunta": "2444",
+        "Arkula Kunta": "2442"
+      },
+      "Subhanpur": {
+        "Bailoni Cheruvu": "2400/EN/06"
+      },
+      "Ameerpet": {
+        "Pochamma Cheruvu": "2446"
+      },
+      "Pendyal": {
+        "chinna kunta": "2486",
+        "Erandas Kunta (Veeran Das Kunta)": "2448",
+        "Kummari Kunta": "2400/EN/22"
+      },
+      "Gangaram": {
+        "Shibbi Kunta": "2400-N-0011",
+        "Komati Kunta": "2400/N/0012"
+      },
+      "Ravirayala": {
+        "Marri Kunta": "2400/EN/29"
+      },
+      "Almasguda": {
+        "Turkavani Kunta": "3600/E/01",
+        "Mamidala Kunta (Mamidi kunta)": "2414"
+      },
+      "Nandipalle": {
+        "Varsha Kunta": "2437",
+        "Pedda Cheruvu": "2436",
+        "Theegala Kunta": "2400/EN/23",
+        "Kolu - Kollu Kunta": "2400/EN/24"
+      },
+      "Gollur": {
+        "Edula Kunta (Melae cheruvu)": "2440",
+        "Ginthel Kunta (Thummala Cheruvu)": "2438",
+        "Amudala Kunta": "2400/EN/13"
+      },
+      "TUKKUGUDA": {
+        "Pavani Kunta": "2400/EN/19"
+      }
+    },
+    "Abdullapurmet": {
+      "Masjidhpur": {
+        "Erra Kunta": "1953",
+        "Paapa Kunta": "1900/EN/13"
+      },
+      "Amberpet Kalan (Pedda Amberpet)": {
+        "Chouta Kunta (K.K.)": "1954"
+      },
+      "Gunthapally": {
+        "Busanam Kunta (Bhushan Kunta)": "1900/N/0016",
+        "OORA CHERUVU": "1913"
+      },
+      "Balijaguda": {
+        "Mannemoni Kunta": "1900/N/0021"
+      },
+      "Koheda": {
+        "Reddy Cheruvu (Edam Kunta)": "1900/N/0022",
+        "Mondi Kunta": "1900/E/23",
+        "Gangasamudram Kunta": "1900/E/19",
+        "HAIL Kunta (Oil Kunta)": "1900/E/17",
+        "Kasan Kunta": "1900/EN/25",
+        "Ettam Kunta": "1900/EN/26",
+        "Thalla Kunta": "1900/EN/27",
+        "Kotha Cheruvu": "1976",
+        "Jaalu Kunta": "1900/EN/12",
+        "Upparoni Kunta": "1900/EN/14",
+        "Veerannabai Kunta": "1900/EN/15"
+      },
+      "Inamguda": {
+        "Bandam Kunta": "1900/E/20",
+        "Bairamkhan Cheruvu": "1931"
+      },
+      "Gowrelli": {
+        "Maloni Kunta": "1900/E/09"
+      },
+      "Thorur": {
+        "Palasamudram Kunta (Kasar Mallaiah Kunta)": "1900/E/01",
+        "Polkam Kunta": "1966",
+        "Mangal Kunta": "1978"
+      },
+      "Thimmaguda": {
+        "Lothu Kunta": "1900/E/08"
+      },
+      "Abdullapur": {
+        "Bandam Kunta": "1900/EN/24",
+        "Bata Cheruvu": "1936",
+        "ChinthalaCheruvu": "1920",
+        "Bava Kunta": "1935",
+        "Yellagabai Kunta": "1900/EN/20",
+        "Lingaiah Kunta": "1900/EN/21",
+        "Amma Kunta": "1900/EN/22",
+        "Dammai Kunta": "1900/EN/23"
+      },
+      "Tharamathipet": {
+        "Chelmai Kunta": "1900/N/0019",
+        "THETTE KUNTA": "1933",
+        "Pollkam Cheruvu": "1949",
+        "Mallesh Kunta": "1900/EEN/02",
+        "Mysamma Cheruvu": "1900/EEN/01",
+        "Anthamasani Kunta": "1900/EEN/03",
+        "Ramapuram Kunta": "1900/EN/18"
+      },
+      "Bacharam": {
+        "Jali Kunta": "1902"
+      },
+      "Mazeedpur": {
+        "Lingai Kunta": "1900/N/0012",
+        "Kodai Kunta": "1900/N/0015",
+        "Pedda Cheruvu": "1900/EN/03",
+        "Chinna Cheruvu": "1953"
+      },
+      "Kawadipally": {
+        "Erra Mallaiah Kunta": "1900/N/009",
+        "CHANDRAMMA KUNTA": "1900-EN-10",
+        "Pedda Cheruvu": "1900/EN/04",
+        "Patha Kunta": "1917",
+        "Siddamma Kunta": "1911",
+        "Chukkaya Kunta": "1916",
+        "Erronibandham Kunta": "1900/EN/11"
+      },
+      "KUNTLOOR": {
+        "Istaribai Kunta": "1900/E/06",
+        "Doddlakadi Kunta": "1900/EN/17",
+        "Batlunibaayi Kunta": "1900/EN/19"
+      },
+      "TATTIANNRAM": {
+        "Jangareddy Kunta": "1900/EN/07",
+        "YELLAREDDYKUNTA": "1900/EN/08",
+        "Kunta": "1980"
+      },
+      "Manneguda": {
+        "Chintal Kunta": "1900/EN/28",
+        "Fathekhankunta": "1973"
+      },
+      "Thattikhana": {
+        "KUMMARI KUNTA": "1900/EN/09"
+      },
+      "Injapur": {
+        "GUDEM KUNTA": "1900/EN/16",
+        "Dilawarkhan Cheruvu": ""
+      },
+      "Bandiraviryal": {
+        "Kumari Kunta": "1900/EN/29",
+        "Ura Kunta": "1900/N/004",
+        "Patel Kunta": "1900/N/003",
+        "Yerra kunta": "1900",
+        "Pulicherla Kunta": "1907",
+        "Shekavani Kunta": "1908"
+      },
+      "Anajpur": {
+        "Indiramma Cheruvu": "1929",
+        "Patel Kunta": "1900/EN/06"
+      },
+      "Batasingaram": {
+        "Jafferguda Cheruvu": "1932",
+        "Mangalvani Kunta": "1900/EN/02",
+        "Pommalla Cheruvu": "1900/EN/05",
+        "Amma kunta": "1939",
+        "Bata cheruvu (Puchakayala Kunta)": "1940"
+      },
+      "Pasumamla": {
+        "Pochamma Cheruvu": "1944",
+        "Pasumamula Cheruvu": "1974",
+        "Bandigudem Kunta": "1915"
+      },
+      "Kuntlur": {
+        "Kuntlur Cheruvu": "1958",
+        "Karkhana Kunta": "1982",
+        "Kuntloor Lake": "1984"
+      },
+      "Marripally": {
+        "Maripally Kunta": "1959"
+      },
+      "Toroor": {
+        "Brahmanpally Cheruvu": "1961"
+      },
+      "Turka Yamjal": {
+        "Guavakunta": "1971",
+        "Kotha Cheruvu (Muthyal Kunta)": "1969"
+      },
+      "PEDDA AMBERPET": {
+        "Edula Cheruvu (Pedda amberpet lake)": "1975"
+      },
+      "Taramathipet": {
+        "Anthaya Pally Kunta": "1909",
+        "Ganganivani Kunta (Ganjoni Kunta)": "1910"
+      },
+      "Amberpet": {
+        "Makthal Kunta": "1923"
+      }
+    },
+    "Yacharam (Part)": {
+      "Gungal": {
+        "Thota Kunta Shikam": "313",
+        "SAI REDDY KUNTA SHIKHAM": "300-EN-01",
+        "NARSIMHULU KUNTA SIKHAM": "311"
+      },
+      "Yacharam": {
+        "Akkavani Kunta": "304"
+      },
+      "Chowderpalle": {
+        "Yarra Kunta": "305",
+        "chowarpally": "306"
+      },
+      "Tulekhurd": {
+        "THUMMALA KUNTA(PATTA LAND)": "325",
+        "Mamidi Kunta": "320"
+      }
+    },
+    "Rajendranagar": {
+      "Mailardev Pally": {
+        "Palle cheruvu": "2951",
+        "Palle Cheruvu": "2951"
+      },
+      "BUMRUKNUDOWLA": {
+        "Bomrukud-Dowla Lake(HUDA Park Lake )": "2935",
+        "NoorMohammad Kunta": "2952"
+      },
+      "Upperpally": {
+        "Pedda Talla Kunta": "2950",
+        "MALKA CHERUVU": "2900-N-004"
+      },
+      "Gagan Pahad": {
+        "APPA CHERUVU": "2900-N-002",
+        "Mamidla Kunta": "2931",
+        "Brahman Cheruvu": "2930"
+      },
+      "Premavatipet": {
+        "PEDDA CHERUVU": "2921",
+        "NIRD RTP1 LAKE": "2900-N-005",
+        "NIRD RTP2 LAKE": "2900-N-006"
+      },
+      "laxmiguda": {
+        "BULBUL KUNTA": "2900-N-001"
+      },
+      "Ibrahimbagh": {
+        "Pedda Cheruvu": "2927"
+      },
+      "Manikonda (Khalsa)": {
+        "Yellama Cheruvu": "2923"
+      },
+      "Katedhan": {
+        "Pale Cheruvu": "2943",
+        "Suleman Cheruvu": "2928",
+        "Marsabai Kunta": "2941"
+      }
+    },
+    "Serilingampally": {
+      "Chandanagar": {
+        "Chandanagar (Mallai Cheruvu)": "2700",
+        "Bakshi Kunta": "3753",
+        "Bachu Kunta": "3700/E/18",
+        "Lingam Kunta": "3724"
+      },
+      "Guntla Begumpet": {
+        "Medi Kunta": "3700/EEN/02"
+      },
+      "Hafeezpet": {
+        "Mangalavani Kunta": "3700/E/15",
+        "Meedi Kunta": "3722",
+        "Kotha Kunta": "3715",
+        "Khaidhamma Kunta": "3729",
+        "Nayanammakunta (Baspalli Cheruvu)": "3759",
+        "Ravula Kunta": "3700/EN/01"
+      },
+      "Gopanpally": {
+        "Medla Kunta(Devuni Kunta)": "3728",
+        "Gosaikunta": "3727",
+        "Masjit E Jalal Cheruvu Lake": "3757",
+        "Chinna Pedda Cheruvu": "3702",
+        "Komati Kunta": "3747",
+        "ISB Lake": "3749"
+      },
+      "NANAKRAMGUDA": {
+        "Ranglal Kunta": "3725",
+        "Nanakram Kunta": "3712",
+        "Sandappa Kunta Lake": "3735",
+        "Chintal Kunta": "3713"
+      },
+      "MADINAGUDA": {
+        "Erla Cheruvu": "3731",
+        "Patel Cheruvu": "3709"
+      },
+      "Gachibowli": {
+        "Barla Kunta": "3720",
+        "Ramamma Kunta": "3726",
+        "Edgavani Kunta": "3733",
+        "Peacock (Central University) lake": "3701",
+        "Gundla Kunta": "3721",
+        "(Gunneru Kunt)University of Hyderabad pond": "3746",
+        "Chillukala Kunta lake": "0",
+        "TCS Energy Park Lake": "3750"
+      },
+      "Kothaguda": {
+        "Neerla Cheruvu": "3716"
+      },
+      "Raidurg": {
+        "Malka Cheruvu": "3707",
+        "Durgam Cheruvu": "3706"
+      },
+      "Khanapet": {
+        "Thammidi Kunta": "3717"
+      },
+      "Nalagandla": {
+        "Nalagandla Cheruvu": "3708"
+      },
+      "Miyapur": {
+        "Gurunath Cheruvu": "3711",
+        "Ramasamudram Kunta (Kalapuram Basti)": "3756"
+      },
+      "Nanakramguda": {
+        "Medi Kunta": "3723"
+      },
+      "Kondapur": {
+        "Ranganna Kunta": "3703",
+        "Kudi Kunta (Gauthami Lake)": "3742",
+        "Kondapur forest lake": "3744",
+        "Botanical Garden Lake": "3748",
+        "Pochamma Kunta": "3739"
+      },
+      "Lingampally": {
+        "Chakalavani Cheruvu": "3719",
+        "Gopi Cheruvu": "3714"
+      },
+      "khajaguda": {
+        "Pedda Cheruvu": "3730",
+        "Thavutoni Kunta": "3700/E/02"
+      },
+      "Khanamet": {
+        "Khanamet Cheruvu": "3732",
+        "MondiKunta": "3700/E/12"
+      },
+      "MADEENAGUDA": {
+        "Meedi Kunta (BK Enclave lake)": "3755"
+      },
+      "Maqta Mahboobpet": {
+        "Pedda Kudi Cheruvu": "3718"
+      },
+      "Gangaram": {
+        "Pedda Cheruvu": "3710"
+      },
+      "IZZATHNAGAR": {
+        "Novatel Lake": "3738",
+        "Rajmahamad Kunta-Maska Kunta": "3754"
+      }
+    },
+    "Gandipet": {
+      "MANCHIREVULA": {
+        "Nagireddy Kunta": "2900/EN/02",
+        "Itikini Cheruvu": "2934"
+      },
+      "Narsingi": {
+        "Muski Cheruvu": "2926",
+        "Brahman Kunta": "2900/EN/01"
+      },
+      "Gandipet": {
+        "Osmansagar Reservoir": "2907"
+      },
+      "VATTINAGULAPALLY": {
+        "Erra Kunta": "2938",
+        "Kotha Cheruvu (Goin Cheruvu)": "2922",
+        "Thoom Kunta": "2940",
+        "Mondi Kunta Lake": "2948"
+      },
+      "KISMATPUR": {
+        "Patti Kunta": "2944"
+      },
+      "PEERAMCHERUVU": {
+        "Bairagiguda Cheruvu": "2936"
+      },
+      "Kokapet": {
+        "Kotha Cheruvu": "2925"
+      },
+      "Poppalguda": {
+        "Bhagirathamma Cheruvu": "2924"
+      },
+      "Manikonda": {
+        "Maisamma Kunta": "2900/EN/03"
+      }
+    },
+    "Balapur": {
+      "Nadergul": {
+        "Lachamma Kunta": "3600/EN/04",
+        "Edigoni Kunta": "3617",
+        "Beera cheruvu": "3619",
+        "Marribai Kunta": "3622",
+        "Lingal Kunta": "3600/EN/01",
+        "Erravani Kunta": "3621",
+        "Sunnem Cheruvu": "3646",
+        "Kandal Kunta": "3620"
+      },
+      "Sultanpur": {
+        "ALLAHKONI CHERUVU": "3634"
+      },
+      "Mamidipally": {
+        "Ongoni Kunta": "3628",
+        "Akkamma Kunta": "3631",
+        "Erra Kunta": "3632",
+        "Sai Kunta": "3627"
+      },
+      "Jalpally": {
+        "Jalpally Tank": "3602",
+        "Jalla Kunta (Talla Kunta)": "3600/E/05",
+        "Jalpally Kunta": "3600/EN/03"
+      },
+      "Kurmal Guda": {
+        "Anthai Cheruvu": "3645",
+        "Kandhal Kunta": "3616"
+      },
+      "Almasguda": {
+        "Erra Kunta": "3625",
+        "Komti Kunta": "3607"
+      },
+      "Jillelguda": {
+        "Manchiryal Talab": "3600/EN/02"
+      },
+      "Balapur": {
+        "Pedda Cheruvu": "3608",
+        "Yerra Cheruvu": "3609"
+      },
+      "Mallapur": {
+        "Suddhavani Kunta": "3603"
+      }
+    },
+    "Manchal (Part)": {
+      "Manchalpally": {
+        "Madasukoni Cheruvu": "400/EN/17",
+        "Basa Cheruvu": "400/EN/16",
+        "Ausharam cheruvu": "400-N-18",
+        "Neralla Cheruvu": "400/EN/06",
+        "Mavilla Cheruvu": "400/EN/05"
+      },
+      "Lingampalle": {
+        "Sabithnagar cheruvu": "400-EN-19",
+        "Satarani Kunta": "400/EN/07"
+      },
+      "Agapalle": {
+        "SAKARI KUNTA": "400/EN/11",
+        "CHAMBHAM CHERUVU": "422",
+        "Saibadam Cheruvu": "400/EN/08"
+      },
+      "Manchal": {
+        "Bhoopal reddy Cheruvu(WS)/KhandemKunta": "400/EN/20",
+        "Polkam cheruvu": "428",
+        "Singaya Kunta": "400/EEN/01",
+        "Narai Kunta/ Naraya Kunta": "400/EEN/02"
+      }
+    },
+    "Saroor Nagar": {
+      "Sulthanpur": {
+        "Bhurankhan Cheruvu": "3600-E-03",
+        "Ekkoni Kunta": "3614",
+        "Pedda Cheruvu": "3605",
+        "Kothamoni Kunta": "3626",
+        "Chandana Cheruvu": "3612",
+        "Large Tank": "3613",
+        "Jopdi Kunta": "3635"
+      },
+      "ALMASGUDA": {
+        "Pochamma Kunta": "3606"
+      }
+    },
+    "Malkajgiri": {
+      "Malkajgiri": {
+        "BHAVANI NAGAR KUNTA": "4713"
+      }
+    },
+    "Ghatkesar": {
+      "Padamatisaiguda": {
+        "Padamatisaiguda": "2629"
+      }
+    },
+    "Quthbullapur": {
+      "GajulaRammaram": {
+        "Chintal Cheruvu": "2838"
+      }
+    },
+    "Rajendra Nagar": {
+      "Himayathsagar": {
+        "Peeram Cheruvu": "2933"
+      },
+      "Narsingi": {
+        "Nalla Cheruvu": "2929"
+      }
+    },
+    "Saroornagar": {
+      "Gurramguda": {
+        "Upparonikunta": "3615"
+      },
+      "Mansoorabad": {
+        "Chinna Cheruvu": "3604"
+      },
+      "Pathulguda": {
+        "Pathulguda Cheruvu": "3600/EN/05"
+      },
+      "Biramalguda": {
+        "Meddala Kunta": "3600"
+      },
+      "Badangpet": {
+        "Kolleni Kunta": "3610"
+      }
+    },
+    "Maheshwaram": {
+      "Dubbacherla": {
+        "Kallem Cheruvu": "2460"
+      },
+      "BaghMankhal": {
+        "Mankhal Cheruvu": "2417"
+      },
+      "Subhanpur": {
+        "Yerra Chetruvu": "2400/EN/02"
+      },
+      "Gollur": {
+        "Eddula kunta": "2400/EN/11"
+      },
+      "Thummaloor": {
+        "Thimmai Cheruvu": "2419"
+      },
+      "Mansanpally": {
+        "Venkata samudram": "2452"
+      },
+      "Ameerpet": {
+        "Kotha cheruvu": "2445",
+        "Talla kunta": "2400/EN/07"
+      },
+      "Mohabathnagar": {
+        "Allikhan Kunta": "2420"
+      },
+      "Kalwakole": {
+        "Pedda cheruvu": "2484"
+      }
+    },
+    "Manchal": {
+      "Nomul": {
+        "Khandem Kunta": "400/EN/03",
+        "polkamma Cheruvu": "400/EN/02"
+      },
+      "Agapally": {
+        "Ura Cheruvu": "400/EN/01"
+      },
+      "Aghapalli": {
+        "Alla Cheruvu": "417",
+        "Pethiry Kunta": "400/EN/12"
+      },
+      "Chittapur": {
+        "Kamuni Cheruvu": "405"
+      },
+      "Nalla Cheruvu": {
+        "Nalla Cheruvu": "407"
+      },
+      "Manchalpalli": {
+        "Koch Cheruvu": "400/EN/09"
+      },
+      "Noumul": {
+        "Ushamma Cheruvu": "400/EN/10",
+        "Ura & Reddy Cheruvu": "400/EN/04"
+      }
+    },
+    "Yacharam": {
+      "Gungal": {
+        "Kaidom kunta": "314",
+        "Pottula Bavi Kunta Shikam": "310"
+      },
+      "Thulekhurd": {
+        "Yerra Kunta": "319",
+        "Thumma Kunta": "322"
+      }
+    }
+  },
+  "Medak": {
+    "Shivampet": {
+      "Bijilipur": {
+        "Kotha Kunta": "900/N/00111",
+        "Chintamad Kunta": "900/EN/05",
+        "Veerappa Cheruvu": "900/N/00114",
+        "Thanam cheruvu": "900/16",
+        "Rangaiya Kunta": "900/EN/08",
+        "DUDEKULAVANI KUNTA": "900/N/00112",
+        "Nakkala kunta": "900-13",
+        "Sheru Kunta": "900-N-00113"
+      },
+      "Pothula Boguda": {
+        "Burugu kunta": "900/N/0036",
+        "Ura cheruvu": "900/N/0037",
+        "Kummari KUnta": "900-EN-14",
+        "Suklon Kunta": "914"
+      },
+      "Gangaipalle": {
+        "Ganga samudram": "987",
+        "Deshpande Kunta": "900/N/00126",
+        "Patel Kunta": "900/N/00125",
+        "Vudugula Cheruvu": "900/N/00124"
+      },
+      "Allipur": {
+        "Narsamma kunta": "936",
+        "Hamsani kunta Cadstral": "900-N-0038",
+        "Durgapochani Kunta": "900-N-0040",
+        "Yerra Kunta": "900/N/0042",
+        "Loddinaganna Kunta": "900/N/0041"
+      },
+      "Gomaram": {
+        "Braman Kunta": "900/N/00119",
+        "Thimpiri Kunta": "900/N/00122",
+        "Bandlavani Kunta": "900/N/00120",
+        "Ramamma kunta": "900/23",
+        "Chinna Veeranna Kunta": "900/N/00117",
+        "Pedda cheruvu": "900/28",
+        "Patel kunta": "900-26",
+        "Eera Reddy Kunta": "900/19"
+      },
+      "Rathnapur": {
+        "Yerka cheruvu": "900/N/0064",
+        "Sunar kunta": "958",
+        "Gollamallaiah Kunta": "959"
+      },
+      "Konthanpalle": {
+        "Somla Kunta": "900/N/00141",
+        "Chinthala Kunta": "900/N/00144",
+        "Mela Kunta": "900/N/00142",
+        "Devunu Cheruvu": "900-N-00138",
+        "Kummari Kunta": "900-N-00139",
+        "Geede vani Kunta": "900-N-00140",
+        "Pedda cheruvu": "900-N-00145",
+        "Yerra Kunta": "900/N/00143"
+      },
+      "Chennapur": {
+        "Kotha kunta": "900/56",
+        "Chennapur cheruvu": "900/N/0053",
+        "Abhilavani kunta": "900/58",
+        "Kistamma Kunta": "900-N-0054",
+        "Vethukula KuntaMothkula Kunta": "900-57"
+      },
+      "Chandi": {
+        "Yedula kunta": "900/N/0050",
+        "Shaban Cheruvu": "900-64",
+        "Lotha Cheruvu": "900-N-0048",
+        "Chinna Cheruvu": "900/N/0047"
+      },
+      "Pambanda": {
+        "Kotha cheruvu": "931",
+        "Veerareddy kunta": "930",
+        "Mettu Pochu Kunta": "900/N/0092",
+        "Gangasani kunta": "933",
+        "Mudavani Kunta": "900/N/0086",
+        "Patel cheruvu": "929",
+        "Palle Cheruvu": "932",
+        "Bapanaya Kunta": "900-EN-13",
+        "Golavani Kunta": "900-EN-12"
+      },
+      "Donthi": {
+        "Kummari kunta": "900/N/006",
+        "Chermakunta": "900/N/007",
+        "Pitri kunta": "900/N/008",
+        "Venkatreddy kunta": "900/N/009",
+        "Avsulavani kunta": "900/N/0014",
+        "Matrala kunta": "900/N/0015",
+        "Masani Kunta": "900/EN/09",
+        "Niruduvani kunta": "900-N-0010",
+        "Kotha Kunta": "900-N-0013",
+        "Lingasamudram Kunta": "900-N-005"
+      },
+      "Nawabpet": {
+        "Erra kunta": "900/N/0017",
+        "Sambaya cheruvu": "900/N/0019",
+        "Korla kunta": "900/N/0022",
+        "Peddapulcharla kunta": "900/31",
+        "Sangem kunta": "900/N/0023",
+        "Budda kunta": "900/N/0021",
+        "Ailapuram Kunta": "900/N/0016",
+        "Veeranna Kunta": "900/N/0020"
+      },
+      "Sikindlapur": {
+        "Devuni cheruvu": "900/4",
+        "Lothan cheruvu": "900/9",
+        "Thette Kunta": "900-N-00135",
+        "Masani Kunta": "900-5",
+        "Gowathojgudem Cheruvu": "900/N/00136"
+      },
+      "Pedda Gottimukkala": {
+        "Reddy kunta": "900/50",
+        "Mallogi Kunta": "900-N-0028",
+        "Kotha Kunta": "900-EN-04",
+        "Bobbili Cheruvu": "900-N-0029",
+        "Dhonthi Kunta": "900-N-0030",
+        "Govindgari Kunta": "900-N-0025",
+        "Devara Kunta": "900-N-0027",
+        "Kannam Cheruvu": "900-N-0024",
+        "Kummari Kunta": "900-42"
+      },
+      "Shabashpalle": {
+        "Chinnabapani kunta": "900/N/0033",
+        "Turukavani kunta": "900/N/0035",
+        "HAMSANI KUNTA": "900/N/0031",
+        "Mamidi Kunta": "978",
+        "Peddabapama Kunta": "900/N/0032"
+      },
+      "Kothapet": {
+        "Malkabadam kunta": "900/N/0069",
+        "Usain kunta": "900-N-0072",
+        "Palle Kunta": "900-N-0077",
+        "Komati Kunta": "900-N-0076",
+        "Bapathi Kunta": "900-N-0082",
+        "Pati Kunta": "900-N-0067",
+        "Molugu Kunta": "900-N-0073",
+        "Rayani Kunta": "900-N-0075",
+        "Pedda Cheruvu": "900-N-0071",
+        "Garlabandam Cheruvu": "900/N/0070",
+        "Kummari Kunta": "900/N/0068"
+      },
+      "Thimmapur": {
+        "Asanna kunta": "900/N/0059",
+        "Neredla Kunta": "900-78",
+        "Yasangi Kunta": "900-76"
+      },
+      "Maqdumpur": {
+        "Banjari kunta": "900/N/0043",
+        "Sirisani kunta": "900-N-0045",
+        "Oora cheruvu": "973",
+        "Rajanna Kunta cad": "900-N-0044"
+      },
+      "yedulapur": {
+        "Muthaya Cheruvu": "900/N/00101",
+        "Singaya Cheruvu": "900-N-00100"
+      },
+      "Gundlapalle": {
+        "Chennarayini Cheruvu": "900/N/0095",
+        "Pabbana kunta": "900-N-0093",
+        "Sarvalla Kunta": "918",
+        "Chinthala Kunta": "900/N/97",
+        "Chouta Kunta": "900/N/0099",
+        "Shivai Kunta": "916",
+        "Tette Kunta": "900/N/0098"
+      },
+      "Chinnagottimukkala": {
+        "Bhayana Cheruvu": "900/EN/03",
+        "Patel cheruvu": "900/80",
+        "Nagasamudhram": "900/81",
+        "Kotha Kunta": "900-N-0062"
+      },
+      "Usirikapalle": {
+        "Vura Cheruvu/ Ura Cheruvu": "900/N/0084",
+        "Kondaiahgari Kunta": "900-N-0085",
+        "Bhavanamma Kunta": "900/N/0083"
+      },
+      "Pillutla": {
+        "Elumana Kunta/ Singareddy Kunta": "900/N/00103",
+        "Palle Cheruvu": "900-94",
+        "Lingareddy Kunta": "900-EN-07",
+        "Pedda Cheruvu": "900-87"
+      },
+      "Ratnapoor": {
+        "Komat Cheruvu": "900-EN-06",
+        "Toorkolla Kunta": "961"
+      },
+      "Shivampet": {
+        "Brahamsamudram": "900-N-0105",
+        "Pedda Cheruvu": "900-N-00106",
+        "Somaraj Kunta": "900-N-00110",
+        "Nagaiah Cheruvu FTL converted": "900-73",
+        "Busaramaiah Kunta": "900-EN-15",
+        "Yerra Cheruvu": "900/N/00108",
+        "Lokaiya Kunta": "900/N/109"
+      }
+    },
+    "Tupran": {
+      "Ghanpur": {
+        "Damara Kunta": "784",
+        "Pothireddy Kunta": "786",
+        "Brrenkula Kunta": "700/N/009",
+        "Sunkaravani kunta": "700/N/0010",
+        "Ramireddy Kunta": "785",
+        "Gowthali Cheruvu": "783"
+      },
+      "Malkapur": {
+        "Danthala Kunta": "700/105",
+        "Thurka Cheruvu": "700/N/0038",
+        "Laksan Kunta": "700-102",
+        "Chinga Cheruvu": "700-EN-01",
+        "Komati Kunta": "700/103",
+        "Thette Kunta": "700/120"
+      },
+      "Ravelli": {
+        "Nall Kunta": "700/22",
+        "KindiKunta": "700/23",
+        "Thirmalaiah kunta": "700/20",
+        "Kanukunta": "700/EN/28",
+        "Shivareddy kunta": "700-18",
+        "Banjarla kunta": "700/N/0055",
+        "PATEL KUNTA": "700/17",
+        "Mannivevi kunta": "700-16",
+        "Oora Cheruvu": "700-19",
+        "Olkala Kunta": "700-21",
+        "Erranna Kunta": "700-EN-05",
+        "Ailla Kunta": "700-15"
+      },
+      "Venkatapur (Pattitupran)": {
+        "Boggula Kunta": "700/25",
+        "Bhooma Chervu": "700/27",
+        "THUMMALA KUNTA": "700/24",
+        "Jeedi Kunta": "700/26"
+      },
+      "Brahmanapalle": {
+        "Singam Kunta": "700/33",
+        "Oora Chervu": "700/31",
+        "Thani Kunta": "700-32"
+      },
+      "Tupran": {
+        "Madika Cheruvu (Mayadaka Chervu)": "700/50",
+        "Komati Kunta FTL": "700-56",
+        "Kummari & Avusalani Kunta": "700-N-0057",
+        "Tamidi Kunra": "700-EN-14",
+        "Kapparavani Kunta": "700-N-0056",
+        "Pedda Cheruvu": "700/49",
+        "Kotha Cheruvu": "700/55"
+      },
+      "Gundareddipalle": {
+        "Panthula Kunta": "700/85",
+        "Koyya gundla Kunta": "700/87",
+        "Gorrevani kunta": "700/EN/33",
+        "Pedda Chervu": "700/86",
+        "Thalla kunta": "700-84",
+        "New Erra Kunta": "700-EN-24"
+      },
+      "Yavapur": {
+        "Vadlavani Kunta": "700/93",
+        "Kaveti vani Kunta": "700/94",
+        "Gundla kunta": "700/96",
+        "Rella kunta": "700/EN/30",
+        "Kathar kunta": "700/EN/32",
+        "SURNAMMA KUNTA": "700/90",
+        "Kudi Kunta": "700-92",
+        "Kotha Kunta": "700-95",
+        "Aila Kunta": "700-EN-06",
+        "Bokkani Kunta": "700-N-0066",
+        "Dhanaiah Kunta": "700/EN/39",
+        "Voora Cheruvu": "700/91",
+        "Vavilla Kunta / Endharolla Kunta": "700/EN/31",
+        "Kanugula Kunta": "700/N/0063"
+      },
+      "Kistapur": {
+        "Kummari Kunta": "700/N/0020",
+        "Vadisela Kunta": "700/N/0023",
+        "Maktha Kunta": "700/N/0024",
+        "Marrikunta": "700/EN/26",
+        "Janigala kunta": "700-N-0021",
+        "Udugula Kunta": "700-N-0026",
+        "Mannevani Kunta": "700/EN/44",
+        "Narsimha Cheruvu": "700/EN/07",
+        "Pachajonna Kunta": "700/EN/37"
+      },
+      "Padalpalle": {
+        "Erra Kunta": "700/N/0046",
+        "Yellaiah kunta": "700/35",
+        "Jeedikunta": "700/EN/27",
+        "Kondaraju kunta": "700/34",
+        "Mogulla kunta": "700/37",
+        "Voora Cheruvu": "700-38",
+        "Kommuri kunta": "700-36"
+      },
+      "Venktaipalle": {
+        "Bodigela Kunta": "700/N/0061",
+        "Voora chervu": "700/97",
+        "Billa kunta": "700/99",
+        "Bhurgaiah Kunta": "700/N/0059",
+        "Thete Kunta / Kotha Kunta": "700/N/60",
+        "Kotha Kunta": "700/N/0060"
+      },
+      "Jhandapalle": {
+        "Yedal vani kunta": "700/40",
+        "Kotha Kunta": "700-N-0014",
+        "Seethaiah kunta": "700-N-0015",
+        "Dhasthagiri kunta": "700-N-0016"
+      },
+      "Datherpally": {
+        "Ramayya Kunta": "700/77",
+        "Jaggareddi Kunta": "700/79",
+        "Patel Kunta": "700/80",
+        "Dimmavani Kunta": "700/82",
+        "Yella reddi chervu": "700/81",
+        "Oora Cheruvu": "700-76"
+      },
+      "Jeedipalle": {
+        "Kothakunta": "748"
+      },
+      "Vattur": {
+        "Kalpa Kunta": "700/44",
+        "Devuni Cheruvu": "700/43"
+      },
+      "Ramaipalle": {
+        "Eeranna Chervu": "774"
+      },
+      "Islampur": {
+        "Pidi kunta": "700/75",
+        "Bannala Cheruvu": "700-71",
+        "Thehebhamdam Kunta": "700-70",
+        "Oora Cheruvu": "700-62",
+        "Erra Kunta": "700-N-0013",
+        "Kistamma Kunta": "700/69",
+        "Kotha Cheruvu": "700/63",
+        "Maisamma Kunta": "700/72",
+        "Mangaloni Kunta": "700/61",
+        "Abhigani Kunta": "700/EN/35",
+        "Mallappa Kunta": "700-67"
+      },
+      "Chatla Gouraram": {
+        "Jalavanikunta": "700/EN/10"
+      },
+      "Allapur": {
+        "Chouta kunta": "700/EN/23",
+        "Pedda chruvu": "794",
+        "SARVANI KUNTA": "700/N/001",
+        "Reddy Kunta": "700-EN-12",
+        "Thumma Cheruvu": "790",
+        "Pan Cheruvu": "795",
+        "Kordal Kunta": "792"
+      },
+      "Venkatapur Agraharam": {
+        "Yerra Chervu/Erra cheruvu": "782"
+      },
+      "Muppi Reddy Palle": {
+        "Kudikunta Shikam": "727",
+        "Masid Palli Cheruvu": "700-EN-04"
+      },
+      "Palat": {
+        "Yellamma kunta": "797"
+      },
+      "Kondapur": {
+        "Oora cheruvu": "733",
+        "Keshaboyana kunta": "732"
+      },
+      "Nagulapalle": {
+        "Nagireddy Kunta and Balireddy Kunta": "700-48",
+        "Venkatreddy /Elukolla Kunta": "700/N/0044",
+        "Laxmi Devi Kunta": "700/45",
+        "Nagula Cheruvu": "700/N/0045"
+      },
+      "Hussainpur": {
+        "Edamabandha Kunta": "700-EN-25"
+      },
+      "Narsampalli": {
+        "Mala Kunta (Bapanoni Kunta)": "802",
+        "Chandramma Kunta": "804",
+        "Shivaiah Kunta": "800/EN/04",
+        "Utta Kunta": "800/EN/02",
+        "Ragi Cheruvu": "803",
+        "Kotha Kunta/ Oora Cheruvu (2)": "800/EN/06",
+        "Korla Kunta": "800/EN/05"
+      },
+      "Konaipalle (Patti Tupran)": {
+        "Mysamma Cheruvu": "700-107",
+        "Kotha Cheruvu": "700-N-0027"
+      },
+      "Immapur": {
+        "Chintala Kunta": "700-EN-40",
+        "Kamuni Kunta": "700/N/0012",
+        "Oora Cheruvu": "776",
+        "Kotha Kunta": "700/EN/36"
+      },
+      "Lingareddipet": {
+        "Rajeshwari Kunta": "700-10"
+      },
+      "Manoharabad": {
+        "Thette Kunta": "700/EN/41"
+      },
+      "Konaipalle (Pattibegampet)": {
+        "Laxmi Devi Kunta": "700/N/0029",
+        "Injeru Kunta": "700/108"
+      },
+      "Reddipally": {
+        "Nagasoni Kunta": "1100/N/0013"
+      },
+      "Ahmednagar": {
+        "Bodanal Kunta": "1100/N/004"
+      },
+      "Lingapur": {
+        "Adivu Cheruvu": "1188"
+      },
+      "Rustumpet": {
+        "Kanakala Cheruvu": "1100/30"
+      }
+    },
+    "Manoharabad": {
+      "Kallakal": {
+        "Yellareddi Kunta": "712",
+        "Vadlavani Kunta": "718",
+        "Yeerakunta shikam": "719",
+        "Sai Kunta": "700/N/0018",
+        "Mamidi Kunta": "700/N/0019",
+        "Pothan kunta": "720",
+        "Garlakunta Shikam": "721",
+        "Oora Cheruvu": "717"
+      },
+      "Muppireddipally": {
+        "Ramraj Kunta Ramdas Kunta": "726",
+        "Poreddy Kunta": "700-N-0042",
+        "Rotaya Kunta": "700-EN-03",
+        "Palli Cheruvu Shikam": "724",
+        "Dandoni Kunta": "700-N-0043",
+        "Pedda Kunta Pinna Kunta": "725"
+      },
+      "Ranagaipally": {
+        "Vadlavani Kunta": "736",
+        "Voora Cheruvu": "737",
+        "Mangalavani Kunta": "700-EN-20",
+        "Pin Cheruvu": "700/EN/42"
+      },
+      "Manoharabad": {
+        "Thalari Kunta": "758",
+        "Jamsani Kunta": "762",
+        "Harbanshi Kunta": "763",
+        "Sai Kunta": "770",
+        "Maktha Kunta": "700-EN-13",
+        "Dayara Kunta": "700-EN-22",
+        "Raja Kunta": "700-N-0039",
+        "Yellamatalli Cheruvu": "700-EN-17",
+        "Yenkamma Thalli Kunta/Moddula  Cheruvu": "700/EN/18",
+        "Purugula Kunta": "765",
+        "Palatoni Kunta": "767",
+        "Thumu Kunta": "700/N/0040",
+        "Jaani/Daraga Kunta": "766",
+        "Gulan Kunta / (Dharmareddy Kunta)": "760"
+      },
+      "Lingareddipet": {
+        "Pochamma Kunta": "700/06",
+        "Mangicheruvu": "700/EN/08",
+        "Kothavani Kunta": "700-N-0036",
+        "Usurala kunta": "700-3",
+        "Pedda Cheruvu": "700-N-0035",
+        "Kaanu Kunta": "700/EN/43",
+        "Malla Kunta": "700/N/0034"
+      },
+      "Kucharam": {
+        "Thettekunta": "700/N/0032",
+        "Mathadi & Begaravani Kunta (Begarivani Kunta)": "700/N/0033",
+        "Thurkavani kunta": "707",
+        "Dosala Kunta": "700/N/0030",
+        "Mogulla Kunta": "703"
+      },
+      "Dharmarajpally": {
+        "Kashaboina Kunta": "700/N/008",
+        "Pedda Cheruvu": "700-N-007"
+      },
+      "Potharam": {
+        "Narsappa kunta": "900/N/002",
+        "Perumandla kunta": "900/N/001",
+        "Purvandla KuntaKomatla Kunta": "900-EN-11",
+        "Oora Cheruvu": "900-N-003"
+      },
+      "Parikibanda": {
+        "Gowthojgudem Cheruvu": "900/EN/10",
+        "Nagadevuni Kunta": "900/N/00129",
+        "Allayi Cheruvu": "900-N-00132",
+        "Kudi Cheruvu": "900-N-00127",
+        "Mutraj Kunta": "900-N-00131",
+        "Patel Cheruvu": "900/N/130",
+        "Kotha Kunta": "900/EN/01"
+      },
+      "Venkatapur (AG)": {
+        "Modula Kunta": "700/N/0062",
+        "Salapa kunta": "780",
+        "Ramamma Kunta": "700-EN-29",
+        "Chintala Kunta": "781",
+        "Chelmayi Kunta": "700/EN/38"
+      },
+      "Chetla gauraram": {
+        "Edugunalla Kunta": "700-EN-16",
+        "Kotha Kunta": "700-EN-21",
+        "Pedda Kunta": "700-N-005"
+      },
+      "Palata": {
+        "Thimanna Kunta": "700-N-0048",
+        "Chinthala Cheruvu": "700-N-0049",
+        "Nagishetty Kunta": "798",
+        "Bhoosanna Kunta": "700-N-0047"
+      },
+      "Jeedipally": {
+        "Kudi Kunta": "750",
+        "Jeedipally Cheruvu": "700-EN-09"
+      },
+      "Ramaiapally": {
+        "Pothuraju kunta": "700-EN-02",
+        "Pedda Cheruvu": "773"
+      },
+      "Konaipally": {
+        "Voora Cheruvu": "700/N/0028"
+      }
+    },
+    "Narsapur": {
+      "Ibrahimbad": {
+        "Mannevani Kunta": "1100/N/003",
+        "Peddacheruvu": "1106",
+        "Chintala Kunta": "1100",
+        "Bachanna Gari Kunta": "1100-N-002",
+        "Karnala kunta": "1105",
+        "Pochamma kunta": "1100-N-001",
+        "Yelgoni Kunta": "1103"
+      },
+      "Yellapur": {
+        "Mollakunta": "1100/52",
+        "Bommala Kunta": "1100/53"
+      },
+      "Brahmanpalle": {
+        "Kandlacheruvu": "1175",
+        "KOCHERUVU": "1170",
+        "NAMILE CHERUVU": "1173",
+        "Gollavani kunta": "1100-N-0032",
+        "Anthai cheruvu": "1176",
+        "Narsaiah kunta": "1177",
+        "Kotha cheruvu": "1172",
+        "Sangareddi kunta": "1174"
+      },
+      "Gollapalle": {
+        "Peddapalukunta": "1182",
+        "Komati Kunta": "1183",
+        "Nagal Cheruv": "1180",
+        "Chinnapalu Kunta": "1181"
+      },
+      "Hanmanthapur": {
+        "Chinthakunta": "1196",
+        "Pedda Cheruvu": "1195"
+      },
+      "Nagulpalle": {
+        "Bommalakunta": "1130",
+        "Nagula Cheruvu": "1132",
+        "Pochamma Kunta": "1100-N-0010",
+        "Thurkaavani Chinna Kunta": "1128",
+        "Yerra Kunta": "1129",
+        "Karnala Chinna Kunta": "1131"
+      },
+      "Admapur": {
+        "Tippasanikunta": "1118",
+        "Pedda Cheruvu": "1100-N-006",
+        "Komati Kunta": "1117",
+        "Papani Kunta": "1115"
+      },
+      "Jakkupalle": {
+        "Anammakunta": "1120",
+        "Gaddi Cheruvu": "1123",
+        "Oora Cheruvu": "1100-N-007",
+        "Joshi Kunta": "1100-N-008",
+        "Bandam Kunta": "1100-N-009",
+        "Narla Kunta": "1121"
+      },
+      "Manthoor": {
+        "Pochanpeddacheruvu": "1148",
+        "Mella kunta": "1100-N-0017"
+      },
+      "Kagazmaddur": {
+        "Yerrakunta": "1100/59",
+        "Pedda Cheruvu": "1100-56",
+        "Kotha Kunta": "1100-58",
+        "Joshi Kunta": "1100-N-0061"
+      },
+      "Chinna Chintakunta": {
+        "Karnalavani kunta": "1100/007",
+        "Kummari kunta": "1100-6",
+        "Peddamalakunta": "1100-10",
+        "Chinnammal kunta": "1100-11",
+        "Gaddamavani kunta": "1100-N-0042",
+        "Patel Kunta": "1100-N-0043",
+        "Amuda Cheruvu": "1100-N-0041"
+      },
+      "Pedda Chintakunta": {
+        "Ramuni Cheruvu": "1100/13",
+        "Devuni cheruvu": "1100-12",
+        "Mela Cheruvu": "1100-15",
+        "Udayagiri vani kunta": "1100-17",
+        "Karnala kunta": "1100-18",
+        "Kotha kunta": "1100-19",
+        "Dharamoji kunta": "1100-20",
+        "Pothi reddy Kunta": "1100-N-0044",
+        "Gajulamahadevuni kunta": "1100-14"
+      },
+      "Awancha": {
+        "Vayakunta": "1100/46",
+        "Lingareddy Kunta": "1100-47",
+        "Mallaya Cheruvu": "1100-N-0057",
+        "Pedda Cheruvu": "1100/43"
+      },
+      "Nathinoipalle": {
+        "Meedhi kunta": "1100/69",
+        "Kathwa kunta": "1100/N/0064",
+        "Konthancheruvu": "1100-67",
+        "Udugula kunta": "1100-71",
+        "Kindi kunta": "1100-68",
+        "Veeranna Cheruvu": "1100/64",
+        "Sayanna Kunta": "1100/N/0065"
+      },
+      "Narayanpur": {
+        "Kotha kunta": "1100/EN/01",
+        "DEVUNI CHERUVU": "1100/N/0039",
+        "DOSALI CHERUVU": "1100/2",
+        "Narsaiah Cheruvu": "1100/01"
+      },
+      "Chippalturthi": {
+        "Pattikunta": "1100/N/0011",
+        "Pedda Cheruvu": "1135",
+        "Yekkapathi Kunta": "1136",
+        "Thimma Kunta": "1137"
+      },
+      "Tujalpur": {
+        "Kasha kunta": "1100/N/0028",
+        "DAMIRA CHERUVU": "1168",
+        "Mantrikunta": "1166",
+        "Tunga kunta": "1100-N-0031",
+        "Kurma Kunta": "1167",
+        "Veeranna Kunta": "1100/N/0030",
+        "Chakari Kunta": "1165"
+      },
+      "Khazipet": {
+        "Tabella kunta": "1100-N-0021",
+        "Veraiah kunta": "1100-N-0022",
+        "Kotha Kunta": "1100-N-0023",
+        "Mothukula Kunta": "1100-N-0025",
+        "Raghava kunta": "1100-N-0019",
+        "Komati Kunta": "1100/N/0024",
+        "Anthireddy Kunta": "1100/N/0020"
+      },
+      "Ramachandrapur": {
+        "Pedda Cheruvu": "1100-42"
+      },
+      "Kondapur": {
+        "Oora cheruvu": "1100-62",
+        "Pithiri kunta": "1100/N/0063"
+      },
+      "Thirmalapur": {
+        "Chinnai kunta": "1100-N-0027",
+        "Damera Cheruvu": "1164"
+      },
+      "Lingapur": {
+        "Venkanna Gari kunta": "1100-N-0033",
+        "Pathi kunta": "1100-N-0034",
+        "Ramalingam Kunta": "1100-N-0036",
+        "Peerla Kunta": "1186",
+        "Ramancheruvu": "1189",
+        "Komman Cheruvu": "1187"
+      },
+      "Ahmednagar": {
+        "Nagoni kunta": "1107",
+        "Ramdaskunta": "1109",
+        "Pedda cheruvu": "1112",
+        "Vodula Kunta": "1108",
+        "Chinthala Kunta": "1100-N-005",
+        "Pottigari kunta": "1110",
+        "Ava Kunta": "1100-EN-02",
+        "Gampaladani Kunta": "1116"
+      },
+      "Achampet": {
+        "Darla Kunta": "1194",
+        "Pedda CheruvuMidi Cheruvu": "1193"
+      },
+      "Reddipalle": {
+        "Mangalvani kunta": "1100-N-0016",
+        "Oora kunta": "1144",
+        "Gollavani Kunta": "1139",
+        "Polkamma kunta": "1100-N-0015",
+        "Pedda Cheruvu": "1142"
+      },
+      "Malparthi": {
+        "Poli cheruvu": "1198",
+        "Oora Cheruvu": "1197"
+      },
+      "Moosapet": {
+        "Lingasamudrala Kunta": "1100-21",
+        "Vaddepally Kunta": "1100-N-0048",
+        "Settia Kunta": "1100/N/0046",
+        "Arka Kunta": "1100/N/0047",
+        "Ayamma Cheruvu": "1100/N/0045"
+      },
+      "Narsapur": {
+        "Eedula Kunta": "1100-N-0052",
+        "Allamvani kunta": "1100-N-0054",
+        "Kojjavani Kunta": "1100/N/0051"
+      },
+      "Tuljarampet": {
+        "Advi Cheruvu": "1100-N-0058"
+      },
+      "Rustumpet": {
+        "Bollaram Kunta": "1100-28",
+        "Kummari Kunta": "1100/26",
+        "Butti Kunta": "1100/31"
+      },
+      "Mohammadabad": {
+        "Pedda Cheruvu": "1100/N/0012"
+      },
+      "Madapur": {
+        "Pedda Cheruvu": "1100/50"
+      }
+    },
+    "Wargal": {
+      "Narsampalle": {
+        "Jogya Kunta": "800"
+      }
+    }
+  },
+  "Hyderabad": {
+    "Tirumalagiri": {
+      "Boinpally": {
+        "Ramanna cheruvu": "4200"
+      },
+      "TIRUMALAGIRI": {
+        "Tirumalagiri Tank": "4201"
+      }
+    },
+    "Saidabad": {
+      "I.S,SADAN": {
+        "Dhobi Ghat / Erra Kunta": "5000"
+      }
+    },
+    "Bandlaguda": {
+      "Bandlaguda(kalsa)": {
+        "Salkam Cheruvu": "4001/1",
+        "Suram Cheruvu": "4001"
+      },
+      "kandikal(Barkas)": {
+        "Gurram Cheruvu": "4000"
+      }
+    },
+    "Khairatabad": {
+      "Yousufguda": {
+        "Sunnam Kunta": "3900/EN/02"
+      }
+    },
+    "Amberpet": {
+      "Bagh Amberpet": {
+        "Bhatukamma kunta": "5100/EEN/01"
+      }
+    },
+    "Bahadurpura": {
+      "Bahadurpura": {
+        "Mir Alam Tank": "4400"
+      }
+    },
+    "Golkonda": {
+      "Golkonda": {
+        "Langer House Tank": "4600",
+        "Naya Qilla": "4602",
+        "Devuni Kunta": "4300/EEN/01",
+        "Katora House": "4601"
+      }
+    },
+    "Shaikpet": {
+      "Hakeempet": {
+        "Lotus pond": "3907",
+        "Hakeempet Kunta": "3903",
+        "Vatti Kunta": "3908",
+        "Kotha Kunta": "3900/EN/01",
+        "Shikari Kunta": "3900/EEN/03"
+      },
+      "Shaikpet": {
+        "Yerra Kunta": "3902",
+        "Jamal Kunta": "3904",
+        "Kotha Cheruvu": "3905",
+        "Bathur Kunta": "3901",
+        "Anantagiri Kunta": "3900",
+        "Banjara Kunta(Singadi Kunta)": "3900/EEN/01",
+        "Shahatam Cheruvu": "3906"
+      },
+      "Jubilee Hills": {
+        "Chiran Kunta lake": "3910"
+      }
+    },
+    "Marredpally": {
+      "Lalaguda": {
+        "ERRA KUNTA": "4500"
+      }
+    }
+  }
+}

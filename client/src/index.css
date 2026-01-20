@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@import "maplibre-gl/dist/maplibre-gl.css";
+@import "maplibre-gl-draw/dist/mapbox-gl-draw.css";
+
+/* Hide Google Translate top banner */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Prevent page jump caused by the banner */
+body {
+    top: 0 !important;
+}
+
+/* Optional: hide the small Google Translate icon that appears on the bottom */
+.goog-logo-link,
+.goog-te-gadget {
+    display: none !important;
+}
+
+.VIpgJd-ZVi9od-ORHb-OEVmcd{
+    display: none !important;
+}
