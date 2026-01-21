@@ -6,8 +6,6 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { motion } from "framer-motion";
 import "maplibre-gl-draw/dist/mapbox-gl-draw.css";
 import { useNavigate } from "react-router-dom";
-import JSZip from "jszip";
-import { kml as kmlToGeoJSON } from "@tmcw/togeojson";
 import { MapPinIcon, ArrowLeftIcon  } from "@heroicons/react/24/outline";
 
 export default function TippanViewer() {
@@ -38,58 +36,27 @@ export default function TippanViewer() {
   const LOCATIONIQ_KEY = "pk.edd1d1cc8b297c95f63273f032beaa41";
   const MAPTILER_KEY = "sxcW0yqySXYuMWtjZglU";
 
-  const normalizeGeoJSON = (gj) => {
-    if (!gj) return null;
-    if (gj.type !== "FeatureCollection")
-      gj = { type: "FeatureCollection", features: gj.features || [] };
 
-    gj.features = gj.features
-      .filter((f) => f && f.geometry && f.geometry.type)
-      .map((f) => {
-        const g = f.geometry;
-        const parseP = (p) => [parseFloat(p[0]), parseFloat(p[1])];
-
-        if (g.type === "Point") f.geometry.coordinates = parseP(g.coordinates);
-        else if (g.type === "LineString")
-          f.geometry.coordinates = g.coordinates.map(parseP);
-        else if (g.type === "Polygon")
-          f.geometry.coordinates = g.coordinates.map((r) => r.map(parseP));
-        else if (g.type === "MultiPolygon")
-          f.geometry.coordinates = g.coordinates.map((p) =>
-            p.map((r) => r.map(parseP))
-          );
-        return f;
-      });
-
-    return gj;
-  };
 
   // ---------- KMZ load ----------
-  useEffect(() => {
-    const loadKMZ = async () => {
-      try {
-        const res = await fetch(import.meta.env.VITE_BACKEND_URL + "important/file.kmz");
-        if (!res.ok) throw new Error("KMZ fetch failed");
-        const arr = await res.arrayBuffer();
-        const zip = await JSZip.loadAsync(arr);
-        const kmlName = Object.keys(zip.files).find((n) =>
-          n.toLowerCase().endsWith(".kml")
-        );
-        if (!kmlName) throw new Error("No KML in KMZ");
 
-        const kmlText = await zip.files[kmlName].async("string");
-        const xml = new DOMParser().parseFromString(kmlText, "text/xml");
-        let geo = kmlToGeoJSON(xml);
-
-        geo = normalizeGeoJSON(geo);
-        setGeoJson(geo);
-      } catch (err) {
-        console.error("KMZ load error:", err);
-      }
-    };
-    loadKMZ();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+// ---------- OPTIMIZED GEOJSON load ----------
+useEffect(() => {
+  const loadGeoJSON = async () => {
+    try {
+      const res = await fetch(
+        import.meta.env.VITE_BACKEND_URL + "important/optimized.geojson",
+        { cache: "no-store" }
+      );
+      if (!res.ok) throw new Error("GeoJSON fetch failed");
+      const geo = await res.json();
+      setGeoJson(geo);
+    } catch (err) {
+      console.error("GeoJSON load error:", err);
+    }
+  };
+  loadGeoJSON();
+}, []);
 
   // ---------- map + draw init ----------
   useEffect(() => {
@@ -174,13 +141,13 @@ useEffect(() => {
     };
 
     if (nonPoint.features.length > 0) {
-      map.addSource("kmzSource", { type: "geojson", data: nonPoint });
+      map.addSource("kmzSource", { type: "geojson", data: nonPoint,generateId: true });
 
       map.addLayer({
         id: "kmz-fill",
         type: "fill",
         source: "kmzSource",
-        paint: { "fill-color": "#ffffff", "fill-opacity": 0.18 },
+        paint: { "fill-color": "#ffffff", "fill-opacity": 0.12 },
       });
 
       map.addLayer({

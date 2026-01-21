@@ -10,15 +10,20 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
+    "@tmcw/togeojson": "^7.1.2",
+    "@turf/turf": "^7.3.2",
+    "adm-zip": "^0.5.16",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "fs": "^0.0.1-security",
+    "fs-extra": "^11.3.3",
     "mongoose": "^8.19.3",
     "morgan": "^1.10.1",
     "multer": "^2.0.2",
     "razorpay": "^2.9.6",
-    "socket.io": "^4.8.3"
+    "socket.io": "^4.8.3",
+    "xmldom": "^0.6.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
