@@ -67,7 +67,7 @@ router.post("/create", upload.array("files", 10), async (req, res) => {
     }
 
     const uploadedFiles = (req.files || []).map((file) => ({
-      url: `/uploads/${file.filename}`,
+      url: `uploads/${file.filename}`,
       originalName: file.originalname,
       size: file.size,
     }));

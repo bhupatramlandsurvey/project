@@ -154,7 +154,7 @@ router.put("/orders/:id", upload.array("processedFiles", 10), async (req, res) =
     // ✅ Build processed file list
     const processedFiles =
       req.files?.map((file) => ({
-        url: `/uploads/processed/${file.filename}`,
+        url: `uploads/processed/${file.filename}`,
         name: file.originalname,
         size: file.size,
       })) || [];
