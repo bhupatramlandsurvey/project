@@ -381,7 +381,7 @@ export default function AdminOrders() {
                     {files.map((file, i) => (
                       <a
                         key={i}
-                        href={`${backend}${file.url}`}
+                        href={`${backend}/${file.url}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-3 py-2 bg-purple-100 border border-purple-300 rounded-lg text-purple-700 hover:bg-purple-200 transition text-sm flex items-center gap-2"
