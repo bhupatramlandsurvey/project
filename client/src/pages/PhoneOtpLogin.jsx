@@ -13,6 +13,7 @@ function PhoneOtpLogin() {
   const [timer, setTimer] = useState(180);
   const [resendDisabled, setResendDisabled] = useState(true);
   const navigate = useNavigate();
+const [loading, setLoading] = useState(false);
 
   // Check if user already logged in
   useEffect(() => {
@@ -39,35 +40,46 @@ function PhoneOtpLogin() {
   }, [timer, step]);
 
   // 🔹 Handle Send OTP (API call)
-  const handleSendOtp = async (e) => {
-    e.preventDefault();
-    setError("");
-    setSuccess("");
+const handleSendOtp = async (e) => {
+  e.preventDefault();
+  setError("");
+  setSuccess("");
 
-    if (!fullName.trim()) return setError("Please enter your full name.");
-    if (!/^\d{10}$/.test(mobile)) return setError("Enter valid 10-digit mobile number.");
+  if (!fullName.trim()) return setError("Please enter your full name.");
+  if (!/^\d{10}$/.test(mobile))
+    return setError("Enter valid 10-digit mobile number.");
 
-    try {
-      const res = await fetch(import.meta.env.VITE_BACKEND_URL + "api/auth/send-otp", {
+  try {
+    setLoading(true); // 🔹 start loading
+
+    // 🔹 2 seconds artificial delay
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    const res = await fetch(
+      import.meta.env.VITE_BACKEND_URL + "api/auth/send-otp",
+      {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullName, mobile }),
-      });
-
-      const data = await res.json();
-
-      if (data.success) {
-        setStep("otp");
-        setTimer(180);
-        setResendDisabled(true);
-        setSuccess(data.message);
-      } else {
-        setError(data.message);
       }
-    } catch (err) {
-      setError("Server error. Please try again.");
+    );
+
+    const data = await res.json();
+
+    if (data.success) {
+      setStep("otp");
+      setTimer(180);
+      setResendDisabled(true);
+      setSuccess(data.message);
+    } else {
+      setError(data.message);
     }
-  };
+  } catch (err) {
+    setError("Server error. Please try again.");
+  } finally {
+    setLoading(false); // 🔹 stop loading
+  }
+};
 
   // 🔹 Handle Verify OTP (API call)
   const handleVerifyOtp = async (e) => {
@@ -171,12 +183,22 @@ function PhoneOtpLogin() {
           {error && <p className="text-red-500 text-xs mb-2">{error}</p>}
           {success && <p className="text-green-500 text-xs mb-2">{success}</p>}
 
-          <button
-            type="submit"
-            className="w-full bg-gradient-to-r from-orange-400 to-orange-500 text-white py-3 rounded-xl font-semibold shadow-lg hover:from-orange-500 hover:to-orange-600 transition-all duration-300"
-          >
-            Get OTP
-          </button>
+        <button
+  type="submit"
+  disabled={loading}
+  className="w-full bg-gradient-to-r from-orange-400 to-orange-500 text-white py-3 rounded-xl font-semibold shadow-lg hover:from-orange-500 hover:to-orange-600 transition-all duration-300 disabled:opacity-70"
+>
+{loading ? (
+  <span className="flex items-center justify-center gap-2">
+    <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+    Sending OTP...
+  </span>
+) : (
+  "Get OTP"
+)}
+
+</button>
+
         </form>
       )}
 
