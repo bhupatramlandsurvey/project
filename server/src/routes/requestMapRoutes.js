@@ -44,6 +44,8 @@ const upload = multer({ storage });
    CREATE REQUEST MAP ORDER (NO SMS HERE)
    ================================================= */
 router.post("/create", upload.array("files", 10), async (req, res) => {
+  console.log("FILES RECEIVED:", req.files);
+
   try {
     const {
       user,
