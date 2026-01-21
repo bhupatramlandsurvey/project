@@ -14,7 +14,7 @@ function ensureDir(dirPath) {
 }
 
 // Storage config that ensures temp dir exists before multer writes
-const tempDir = path.join(__dirname, "../../uploads/temp");
+const tempDir = path.join(__dirname, "../uploads/temp");
 
 ensureDir(tempDir);
 
@@ -54,7 +54,8 @@ router.post("/upload-kmz", upload.single("kmz"), (req, res) => {
 
     const uploadedTempPath = req.file.path; // full temp path
 // Save outside src folder: server/uploads/important/file.kmz
-const importantDir = path.join(__dirname, "../../uploads/important");
+const importantDir = path.join(__dirname, "../uploads/important");
+
 const targetPath = path.join(importantDir, "file.kmz");
 
 
@@ -115,7 +116,8 @@ const targetPath = path.join(importantDir, "file.kmz");
 router.get("/kmz-info", (req, res) => {
   try {
     // same path used by upload handler (two levels up -> uploads/important)
-    const targetPath = path.join(__dirname, "../../uploads/important/file.kmz");
+    const targetPath = path.join(__dirname, "../uploads/important/file.kmz");
+
 
     // prevent caching so clients always get fresh timestamp
     res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
