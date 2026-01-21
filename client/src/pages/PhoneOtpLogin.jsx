@@ -144,7 +144,7 @@ const handleSendOtp = async (e) => {
             Verify your phone number
           </h2>
           <p className="text-sm text-gray-500 text-center mb-4">
-            Enter your details to get a{" "}
+            Enter your details to get {" "}
             <span className="font-semibold text-orange-500">
               One Time Password
             </span>
