@@ -26,7 +26,8 @@ const razorpay = new Razorpay({
 });
 
 /* ---------------- MULTER ---------------- */
-const uploadDir = path.join(__dirname, "../../uploads");
+const uploadDir = path.join(__dirname, "../uploads");
+
 if (!fs.existsSync(uploadDir)) fs.mkdirSync(uploadDir, { recursive: true });
 
 const storage = multer.diskStorage({
