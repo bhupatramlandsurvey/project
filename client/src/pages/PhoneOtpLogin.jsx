@@ -66,14 +66,28 @@ const handleSendOtp = async (e) => {
 
     const data = await res.json();
 
-    if (data.success) {
-      setStep("otp");
-      setTimer(180);
-      setResendDisabled(true);
-      setSuccess(data.message);
-    } else {
-      setError(data.message);
-    }
+   // 🔹 DEMO USER → DIRECT LOGIN (EXIT IMMEDIATELY)
+if (data.demo && data.user) {
+  localStorage.setItem(
+    "loggedInUser",
+    JSON.stringify(data.user)
+  );
+  window.location.href = `${window.location.origin}/dashboard/home`;
+  return;
+}
+
+// 🔹 NORMAL USER → OTP FLOW
+if (data.success) {
+  setStep("otp");
+  setTimer(180);
+  setResendDisabled(true);
+  setSuccess(data.message);
+} else {
+  setError(data.message);
+}
+
+
+
   } catch (err) {
     setError("Server error. Please try again.");
   } finally {
