@@ -158,7 +158,7 @@ if (data.success) {
             Verify your phone number
           </h2>
           <p className="text-sm text-gray-500 text-center mb-4">
-            Enter your details to get {" "}
+            Enter your details to get a{" "}
             <span className="font-semibold text-orange-500">
               One Time Password
             </span>
