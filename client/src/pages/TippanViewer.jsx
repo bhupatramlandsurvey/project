@@ -12,6 +12,11 @@ export default function TippanViewer() {
   const mapContainer = useRef(null);
   const mapRef = useRef(null);
   const drawRef = useRef(null);
+  const userMarkerRef = useRef(null);
+const watchIdRef = useRef(null);
+const [showRecenter, setShowRecenter] = useState(false);
+const lastUserLocation = useRef(null);
+
 
   const navigate = useNavigate();
 
@@ -73,6 +78,9 @@ useEffect(() => {
       displayControlsDefault: false,
       controls: { line_string: true, polygon: true, trash: true },
     });
+    mapRef.current.on("dragstart", () => setShowRecenter(true));
+    mapRef.current.on("zoomstart", () => setShowRecenter(true));
+
     mapRef.current.addControl(drawRef.current);
 
     // Show Get Measurement button when user creates/updates shapes (any vertex)
@@ -91,6 +99,8 @@ useEffect(() => {
       clearSegmentMarkers();
       clearAreaLabel();
     });
+
+
 
     // While drawing, show live labels: listen mousemove on map
     const mouseMoveHandler = (e) => {
@@ -118,6 +128,93 @@ useEffect(() => {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+useEffect(() => {
+  if (!mapRef.current) return;
+
+  if (!navigator.geolocation) return alert("Geolocation not supported");
+
+  let accuracyCircle = null;
+
+  watchIdRef.current = navigator.geolocation.watchPosition(
+    (pos) => {
+      const { latitude, longitude, accuracy } = pos.coords;
+
+      const lngLat = [longitude, latitude];
+      lastUserLocation.current = lngLat;
+
+      // ===== BLUE DOT ELEMENT =====
+      if (!userMarkerRef.current) {
+        const el = document.createElement("div");
+        el.className = "gm-blue-dot";
+
+        userMarkerRef.current = new maplibregl.Marker({
+          element: el,
+          anchor: "center",
+        })
+          .setLngLat(lngLat)
+          .addTo(mapRef.current);
+
+        mapRef.current.flyTo({
+          center: lngLat,
+          zoom: 16,
+        });
+      } else {
+        userMarkerRef.current.setLngLat(lngLat);
+      }
+
+      // ===== ACCURACY CIRCLE =====
+      // Google-style capped + smoothed accuracy
+const radius = Math.min(Math.max(accuracy * 0.4, 12), 60); // meters
+
+const circleGeo = turf.circle(lngLat, radius / 1000, {
+  steps: 64,
+  units: "kilometers",
+});
+
+if (mapRef.current.getSource("accuracy")) {
+  mapRef.current.getSource("accuracy").setData(circleGeo);
+} else {
+  mapRef.current.addSource("accuracy", {
+    type: "geojson",
+    data: circleGeo,
+  });
+
+  mapRef.current.addLayer({
+    id: "accuracy-fill",
+    type: "fill",
+    source: "accuracy",
+    paint: {
+      "fill-color": "#2563eb",
+      "fill-opacity": 0.15,
+    },
+  });
+
+  mapRef.current.addLayer({
+    id: "accuracy-outline",
+    type: "line",
+    source: "accuracy",
+    paint: {
+      "line-color": "#2563eb",
+      "line-width": 2,
+    },
+  });
+}
+
+    },
+    () => alert("Unable to fetch location"),
+    {
+      enableHighAccuracy: true,
+      maximumAge: 0,
+      timeout: 10000,
+    }
+  );
+
+  return () => {
+    if (watchIdRef.current)
+      navigator.geolocation.clearWatch(watchIdRef.current);
+  };
+}, []);
+
 
   // ---------- Add KMZ layers + markers ----------
 useEffect(() => {
@@ -458,17 +555,6 @@ useEffect(() => {
   };
 
   // ---------- My location ----------
-  const showMyLocation = () => {
-    if (!navigator.geolocation) return alert("Geolocation not supported");
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        const { latitude, longitude } = pos.coords;
-        mapRef.current.flyTo({ center: [longitude, latitude], zoom: 15, duration: 800 });
-        new maplibregl.Marker({ color: "red" }).setLngLat([longitude, latitude]).addTo(mapRef.current);
-      },
-      () => alert("Unable to fetch location")
-    );
-  };
 
   return (
     <div className="p-4">
@@ -542,6 +628,22 @@ useEffect(() => {
 
       {/* map */}
       <div className="relative w-full h-[650px]">
+                {showRecenter && (
+  <button
+    onClick={() => {
+      if (!lastUserLocation.current) return;
+      mapRef.current.flyTo({
+        center: lastUserLocation.current,
+        zoom: 16,
+        duration: 800,
+      });
+      setShowRecenter(false);
+    }}
+    className="absolute bottom-4 right-4 z-50 bg-white p-3 rounded-full shadow-lg"
+  >
+    📍
+  </button>
+)}
         {/* Bottom-center Get Measurement button */}
         {showMeasureBtn && (
           <button
@@ -554,11 +656,6 @@ useEffect(() => {
           </button>
         )}
 
-        {/* My Location (HeroIcon) */}
-        <button onClick={showMyLocation} className="absolute bottom-4 right-4 z-50 bg-white p-3 rounded-full shadow-lg">
-          <MapPinIcon className="h-6 w-6 text-blue-600" />
-        </button>
-
         {/* measurement panel */}
         {measurement && (
           <div className="absolute bottom-4 left-4 z-50 bg-white p-3 rounded shadow">
@@ -570,6 +667,8 @@ useEffect(() => {
         )}
 
         <div ref={mapContainer} className="w-full h-full rounded-xl overflow-hidden shadow" />
+
+
       </div>
     </div>
   );
