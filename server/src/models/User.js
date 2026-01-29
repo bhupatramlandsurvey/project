@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema(
       default: "user",
     },
 
-    // 🔐 OTP fields (added)
+    // 🔐 OTP fields 
     otp: { type: String },
     otpExpiresAt: { type: Date },
   },
