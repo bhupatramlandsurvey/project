@@ -16,6 +16,47 @@ export default function TippanViewer() {
 const watchIdRef = useRef(null);
 const [showRecenter, setShowRecenter] = useState(false);
 const lastUserLocation = useRef(null);
+const CLOSE_DISTANCE_METERS = 8;
+const STORAGE_KEY = "tippan_drawn_features";
+const selectedFeatureIdRef = useRef(null);
+
+const saveDrawings = () => {
+  if (!drawRef.current) return;
+  const data = drawRef.current.getAll();
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+};
+
+const loadDrawings = () => {
+  if (!drawRef.current) return;
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) return;
+
+  try {
+    const geo = JSON.parse(raw);
+    if (geo?.features?.length) {
+      drawRef.current.set(geo);
+
+      // re-lock loaded features
+      geo.features.forEach((f) => {
+        drawRef.current.setFeatureProperty(f.id, "locked", true);
+      });
+if (geo.features.length) {
+  const f = geo.features[0];
+  selectedFeatureIdRef.current = f.id;
+  updateSegmentAndAreaLabels(f);
+}
+
+      setShowMeasureBtn(true);
+      updateSegmentAndAreaLabels();
+      updateMeasurementPanel();
+    }
+  } catch (e) {
+    console.warn("Failed to load drawings", e);
+  }
+};
+
+const metersBetween = (a, b) =>
+  turf.distance(turf.point(a), turf.point(b), { units: "kilometers" }) * 1000;
 
 
   const navigate = useNavigate();
@@ -74,31 +115,152 @@ useEffect(() => {
 
     mapRef.current.addControl(new maplibregl.NavigationControl(), "top-left");
 
-    drawRef.current = new MapboxDraw({
-      displayControlsDefault: false,
-      controls: { line_string: true, polygon: true, trash: true },
-    });
+drawRef.current = new MapboxDraw({
+  displayControlsDefault: false,
+  controls: {
+    polygon: true,
+    line_string: true,
+    trash: true,
+  },
+  userProperties: true,
+ styles: [
+  // polygon fill
+  {
+    id: "gl-draw-polygon-fill",
+    type: "fill",
+    filter: ["all", ["==", "$type", "Polygon"]],
+    paint: {
+      "fill-color": "#F54927",
+      "fill-opacity": 0.2
+    }
+  },
+
+  // polygon outline
+  {
+    id: "gl-draw-polygon-stroke",
+    type: "line",
+    filter: ["all", ["==", "$type", "Polygon"]],
+    paint: {
+      "line-color": "#2563eb",
+      "line-width": 2
+    }
+  },
+
+  // line string
+  {
+    id: "gl-draw-line",
+    type: "line",
+    filter: ["all", ["==", "$type", "LineString"]],
+    paint: {
+      "line-color": "#2563eb",
+      "line-width": 2
+    }
+  },
+
+  // hide vertex handles
+  {
+    id: "gl-draw-vertex",
+    type: "circle",
+    filter: ["all", ["==", "meta", "vertex"]],
+    paint: {
+      "circle-radius": 0
+    }
+  }
+]
+
+});
+mapRef.current.on("click", (e) => {
+  const features = mapRef.current.queryRenderedFeatures(e.point);
+
+  for (const ft of features) {
+    const id = ft.properties?.id;
+    if (!id) continue;
+
+    const f = drawRef.current.get(id);
+    if (!f) continue;
+
+    selectedFeatureIdRef.current = id;
+    updateSegmentAndAreaLabels(f);
+    return;
+  }
+
+  // click empty → clear labels
+  clearSegmentMarkers();
+  clearAreaLabel();
+  setMeasurement(null);
+});
+
     mapRef.current.on("dragstart", () => setShowRecenter(true));
     mapRef.current.on("zoomstart", () => setShowRecenter(true));
 
     mapRef.current.addControl(drawRef.current);
+    mapRef.current.once("load", () => {
+  loadDrawings();
+});
+
+    // prevent moving locked polygons
+mapRef.current.on("mousemove", (e) => {
+  const draw = drawRef.current;
+  if (!draw) return;
+
+  const selected = draw.getSelectedIds();
+  if (!selected.length) return;
+
+  const f = draw.get(selected[0]);
+  if (f?.properties?.locked) {
+    draw.changeMode("simple_select", { featureIds: [] });
+  }
+});
+
+mapRef.current.on("mousedown", (e) => {
+  const draw = drawRef.current;
+  if (!draw) return;
+
+  const features = mapRef.current.queryRenderedFeatures(e.point);
+
+  if (!features.length) return;
+
+  for (const f of features) {
+    const id = f.properties?.id;
+    if (!id) continue;
+
+    const df = draw.get(id);
+    if (df?.properties?.locked) {
+      e.preventDefault();
+      draw.changeMode("simple_select", { featureIds: [] });
+      return;
+    }
+  }
+});
+
 
     // Show Get Measurement button when user creates/updates shapes (any vertex)
-    mapRef.current.on("draw.create", () => {
-      setShowMeasureBtn(true);
-      // update labels for the newly created feature
-      updateSegmentAndAreaLabels();
-    });
-    mapRef.current.on("draw.update", () => {
-      setShowMeasureBtn(true);
-      updateSegmentAndAreaLabels();
-    });
-    mapRef.current.on("draw.delete", () => {
-      setShowMeasureBtn(false);
-      setMeasurement(null);
-      clearSegmentMarkers();
-      clearAreaLabel();
-    });
+mapRef.current.on("draw.create", (e) => {
+  const f = e.features[0];
+
+  drawRef.current.setFeatureProperty(f.id, "locked", true);
+
+  selectedFeatureIdRef.current = f.id;
+
+  updateSegmentAndAreaLabels(f);
+  saveDrawings();
+});
+
+
+mapRef.current.on("draw.update", () => {
+  setShowMeasureBtn(true);
+  updateSegmentAndAreaLabels();
+  saveDrawings();
+});
+
+mapRef.current.on("draw.delete", () => {
+  setShowMeasureBtn(false);
+  setMeasurement(null);
+  clearSegmentMarkers();
+  clearAreaLabel();
+
+  saveDrawings();
+});
 
 
 
@@ -119,6 +281,40 @@ useEffect(() => {
     };
 
     mapRef.current.on("mousemove", mouseMoveHandler);
+mapRef.current.on("click", (e) => {
+  const draw = drawRef.current;
+  if (!draw) return;
+
+  if (draw.getMode() !== "draw_polygon") return;
+
+  const data = draw.getAll();
+  if (!data.features.length) return;
+
+  const f = data.features[data.features.length - 1];
+  if (!f || !f.geometry) return;
+
+  const ring = f.geometry.coordinates[0];
+  if (ring.length < 3) return;
+
+  const first = ring[0];
+  const clicked = [e.lngLat.lng, e.lngLat.lat];
+
+  const dist = metersBetween(first, clicked);
+
+  // 👇 tap first point → finish polygon
+  if (dist < CLOSE_DISTANCE_METERS) {
+    ring[ring.length - 1] = first;
+
+    draw.setFeatureCoordinates(f.id, [ring]);
+
+    // IMPORTANT: finish draw first
+    draw.changeMode("simple_select", { featureIds: [f.id] });
+
+
+    updateSegmentAndAreaLabels();
+    updateMeasurementPanel();
+  }
+});
 
     return () => {
       if (mapRef.current) {
@@ -332,70 +528,103 @@ useEffect(() => {
   };
 
   // create a white box label element (STYLE A)
-  const createLabelEl = (text) => {
-    const el = document.createElement("div");
-    el.style.cssText = `
-      background: rgba(255,255,255,0.95);
-      padding: 4px 6px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
-      white-space: nowrap;
-      transform: translate(-50%, -50%);
-    `;
-    el.innerText = text;
-    return el;
-  };
+const createLabelEl = (text, onDelete) => {
+  const el = document.createElement("div");
+  el.style.cssText = `
+    background: rgba(255,255,255,0.95);
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transform: translate(-50%, -50%);
+  `;
+
+  const span = document.createElement("span");
+  span.innerText = text;
+
+  el.appendChild(span);
+
+  if (onDelete) {
+    const del = document.createElement("span");
+    del.innerHTML = "🗑";
+    del.style.cursor = "pointer";
+    del.style.fontSize = "14px";
+
+    del.onclick = (ev) => {
+      ev.stopPropagation();
+      onDelete();
+    };
+
+    el.appendChild(del);
+  }
+
+  return el;
+};
+
 
   // update/perhaps recreate segment markers + area label for the *final* geometry (on draw.create/ update)
-  const updateSegmentAndAreaLabels = () => {
-    const data = drawRef.current.getAll();
-    if (!data || !data.features || data.features.length === 0) {
+const updateSegmentAndAreaLabels = (feature) => {
+  if (!feature || !feature.geometry) return;
+
+  clearSegmentMarkers();
+  clearAreaLabel();
+
+  const f = feature;
+
+  if (f.geometry.type !== "Polygon" && f.geometry.type !== "LineString") return;
+
+  const coords =
+    f.geometry.type === "Polygon"
+      ? f.geometry.coordinates[0]
+      : f.geometry.coordinates;
+
+  const len = coords.length - (f.geometry.type === "Polygon" ? 1 : 0);
+
+  for (let i = 0; i < len - 1; i++) {
+    const a = coords[i];
+    const b = coords[i + 1];
+    const mid = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+
+    const segMeters =
+      turf.length(turf.lineString([a, b]), { units: "kilometers" }) * 1000;
+
+    const el = createLabelEl(formatDistance(segMeters));
+
+    const m = new maplibregl.Marker({ element: el, anchor: "center" })
+      .setLngLat(mid)
+      .addTo(mapRef.current);
+
+    segmentMarkersRef.current.push(m);
+  }
+
+  if (f.geometry.type === "Polygon") {
+    const area = turf.area(f);
+    const centroid = turf.pointOnFeature(f).geometry.coordinates;
+
+    const el = createLabelEl(`Area: ${formatArea(area)}`, () => {
+      drawRef.current.delete(f.id);
       clearSegmentMarkers();
       clearAreaLabel();
-      return;
-    }
+      setMeasurement(null);
+      saveDrawings();
+    });
 
-    // use last feature
-    const f = data.features[data.features.length - 1];
-    if (!f || !f.geometry) return;
+    areaLabelMarkerRef.current = new maplibregl.Marker({ element: el })
+      .setLngLat(centroid)
+      .addTo(mapRef.current);
 
-    clearSegmentMarkers();
-    clearAreaLabel();
+    setMeasurement({
+      type: "area",
+      valueText: formatArea(area),
+    });
+  }
+};
 
-    if (f.geometry.type === "LineString" || f.geometry.type === "Polygon") {
-      // for polygon, use the outer ring coordinates
-      const coords = f.geometry.type === "Polygon" ? f.geometry.coordinates[0] : f.geometry.coordinates;
-      // if polygon, last coord equals first; ignore last when computing segments
-      const len = coords.length - (f.geometry.type === "Polygon" ? 1 : 0);
-
-      for (let i = 0; i < len - 1; i++) {
-        const a = coords[i];
-        const b = coords[i + 1];
-        const mid = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
-        const segLine = turf.lineString([a, b]);
-        const segMeters = turf.length(segLine, { units: "kilometers" }) * 1000;
-        const label = formatDistance(segMeters);
-
-        const el = createLabelEl(label);
-        const m = new maplibregl.Marker({ element: el, anchor: "center" })
-          .setLngLat([mid[0], mid[1]])
-          .addTo(mapRef.current);
-        segmentMarkersRef.current.push(m);
-      }
-
-      // area label for polygon
-      if (f.geometry.type === "Polygon") {
-        const area = turf.area(f); // in m2
-        const centroid = turf.centroid(f).geometry.coordinates;
-        const el = createLabelEl(`Area: ${formatArea(area)}`);
-        areaLabelMarkerRef.current = new maplibregl.Marker({ element: el, anchor: "center" })
-          .setLngLat([centroid[0], centroid[1]])
-          .addTo(mapRef.current);
-      }
-    }
-  };
 
   // update live labels during drawing using pointer lngLat
   const updateLiveLabelsWithCursor = (cursorLngLat) => {
@@ -464,6 +693,7 @@ useEffect(() => {
         const area = turf.area(poly);
         const centroid = turf.centroid(poly).geometry.coordinates;
         const el = createLabelEl(`Area: ${formatArea(area)}`);
+
         areaLabelMarkerRef.current = new maplibregl.Marker({ element: el, anchor: "center" })
           .setLngLat([centroid[0], centroid[1]])
           .addTo(mapRef.current);
@@ -507,23 +737,44 @@ useEffect(() => {
   };
 
   // ---------- Toggle KMZ ----------
-  const toggleKmz = () => {
-    const map = mapRef.current;
-    setKmzVisible((v) => {
-      const show = !v;
-      try {
-        if (map.getLayer("kmz-fill")) map.setLayoutProperty("kmz-fill", "visibility", show ? "visible" : "none");
-        if (map.getLayer("kmz-outline")) map.setLayoutProperty("kmz-outline", "visibility", show ? "visible" : "none");
-        markersRef.current.forEach((m) => {
-          const el = m.getElement();
-          el.style.display = show ? "" : "none";
-        });
-      } catch (e) {
-        console.warn("toggleKmz error", e);
+const toggleKmz = () => {
+  const map = mapRef.current;
+
+  setKmzVisible((v) => {
+    const show = !v;
+
+    try {
+      // 🔥 hide ALL MapboxDraw layers (dynamic ids)
+      const style = map.getStyle();
+
+      style.layers.forEach((layer) => {
+        if (layer.id.startsWith("gl-draw")) {
+          map.setLayoutProperty(
+            layer.id,
+            "visibility",
+            show ? "visible" : "none"
+          );
+        }
+      });
+
+      // Measurements
+      segmentMarkersRef.current.forEach((m) => {
+        m.getElement().style.display = show ? "" : "none";
+      });
+
+      if (areaLabelMarkerRef.current) {
+        areaLabelMarkerRef.current.getElement().style.display = show ? "" : "none";
       }
-      return show;
-    });
-  };
+
+    } catch (e) {
+      console.warn("toggle user parcels error", e);
+    }
+
+    return show;
+  });
+};
+
+
 
   // ---------- LocationIQ helpers ----------
   const fetchSuggestions = async (text) => {
