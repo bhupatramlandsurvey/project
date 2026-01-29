@@ -212,12 +212,11 @@ mapRef.current.on("mousemove", (e) => {
   }
 });
 
-mapRef.current.on("mousedown", (e) => {
+const cancelIfLocked = (point) => {
   const draw = drawRef.current;
   if (!draw) return;
 
-  const features = mapRef.current.queryRenderedFeatures(e.point);
-
+  const features = mapRef.current.queryRenderedFeatures(point);
   if (!features.length) return;
 
   for (const f of features) {
@@ -226,13 +225,31 @@ mapRef.current.on("mousedown", (e) => {
 
     const df = draw.get(id);
     if (df?.properties?.locked) {
-      e.preventDefault();
       draw.changeMode("simple_select", { featureIds: [] });
       return;
     }
   }
+};
+
+mapRef.current.on("mousedown", (e) => cancelIfLocked(e.point));
+
+mapRef.current.on("touchstart", (e) => {
+  const pt = e.point || e.points?.[0];
+  if (pt) cancelIfLocked(pt);
 });
 
+mapRef.current.on("touchmove", (e) => {
+  const draw = drawRef.current;
+  if (!draw) return;
+
+  const selected = draw.getSelectedIds();
+  if (!selected.length) return;
+
+  const f = draw.get(selected[0]);
+  if (f?.properties?.locked) {
+    draw.changeMode("simple_select", { featureIds: [] });
+  }
+});
 
     // Show Get Measurement button when user creates/updates shapes (any vertex)
 mapRef.current.on("draw.create", (e) => {
