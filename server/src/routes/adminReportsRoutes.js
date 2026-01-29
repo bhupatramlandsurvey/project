@@ -36,14 +36,24 @@ function unifiedOrdersPipeline({ from, to, extraMatch = {} } = {}) {
     files: { $ifNull: ["$files", "$uploadedFiles"] },
   };
 
-  const matchStage = {
-    $match: {
-      $and: [
-        { $or: [{ createdAt: { $gte: dateFrom, $lte: dateTo } }, { dateTime: { $gte: dateFrom, $lte: dateTo } }] },
-        extraMatch,
-      ],
-    },
-  };
+const matchStage = {
+  $match: {
+    $and: [
+      {
+        $or: [
+          { createdAt: { $gte: dateFrom, $lte: dateTo } },
+          { dateTime: { $gte: dateFrom, $lte: dateTo } }
+        ]
+      },
+
+      // ✅ ONLY PAID / COMPLETED ORDERS
+      { status: "Processing" },
+
+      extraMatch
+    ],
+  },
+};
+
 
   // Each branch normalizes to the same shape and adds a "type"
   const first = [

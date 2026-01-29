@@ -337,6 +337,13 @@ export default function DownloadMaps() {
       `/dashboard/download-maps-and-files/${formatted}?source=${source}`
     );
   };
+const CURRENT_YEAR = new Date().getFullYear();
+
+const YEAR_OPTIONS = Array.from(
+  { length: CURRENT_YEAR - 1954 + 1 },
+  (_, i) => 1954 + i
+);
+
 
   const renderForm = () => {
     if (!selectedType) {
@@ -691,22 +698,35 @@ export default function DownloadMaps() {
               <label className="font-semibold text-gray-700">
                 Year Range <span className="text-red-500">*</span>
               </label>
-              <div className="flex gap-2">
-                <input
-                  type="number"
-                  placeholder="Year From"
-                  value={yearFrom}
-                  onChange={(e) => setYearFrom(e.target.value)}
-                  className="p-2.5 border rounded-xl w-1/2"
-                />
-                <input
-                  type="number"
-                  placeholder="Year To"
-                  value={yearTo}
-                  onChange={(e) => setYearTo(e.target.value)}
-                  className="p-2.5 border rounded-xl w-1/2"
-                />
-              </div>
+<div className="flex gap-2">
+  <select
+    value={yearFrom}
+    onChange={(e) => setYearFrom(e.target.value)}
+    className="p-2.5 border rounded-xl w-1/2"
+  >
+    <option value="">Year From</option>
+    {YEAR_OPTIONS.map((y) => (
+      <option key={y} value={y}>
+        {y}
+      </option>
+    ))}
+  </select>
+
+  <select
+    value={yearTo}
+    onChange={(e) => setYearTo(e.target.value)}
+    className="p-2.5 border rounded-xl w-1/2"
+  >
+    <option value="">Year To</option>
+    {YEAR_OPTIONS.map((y) => (
+      <option key={y} value={y}>
+        {y}
+      </option>
+    ))}
+  </select>
+</div>
+
+
             </div>
           </div>
 

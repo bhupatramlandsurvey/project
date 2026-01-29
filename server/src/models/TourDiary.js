@@ -26,11 +26,13 @@ const TourDiarySchema = new Schema(
   {
     userId: { type: Schema.Types.ObjectId, ref: "User", unique: true, required: true },
     header: {
-      name: String,
-      designation: String,
-      mandal: String,
-      month: String
-    },
+  officeTitle: String,
+  name: String,
+  designation: String,
+  mandal: String,
+  month: String
+},
+
     rows: { type: [RowSchema], default: [] }
   },
   { timestamps: true }

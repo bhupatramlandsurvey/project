@@ -30,12 +30,14 @@ export default function TourDiaryTab({ loggedInUser: propLoggedInUser }) {
   const loggedInUser = propLoggedInUser || parsedUser;
 
   const [rows, setRows] = useState([]);
-  const [header, setHeader] = useState({
-    name: "",
-    designation: "",
-    mandal: "",
-    month: ""
-  });
+const [header, setHeader] = useState({
+  officeTitle: "",
+  name: "",
+  designation: "",
+  mandal: "",
+  month: ""
+});
+
 
   const [loading, setLoading] = useState(false);
   const [syncMessage, setSyncMessage] = useState("");
@@ -71,12 +73,28 @@ export default function TourDiaryTab({ loggedInUser: propLoggedInUser }) {
       if (json && json.success && json.data) {
         const doc = json.data;
         // Some backends might store header under doc.header; adjust gracefully
-        if (doc.header) setHeader(doc.header);
+        if (doc.header)
+  setHeader({
+    officeTitle: "",
+    name: "",
+    designation: "",
+    mandal: "",
+    month: "",
+    ...doc.header
+  });
+
         if (doc.rows) setRows(doc.rows);
         setSyncMessage("Loaded from server");
       } else {
         // No document found — start fresh
-        setHeader({ name: "", designation: "", mandal: "", month: "" });
+        setHeader({
+  officeTitle: "",
+  name: "",
+  designation: "",
+  mandal: "",
+  month: ""
+});
+
         setRows([]);
         setSyncMessage("No server data. Starting fresh.");
       }
@@ -135,7 +153,14 @@ export default function TourDiaryTab({ loggedInUser: propLoggedInUser }) {
     if (!ok) return;
 
     setRows([]);
-    setHeader({ name: "", designation: "", mandal: "", month: "" });
+    setHeader({
+  officeTitle: "",
+  name: "",
+  designation: "",
+  mandal: "",
+  month: ""
+});
+
     setSyncMessage("Cleared locally. Click Save to persist to server.");
   };
 
@@ -183,7 +208,12 @@ const exportPDF = () => {
   // 🔵 Add Heading
   doc.setFontSize(16);
   doc.setFont("helvetica", "bold");
-  doc.text("OFFICE OF THE COLLECTOR SURVEY AND LAND RECORDS RANGAREDDY DISTRICT", 14, 12);
+  doc.text(
+  header.officeTitle || "OFFICE OF THE COLLECTOR SURVEY AND LAND RECORDS",
+  14,
+  12
+);
+
   doc.text("", 14, 20);
 
   // 🔵 Add sub-header (existing)
@@ -261,6 +291,14 @@ const exportPDF = () => {
 
       {/* Header Inputs */}
       <div className="mb-6">
+        <input
+  className={inputHeader}
+  placeholder="Title"
+  value={header.officeTitle}
+  onChange={(e) => setHeader({ ...header, officeTitle: e.target.value })}
+/>
+<br />
+
         <input
           className={inputHeader}
           placeholder="Name"

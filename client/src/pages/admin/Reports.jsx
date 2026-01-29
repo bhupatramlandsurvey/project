@@ -114,9 +114,10 @@ export default function Reports() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           <SummaryCard
             title="Total Revenue"
-            value={`₹${(
-              summary?.totals?.totalRevenueINR || 0
-            ).toLocaleString()}`}
+           value={`₹${(
+  (summary?.totals?.totalRevenueINR || 0) / 100
+).toLocaleString()}`}
+
             color="from-purple-500 to-purple-600"
             icon="💰"
           />

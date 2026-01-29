@@ -522,7 +522,8 @@ const handleTypeClick = (option) => {
           Request Submitted!
         </h2>
         <p className="text-gray-600 mb-3">
-          Your Land Survey Request has been recorded successfully.
+         Your request has been received. We will call you back soon.
+
         </p>
         <p className="font-semibold text-gray-700 mb-4">
           Request ID: {completedOrderId}
