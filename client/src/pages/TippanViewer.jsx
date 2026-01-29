@@ -16,7 +16,8 @@ export default function TippanViewer() {
 const watchIdRef = useRef(null);
 const [showRecenter, setShowRecenter] = useState(false);
 const lastUserLocation = useRef(null);
-const CLOSE_DISTANCE_METERS = 8;
+const CLOSE_DISTANCE_METERS = 1.5; // or even 1
+
 const STORAGE_KEY = "tippan_drawn_features";
 const selectedFeatureIdRef = useRef(null);
 
@@ -122,7 +123,15 @@ drawRef.current = new MapboxDraw({
     line_string: true,
     trash: true,
   },
+
   userProperties: true,
+  clickBuffer: 2,
+touchBuffer: 8,
+
+
+  modes: MapboxDraw.modes,
+
+  finishOnDoubleClick: false,
  styles: [
   // polygon fill
   {
@@ -158,37 +167,22 @@ drawRef.current = new MapboxDraw({
   },
 
   // hide vertex handles
-  {
-    id: "gl-draw-vertex",
-    type: "circle",
-    filter: ["all", ["==", "meta", "vertex"]],
-    paint: {
-      "circle-radius": 0
-    }
+ {
+  id: "gl-draw-vertex",
+  type: "circle",
+  filter: ["all", ["==", "meta", "vertex"]],
+  paint: {
+    "circle-radius": 6,
+    "circle-color": "#2563eb",
+    "circle-stroke-width": 2,
+    "circle-stroke-color": "#fff"
   }
+}
+
 ]
 
 });
-mapRef.current.on("click", (e) => {
-  const features = mapRef.current.queryRenderedFeatures(e.point);
 
-  for (const ft of features) {
-    const id = ft.properties?.id;
-    if (!id) continue;
-
-    const f = drawRef.current.get(id);
-    if (!f) continue;
-
-    selectedFeatureIdRef.current = id;
-    updateSegmentAndAreaLabels(f);
-    return;
-  }
-
-  // click empty → clear labels
-  clearSegmentMarkers();
-  clearAreaLabel();
-  setMeasurement(null);
-});
 
     mapRef.current.on("dragstart", () => setShowRecenter(true));
     mapRef.current.on("zoomstart", () => setShowRecenter(true));
@@ -255,7 +249,7 @@ mapRef.current.on("touchmove", (e) => {
 mapRef.current.on("draw.create", (e) => {
   const f = e.features[0];
 
-  drawRef.current.setFeatureProperty(f.id, "locked", true);
+  // drawRef.current.setFeatureProperty(f.id, "locked", true);
 
   selectedFeatureIdRef.current = f.id;
 
@@ -281,6 +275,7 @@ mapRef.current.on("draw.delete", () => {
 
 
 
+
     // While drawing, show live labels: listen mousemove on map
     const mouseMoveHandler = (e) => {
       if (!drawRef.current) return;
@@ -298,40 +293,79 @@ mapRef.current.on("draw.delete", () => {
     };
 
     mapRef.current.on("mousemove", mouseMoveHandler);
-mapRef.current.on("click", (e) => {
+    mapRef.current.on("click", (e) => {
   const draw = drawRef.current;
   if (!draw) return;
 
-  if (draw.getMode() !== "draw_polygon") return;
+  const mode = draw.getMode();
 
-  const data = draw.getAll();
-  if (!data.features.length) return;
+  // ===== DRAW POLYGON =====
+  if (mode === "draw_polygon") {
+    const data = draw.getAll();
+    if (!data.features.length) return;
 
-  const f = data.features[data.features.length - 1];
-  if (!f || !f.geometry) return;
+    const f = data.features[data.features.length - 1];
+    if (!f?.geometry) return;
 
-  const ring = f.geometry.coordinates[0];
-  if (ring.length < 3) return;
+    const ring = f.geometry.coordinates[0];
+    if (!ring || ring.length < 4) return;
 
-  const first = ring[0];
-  const clicked = [e.lngLat.lng, e.lngLat.lat];
+    const first = ring[0];
+    const clicked = [e.lngLat.lng, e.lngLat.lat];
 
-  const dist = metersBetween(first, clicked);
+    const dist = metersBetween(first, clicked);
 
-  // 👇 tap first point → finish polygon
-  if (dist < CLOSE_DISTANCE_METERS) {
-    ring[ring.length - 1] = first;
+    if (dist < CLOSE_DISTANCE_METERS) {
+      ring[ring.length - 1] = first;
+      draw.setFeatureCoordinates(f.id, [ring]);
 
-    draw.setFeatureCoordinates(f.id, [ring]);
+      draw.changeMode("simple_select", { featureIds: [f.id] });
 
-    // IMPORTANT: finish draw first
-    draw.changeMode("simple_select", { featureIds: [f.id] });
+      updateSegmentAndAreaLabels(f);
+      updateMeasurementPanel();
+    }
 
+    return;
+  }
 
-    updateSegmentAndAreaLabels();
-    updateMeasurementPanel();
+  // ===== SELECT EXISTING POLYGON =====
+const pt = e.point || mapRef.current.project(e.lngLat);
+const features = mapRef.current.queryRenderedFeatures(pt);
+
+  for (const ft of features) {
+    const id = ft.properties?.id;
+    if (!id) continue;
+
+    const feature = draw.get(id);
+    if (!feature) continue;
+
+    selectedFeatureIdRef.current = id;
+
+    draw.changeMode("direct_select", { featureId: id });
+
+    updateSegmentAndAreaLabels(feature);
+
+    if (feature.geometry.type === "Polygon") {
+      const area = turf.area(feature);
+      if (area > 0.5) {
+        setMeasurement({
+          type: "area",
+          valueText: formatArea(area),
+        });
+      }
+    }
+
+    return;
   }
 });
+
+// mobile tap → behave like click
+mapRef.current.on("touchend", (e) => {
+  if (e.point) mapRef.current.fire("click", e);
+});
+
+
+
 
     return () => {
       if (mapRef.current) {
@@ -453,12 +487,13 @@ useEffect(() => {
     if (nonPoint.features.length > 0) {
       map.addSource("kmzSource", { type: "geojson", data: nonPoint,generateId: true });
 
-      map.addLayer({
-        id: "kmz-fill",
-        type: "fill",
-        source: "kmzSource",
-        paint: { "fill-color": "#ffffff", "fill-opacity": 0.12 },
-      });
+  map.addLayer({
+  id: "kmz-fill",
+  type: "fill",
+  source: "kmzSource",
+  paint: { "fill-opacity": 0 },
+});
+
 
       map.addLayer({
         id: "kmz-outline",
@@ -547,6 +582,8 @@ useEffect(() => {
   // create a white box label element (STYLE A)
 const createLabelEl = (text, onDelete) => {
   const el = document.createElement("div");
+  el.style.pointerEvents = "auto";
+el.addEventListener("touchstart", (e) => e.stopPropagation(), { passive: false });
   el.style.cssText = `
     background: rgba(255,255,255,0.95);
     padding: 4px 6px;
@@ -572,10 +609,18 @@ const createLabelEl = (text, onDelete) => {
     del.style.cursor = "pointer";
     del.style.fontSize = "14px";
 
-    del.onclick = (ev) => {
-      ev.stopPropagation();
-      onDelete();
-    };
+   const handleDelete = (ev) => {
+  ev.preventDefault();
+  ev.stopPropagation();
+  onDelete();
+};
+
+// desktop
+del.addEventListener("click", handleDelete);
+
+// mobile
+del.addEventListener("touchstart", handleDelete, { passive: false });
+
 
     el.appendChild(del);
   }
@@ -601,6 +646,7 @@ const updateSegmentAndAreaLabels = (feature) => {
       : f.geometry.coordinates;
 
   const len = coords.length - (f.geometry.type === "Polygon" ? 1 : 0);
+if (len < 2) return;
 
   for (let i = 0; i < len - 1; i++) {
     const a = coords[i];
@@ -620,7 +666,23 @@ const updateSegmentAndAreaLabels = (feature) => {
   }
 
   if (f.geometry.type === "Polygon") {
+
+  const ring = f.geometry.coordinates[0];
+
+  // must be closed + minimum 4 coords
+  if (!ring || ring.length < 4) return;
+
+  const first = ring[0];
+  const last = ring[ring.length - 1];
+
+  // not closed yet
+  if (first[0] !== last[0] || first[1] !== last[1]) return;
+
     const area = turf.area(f);
+
+// ignore garbage tiny areas
+if (area < 0.5) return;
+
     const centroid = turf.pointOnFeature(f).geometry.coordinates;
 
     const el = createLabelEl(`Area: ${formatArea(area)}`, () => {
@@ -941,3 +1003,10 @@ const toggleKmz = () => {
     </div>
   );
 }
+
+
+
+
+
+
+
