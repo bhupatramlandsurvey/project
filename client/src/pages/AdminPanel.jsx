@@ -41,7 +41,7 @@ export default function AdminPanel() {
     survey: 0,
   });
 
-  /* 🔌 SOCKET CONNECTION */
+
   useEffect(() => {
     socketRef.current = io(import.meta.env.VITE_BACKEND_URL, {
       transports: ["websocket", "polling"],

@@ -23,7 +23,7 @@ const landSurveyOrderSchema = new mongoose.Schema({
   friendlyId: { type: String, unique: true, required: true }, // FIXED
   orderId: String, // optional
 
-  // 🔹 Status and Tracking
+
   status: {
     type: String,
     enum: ["Pending", "Processing", "Completed", "Cancelled", "Failed"],
