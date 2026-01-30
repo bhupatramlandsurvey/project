@@ -499,7 +499,7 @@ map.addLayer({
 
   layout: {
     "symbol-placement": "point", // 👈 FORCE centroid
-    "text-field": ["get", "Parcel_num"],
+    "text-field": ["get", "name"],
     "text-size": 12,
     "text-anchor": "center",
     "text-allow-overlap": true,
