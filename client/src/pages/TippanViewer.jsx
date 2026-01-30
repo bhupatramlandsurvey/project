@@ -450,6 +450,7 @@ if (mapRef.current.getSource("accuracy")) {
 
 
   // ---------- Add KMZ layers + markers ----------
+// ---------- Add KMZ layers + markers ----------
 useEffect(() => {
   const map = mapRef.current;
   if (!map) return;
@@ -466,6 +467,7 @@ useEffect(() => {
         "important/parcels.pmtiles",
     });
 
+    // fill (hidden)
     map.addLayer({
       id: "kmz-fill",
       type: "fill",
@@ -476,6 +478,7 @@ useEffect(() => {
       },
     });
 
+    // outline
     map.addLayer({
       id: "kmz-outline",
       type: "line",
@@ -486,8 +489,31 @@ useEffect(() => {
         "line-width": 2,
       },
     });
+
+    // ✅ parcel numbers
+    map.addLayer({
+      id: "kmz-labels",
+      type: "symbol",
+      source: "kmzSource",
+      "source-layer": "optimized",
+
+      layout: {
+        "text-field": ["get", "Parcel_num"], // 👈 exact property
+        "text-size": 12,
+        "text-anchor": "center",
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+      },
+
+      paint: {
+        "text-color": "#ffffff",
+        "text-halo-color": "#000000",
+        "text-halo-width": 1.5,
+      },
+    });
   });
 }, []);
+
 
 
   // ---------- Measurement helpers ----------
@@ -776,6 +802,10 @@ const toggleKmz = () => {
         }
       });
 
+      // ✅ toggle parcel outlines + labels
+      map.setLayoutProperty("kmz-outline", "visibility", show ? "visible" : "none");
+      map.setLayoutProperty("kmz-labels", "visibility", show ? "visible" : "none");
+
       // Measurements
       segmentMarkersRef.current.forEach((m) => {
         m.getElement().style.display = show ? "" : "none";
@@ -792,6 +822,7 @@ const toggleKmz = () => {
     return show;
   });
 };
+
 
 
 
