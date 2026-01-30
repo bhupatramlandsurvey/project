@@ -27,7 +27,8 @@ export default function UpdateKmz() {
   const handleUpload = async () => {
     if (!file) return alert("Please select a KMZ file");
 setSuccess(false);
-setProcessing(false);
+setProcessing(true);
+
     const formData = new FormData();
     formData.append("kmz", file);
 
@@ -43,14 +44,7 @@ setProcessing(false);
     xhr.open("POST", `${import.meta.env.VITE_BACKEND_URL}api/kmz/upload-kmz`);
 
     xhr.onload = () => {
-      let res;
-try {
-  res = JSON.parse(xhr.response);
-} catch {
-  alert("Server error");
-  return;
-}
-
+      const res = JSON.parse(xhr.response);
 
      if (res.success) {
   setUploadProgress(0);
@@ -64,7 +58,7 @@ try {
 
     xhr.send(formData);
   };
-const waitForTiles = async () => {
+const waitForTiles = () => {
   const check = async () => {
     try {
       const r = await fetch(
@@ -72,21 +66,21 @@ const waitForTiles = async () => {
         { cache: "no-store" }
       );
 
-     if (r.ok) {
-  setProcessing(false);
-  setSuccess(true);
-  setFile(null);       // 🔥 reset file
-  loadKmzInfo();
-  return;
-}
+      if (r.ok) {
+        setProcessing(false);
+        setSuccess(true);
+        setFile(null);
+        loadKmzInfo();
+        return;
+      }
+    } catch (e) {}
 
-    } catch {}
-
-    setTimeout(check, 3000);
+    setTimeout(check, 3000); // keep polling every 3s
   };
 
   check();
 };
+
 
   return (
     <div className="relative min-h-screen bg-white p-6">
