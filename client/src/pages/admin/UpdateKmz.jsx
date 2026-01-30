@@ -62,20 +62,22 @@ const waitForTiles = () => {
   const check = async () => {
     try {
       const r = await fetch(
-        import.meta.env.VITE_BACKEND_URL + "important/parcels.pmtiles",
-        { cache: "no-store" }
+        import.meta.env.VITE_BACKEND_URL + "api/kmz/tile-status"
       );
 
-      if (r.ok) {
+      const d = await r.json();
+
+      if (d.ready) {
         setProcessing(false);
         setSuccess(true);
+        setUploadProgress(0);
         setFile(null);
         loadKmzInfo();
         return;
       }
-    } catch (e) {}
+    } catch {}
 
-    setTimeout(check, 3000); // keep polling every 3s
+    setTimeout(check, 3000);
   };
 
   check();

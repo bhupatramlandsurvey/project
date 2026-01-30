@@ -149,4 +149,17 @@ router.get("/kmz-info", (req, res) => {
   }
 });
 
+router.get("/tile-status", (req, res) => {
+  const fs = require("fs");
+
+  const tilePath = "important/parcels.pmtiles";
+
+  if (fs.existsSync(tilePath)) {
+    return res.json({ ready: true });
+  }
+
+  res.json({ ready: false });
+});
+
+
 module.exports = router;
