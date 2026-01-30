@@ -25,6 +25,7 @@
     "lucide-react": "^0.544.0",
     "maplibre-gl": "^5.13.0",
     "maplibre-gl-draw": "^1.6.9",
+    "pmtiles": "^4.3.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-helmet": "^6.1.0",

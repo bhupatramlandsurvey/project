@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import "maplibre-gl-draw/dist/mapbox-gl-draw.css";
 import { useNavigate } from "react-router-dom";
 import { MapPinIcon, ArrowLeftIcon  } from "@heroicons/react/24/outline";
+import { Protocol } from "pmtiles";
+
 
 export default function TippanViewer() {
   const mapContainer = useRef(null);
@@ -70,7 +72,6 @@ const metersBetween = (a, b) =>
   const areaLabelMarkerRef = useRef(null);
   const liveCursorMarkerRef = useRef(null);
 
-  const [geoJson, setGeoJson] = useState(null);
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [measurement, setMeasurement] = useState(null);
@@ -88,22 +89,7 @@ const metersBetween = (a, b) =>
   // ---------- KMZ load ----------
 
 // ---------- OPTIMIZED GEOJSON load ----------
-useEffect(() => {
-  const loadGeoJSON = async () => {
-    try {
-      const res = await fetch(
-        import.meta.env.VITE_BACKEND_URL + "important/optimized.geojson",
-        { cache: "no-store" }
-      );
-      if (!res.ok) throw new Error("GeoJSON fetch failed");
-      const geo = await res.json();
-      setGeoJson(geo);
-    } catch (err) {
-      console.error("GeoJSON load error:", err);
-    }
-  };
-  loadGeoJSON();
-}, []);
+
 
   // ---------- map + draw init ----------
   useEffect(() => {
@@ -466,88 +452,42 @@ if (mapRef.current.getSource("accuracy")) {
   // ---------- Add KMZ layers + markers ----------
 useEffect(() => {
   const map = mapRef.current;
-  if (!map || !geoJson) return;
+  if (!map) return;
 
-  const applyLayers = () => {
-    // cleanup old markers
-    markersRef.current.forEach((m) => m.remove());
-    markersRef.current = [];
+  const protocol = new Protocol();
+  maplibregl.addProtocol("pmtiles", protocol.tile);
 
-    try { if (map.getLayer("kmz-fill")) map.removeLayer("kmz-fill"); } catch {}
-    try { if (map.getLayer("kmz-outline")) map.removeLayer("kmz-outline"); } catch {}
-    try { if (map.getSource("kmzSource")) map.removeSource("kmzSource"); } catch {}
-
-    const nonPoint = {
-      type: "FeatureCollection",
-      features: geoJson.features.filter(
-        (f) => f.geometry && f.geometry.type !== "Point"
-      ),
-    };
-
-    if (nonPoint.features.length > 0) {
-      map.addSource("kmzSource", { type: "geojson", data: nonPoint,generateId: true });
-
-  map.addLayer({
-  id: "kmz-fill",
-  type: "fill",
-  source: "kmzSource",
-  paint: { "fill-opacity": 0 },
-});
-
-
-      map.addLayer({
-        id: "kmz-outline",
-        type: "line",
-        source: "kmzSource",
-        paint: { "line-color": "#ffffff", "line-width": 2 },
-      });
-    }
-
-    // add point markers
-    const pointFeatures = geoJson.features.filter(
-      (f) => f.geometry && f.geometry.type === "Point"
-    );
-
-    pointFeatures.forEach((feat, idx) => {
-      const [lng, lat] = feat.geometry.coordinates;
-
-      const el = document.createElement("div");
-      el.className = "survey-label";
-      el.style.background = "white";
-      el.style.padding = "4px 6px";
-      el.style.borderRadius = "6px";
-      el.innerText =
-        feat.properties?.name ||
-        feat.properties?.Name ||
-        feat.properties?.description ||
-        `${idx + 1}`;
-
-      const marker = new maplibregl.Marker({ element: el })
-        .setLngLat([lng, lat])
-        .addTo(map);
-
-      markersRef.current.push(marker);
+  map.once("load", () => {
+    map.addSource("kmzSource", {
+      type: "vector",
+      url:
+        "pmtiles://" +
+        import.meta.env.VITE_BACKEND_URL +
+        "important/parcels.pmtiles",
     });
 
-    // fit bounds
-    try {
-      const bbox = turf.bbox(geoJson);
-      map.fitBounds(
-        [
-          [bbox[0], bbox[1]],
-          [bbox[2], bbox[3]],
-        ],
-        { padding: 40 }
-      );
-    } catch {}
-  };
+    map.addLayer({
+      id: "kmz-fill",
+      type: "fill",
+      source: "kmzSource",
+      "source-layer": "optimized",
+      paint: {
+        "fill-opacity": 0,
+      },
+    });
 
-  if (map.isStyleLoaded()) {
-    applyLayers();
-  } else {
-    map.once("load", applyLayers);
-  }
-}, [geoJson]);
+    map.addLayer({
+      id: "kmz-outline",
+      type: "line",
+      source: "kmzSource",
+      "source-layer": "optimized",
+      paint: {
+        "line-color": "#ffffff",
+        "line-width": 2,
+      },
+    });
+  });
+}, []);
 
 
   // ---------- Measurement helpers ----------
