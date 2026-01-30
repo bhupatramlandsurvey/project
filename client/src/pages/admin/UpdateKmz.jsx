@@ -26,7 +26,8 @@ export default function UpdateKmz() {
 
   const handleUpload = async () => {
     if (!file) return alert("Please select a KMZ file");
-
+setSuccess(false);
+setProcessing(false);
     const formData = new FormData();
     formData.append("kmz", file);
 
@@ -42,7 +43,14 @@ export default function UpdateKmz() {
     xhr.open("POST", `${import.meta.env.VITE_BACKEND_URL}api/kmz/upload-kmz`);
 
     xhr.onload = () => {
-      const res = JSON.parse(xhr.response);
+      let res;
+try {
+  res = JSON.parse(xhr.response);
+} catch {
+  alert("Server error");
+  return;
+}
+
 
      if (res.success) {
   setUploadProgress(0);
@@ -64,12 +72,14 @@ const waitForTiles = async () => {
         { cache: "no-store" }
       );
 
-      if (r.ok) {
-        setProcessing(false);
-        setSuccess(true);
-        loadKmzInfo();
-        return;
-      }
+     if (r.ok) {
+  setProcessing(false);
+  setSuccess(true);
+  setFile(null);       // 🔥 reset file
+  loadKmzInfo();
+  return;
+}
+
     } catch {}
 
     setTimeout(check, 3000);
