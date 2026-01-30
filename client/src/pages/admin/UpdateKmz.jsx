@@ -46,11 +46,14 @@ setProcessing(true);
     xhr.onload = () => {
       const res = JSON.parse(xhr.response);
 
-     if (res.success) {
+if (res.success) {
   setUploadProgress(0);
-  setProcessing(true);
-  waitForTiles();
+  setProcessing(false);
+  setSuccess(true);
+  setFile(null);
+  loadKmzInfo();
 }
+
  else {
         alert("Upload failed");
       }
