@@ -491,27 +491,33 @@ useEffect(() => {
     });
 
     // ✅ parcel numbers
-    map.addLayer({
-      id: "kmz-labels",
-      type: "symbol",
-      source: "kmzSource",
-      "source-layer": "optimized",
+map.addLayer({
+  id: "kmz-labels",
+  type: "symbol",
+  source: "kmzSource",
+  "source-layer": "optimized",
 
-      layout: {
-        "text-field": ["get", "Parcel_num"], // 👈 exact property
-        "text-size": 12,
-        "text-anchor": "center",
-        "text-allow-overlap": true,
-        "text-ignore-placement": true,
-      },
+  layout: {
+    "symbol-placement": "point", // 👈 FORCE centroid
+    "text-field": ["get", "Parcel_num"],
+    "text-size": 12,
+    "text-anchor": "center",
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+  },
 
-      paint: {
-        "text-color": "#ffffff",
-        "text-halo-color": "#000000",
-        "text-halo-width": 1.5,
-      },
-    });
+  paint: {
+    "text-color": "#ffffff",
+    "text-halo-color": "#000000",
+    "text-halo-width": 1.5,
+  },
+});
+
   });
+  map.on("click", "kmz-outline", (e) => {
+  console.log(e.features[0].properties);
+});
+
 }, []);
 
 

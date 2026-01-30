@@ -87,10 +87,19 @@ function generateOptimizedGeoJSON(kmzPath, geojsonOut, pmtilesOut) {
   fs.writeFileSync(geojsonOut, JSON.stringify(geojson));
 
   // 🔥 convert GeoJSON → PMTiles
-  execSync(
-    `tippecanoe -o ${pmtilesOut} -zg --drop-densest-as-needed ${geojsonOut}`,
-    { stdio: "inherit" }
-  );
+execSync(
+  `tippecanoe \
+    -o ${pmtilesOut} \
+    --force \
+    --preserve-input-order \
+    --drop-densest-as-needed \
+    --extend-zooms-if-still-dropping \
+    --maximum-zoom=16 \
+    --minimum-zoom=10 \
+    ${geojsonOut}`,
+  { stdio: "inherit" }
+);
+
 }
 
 
