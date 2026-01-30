@@ -9,6 +9,8 @@ export default function UpdateKmz() {
   const [file, setFile] = useState(null);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [success, setSuccess] = useState(false);
+  const [processing, setProcessing] = useState(false);
+
   const [kmzInfo, setKmzInfo] = useState(null);
 
   // Fetch existing KMZ file details
@@ -42,17 +44,39 @@ export default function UpdateKmz() {
     xhr.onload = () => {
       const res = JSON.parse(xhr.response);
 
-      if (res.success) {
-        setSuccess(true);
-        setUploadProgress(0);
-        loadKmzInfo(); // Refresh KMZ info after upload
-      } else {
+     if (res.success) {
+  setUploadProgress(0);
+  setProcessing(true);
+  waitForTiles();
+}
+ else {
         alert("Upload failed");
       }
     };
 
     xhr.send(formData);
   };
+const waitForTiles = async () => {
+  const check = async () => {
+    try {
+      const r = await fetch(
+        import.meta.env.VITE_BACKEND_URL + "important/parcels.pmtiles",
+        { cache: "no-store" }
+      );
+
+      if (r.ok) {
+        setProcessing(false);
+        setSuccess(true);
+        loadKmzInfo();
+        return;
+      }
+    } catch {}
+
+    setTimeout(check, 3000);
+  };
+
+  check();
+};
 
   return (
     <div className="relative min-h-screen bg-white p-6">
@@ -134,6 +158,28 @@ export default function UpdateKmz() {
           </div>
         )}
       </div>
+<AnimatePresence>
+  {processing && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 flex items-center justify-center bg-black/40 z-50"
+    >
+      <motion.div
+        initial={{ scale: 0.8 }}
+        animate={{ scale: 1 }}
+        className="bg-white p-6 rounded-xl shadow text-center"
+      >
+        <div className="animate-spin text-3xl">⚙️</div>
+        <p className="mt-3 font-semibold">
+          Processing KMZ…<br />
+          Generating map tiles
+        </p>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
 
       {/* 🎉 Success Animation */}
       <AnimatePresence>
