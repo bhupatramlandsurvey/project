@@ -187,7 +187,6 @@ function App() {
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/about-us" element={<AboutUs />} />
 
-        {/* 📞 Contact Page */}
         <Route path="/contact" element={<Contact />} />
 
         <Route path="*" element={<NotFound />} />
