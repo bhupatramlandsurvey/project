@@ -13,6 +13,8 @@ export default function Users() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
+const [search, setSearch] = useState("");
+const [roleFilter, setRoleFilter] = useState("all");
 
   // ✅ Mock user data (no backend)
  // ✅ Fetch all users
@@ -28,6 +30,22 @@ useEffect(() => {
   };
   fetchUsers();
 }, []);
+// ✅ Counts
+const totalUsers = users.length;
+const userCount = users.filter((u) => u.role === "user").length;
+const managerCount = users.filter((u) => u.role === "manager").length;
+const adminCount = users.filter((u) => u.role === "admin").length;
+
+// ✅ Filter + Search
+const filteredUsers = users.filter((u) => {
+  const matchRole = roleFilter === "all" || u.role === roleFilter;
+
+  const matchSearch =
+    u.fullName?.toLowerCase().includes(search.toLowerCase()) ||
+    u.mobile?.includes(search);
+
+  return matchRole && matchSearch;
+});
 
 // ✅ Save edited user role
 const handleSave = async () => {
@@ -82,13 +100,52 @@ const handleDelete = async (id) => {
       </motion.button>
 
       <h1 className="text-2xl font-bold mb-6 text-center">Manage Users</h1>
+<div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+  <div className="bg-blue-100 rounded-xl p-3 text-center">
+    <p className="text-sm">Total</p>
+    <p className="text-xl font-bold">{totalUsers}</p>
+  </div>
+  <div className="bg-green-100 rounded-xl p-3 text-center">
+    <p className="text-sm">Users</p>
+    <p className="text-xl font-bold">{userCount}</p>
+  </div>
+  <div className="bg-yellow-100 rounded-xl p-3 text-center">
+    <p className="text-sm">Managers</p>
+    <p className="text-xl font-bold">{managerCount}</p>
+  </div>
+  <div className="bg-red-100 rounded-xl p-3 text-center">
+    <p className="text-sm">Admins</p>
+    <p className="text-xl font-bold">{adminCount}</p>
+  </div>
+</div>
+<div className="flex flex-col sm:flex-row gap-4 mb-6">
+  <input
+    type="text"
+    placeholder="Search by name or mobile..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    className="border rounded-xl px-4 py-2 flex-1"
+  />
+
+  <select
+    value={roleFilter}
+    onChange={(e) => setRoleFilter(e.target.value)}
+    className="border rounded-xl px-4 py-2"
+  >
+    <option value="all">All</option>
+    <option value="user">Users</option>
+    <option value="manager">Managers</option>
+    <option value="admin">Admins</option>
+  </select>
+</div>
 
       {/* User Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {users.length === 0 ? (
+        {filteredUsers.length === 0 ? (
           <p className="text-center text-gray-500 col-span-full">Loading users...</p>
         ) : (
-          users.map((user) => (
+          filteredUsers.map((user) => (
+
             <motion.div
               key={user._id}
               initial={{ y: 20, opacity: 0 }}
