@@ -795,7 +795,7 @@ const toggleKmz = () => {
     const show = !v;
 
     try {
-      // 🔥 hide ALL MapboxDraw layers (dynamic ids)
+      // 🔥 Toggle ONLY MapboxDraw layers (custom drawings)
       const style = map.getStyle();
 
       style.layers.forEach((layer) => {
@@ -808,11 +808,7 @@ const toggleKmz = () => {
         }
       });
 
-      // ✅ toggle parcel outlines + labels
-      map.setLayoutProperty("kmz-outline", "visibility", show ? "visible" : "none");
-      map.setLayoutProperty("kmz-labels", "visibility", show ? "visible" : "none");
-
-      // Measurements
+      // 🔥 Toggle ONLY measurement markers (segments + area)
       segmentMarkersRef.current.forEach((m) => {
         m.getElement().style.display = show ? "" : "none";
       });
@@ -822,12 +818,13 @@ const toggleKmz = () => {
       }
 
     } catch (e) {
-      console.warn("toggle user parcels error", e);
+      console.warn("toggle draw polygons error", e);
     }
 
     return show;
   });
 };
+
 
 
 
