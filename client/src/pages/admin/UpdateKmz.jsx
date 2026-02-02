@@ -47,9 +47,8 @@ setProcessing(true);
       const res = JSON.parse(xhr.response);
 
 if (res.success) {
+  waitForTiles();
   setUploadProgress(0);
-  setProcessing(false);
-  setSuccess(true);
   setFile(null);
   loadKmzInfo();
 }

@@ -3,7 +3,8 @@ const express = require("express");
 const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
-const { execSync } = require("child_process");
+const { exec } = require("child_process");
+
 
 
 const AdmZip = require("adm-zip");
@@ -53,7 +54,7 @@ const upload = multer({
 });
 
 /* ---------- KMZ → OPTIMIZED GEOJSON ---------- */
-function generateOptimizedGeoJSON(kmzPath, geojsonOut, pmtilesOut) {
+async function generateOptimizedGeoJSON(kmzPath, geojsonOut, pmtilesOut) {
   const zip = new AdmZip(kmzPath);
 
   const kmlEntry = zip
@@ -87,18 +88,27 @@ function generateOptimizedGeoJSON(kmzPath, geojsonOut, pmtilesOut) {
   fs.writeFileSync(geojsonOut, JSON.stringify(geojson));
 
   // 🔥 convert GeoJSON → PMTiles
-execSync(
-  `tippecanoe \
-    -o ${pmtilesOut} \
-    --force \
-    --preserve-input-order \
-    --drop-densest-as-needed \
-    --extend-zooms-if-still-dropping \
-    --maximum-zoom=16 \
-    --minimum-zoom=10 \
-    ${geojsonOut}`,
-  { stdio: "inherit" }
-);
+return new Promise((resolve, reject) => {
+  exec(
+    `tippecanoe \
+      -o ${pmtilesOut} \
+      --force \
+      --preserve-input-order \
+      --drop-densest-as-needed \
+      --extend-zooms-if-still-dropping \
+      --maximum-zoom=16 \
+      --minimum-zoom=10 \
+      ${geojsonOut}`,
+    (err, stdout, stderr) => {
+      if (err) {
+        console.error(stderr);
+        return reject(err);
+      }
+      resolve();
+    }
+  );
+});
+
 
 }
 
@@ -120,7 +130,7 @@ if (fs.existsSync(pmtilesPath)) fs.unlinkSync(pmtilesPath);
     fs.renameSync(tempPath, kmzPath);
 
     // 🔥 generate optimized geojson
-    generateOptimizedGeoJSON(kmzPath, geojsonPath, pmtilesPath);
+   await  generateOptimizedGeoJSON(kmzPath, geojsonPath, pmtilesPath);
 
     res.json({
   success: true,
@@ -161,7 +171,8 @@ router.get("/kmz-info", (req, res) => {
 router.get("/tile-status", (req, res) => {
   const fs = require("fs");
 
-  const tilePath = "important/parcels.pmtiles";
+const tilePath = path.join(__dirname, "../uploads/important/parcels.pmtiles");
+
 
   if (fs.existsSync(tilePath)) {
     return res.json({ ready: true });
