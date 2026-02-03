@@ -55,62 +55,55 @@ const upload = multer({
 
 /* ---------- KMZ → OPTIMIZED GEOJSON ---------- */
 async function generateOptimizedGeoJSON(kmzPath, geojsonOut, pmtilesOut) {
+  console.log("STEP 1: Reading KMZ");
+
   const zip = new AdmZip(kmzPath);
+
+  console.log("STEP 2: Extracting KML");
 
   const kmlEntry = zip
     .getEntries()
     .find((e) => e.entryName.toLowerCase().endsWith(".kml"));
 
-  if (!kmlEntry) throw new Error("No KML found inside KMZ");
+  if (!kmlEntry) throw new Error("No KML found");
 
   const kmlText = kmlEntry.getData().toString("utf8");
   const dom = new DOMParser().parseFromString(kmlText, "text/xml");
 
+  console.log("STEP 3: Converting to GeoJSON");
+
   let geojson = toGeoJSON.kml(dom);
 
-  // simplify polygons
+  console.log("Features:", geojson.features.length);
+
   geojson.features = geojson.features
     .filter((f) => f && f.geometry)
     .map((f) => {
-      if (
-        f.geometry.type === "Polygon" ||
-        f.geometry.type === "MultiPolygon"
-      ) {
-        return turf.simplify(f, {
-          tolerance: 0.00005,
-          highQuality: false,
-        });
+      if (f.geometry.type === "Polygon" || f.geometry.type === "MultiPolygon") {
+        return turf.simplify(f, { tolerance: 0.00005 });
       }
       return f;
     });
 
-  // write geojson
+  console.log("STEP 4: Writing GeoJSON");
+
   fs.writeFileSync(geojsonOut, JSON.stringify(geojson));
 
-  // 🔥 convert GeoJSON → PMTiles
-return new Promise((resolve, reject) => {
-  exec(
-    `tippecanoe \
-      -o ${pmtilesOut} \
-      --force \
-      --preserve-input-order \
-      --drop-densest-as-needed \
-      --extend-zooms-if-still-dropping \
-      --maximum-zoom=16 \
-      --minimum-zoom=10 \
-      ${geojsonOut}`,
-    (err, stdout, stderr) => {
-      if (err) {
-        console.error(stderr);
-        return reject(err);
+  console.log("STEP 5: Starting tippecanoe");
+
+  await new Promise((resolve, reject) => {
+    exec(
+      `tippecanoe -o ${pmtilesOut} --force ${geojsonOut}`,
+      (err) => {
+        if (err) return reject(err);
+        resolve();
       }
-      resolve();
-    }
-  );
-});
+    );
+  });
 
-
+  console.log("STEP 6: Tippecanoe finished");
 }
+
 
 
 /* ---------- upload route ---------- */
