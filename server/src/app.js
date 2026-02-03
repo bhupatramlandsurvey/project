@@ -21,6 +21,7 @@ const abstractRoutes = require("./routes/abstractRoutes");
 const kmzUpdateRoute = require("./routes/kmzUpdateRoute");
 const priceRoute = require("./routes/priceRoute");
 const versionRoute = require("./routes/versionRoute");
+const pmtilesRoute = require("./routes/pmtilesRoute");
 
 
 
@@ -51,6 +52,9 @@ app.use("/api/abstract", abstractRoutes);
 app.use("/api/kmz", kmzUpdateRoute);
 app.use("/api/prices", priceRoute);
 app.use("/api/version", versionRoute);
+app.use("/api/pmtiles", pmtilesRoute);
+
+
 app.get("/socket-test", (req, res) => {
   const io = req.app.get("io");
   io.emit("new-order", { test: true });
