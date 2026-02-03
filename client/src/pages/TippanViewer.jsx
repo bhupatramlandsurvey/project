@@ -472,7 +472,8 @@ useEffect(() => {
       id: "kmz-fill",
       type: "fill",
       source: "kmzSource",
-      "source-layer": "optimized",
+      "source-layer": "GEOJSON_4326",
+
       paint: {
         "fill-opacity": 0,
       },
@@ -483,7 +484,8 @@ useEffect(() => {
       id: "kmz-outline",
       type: "line",
       source: "kmzSource",
-      "source-layer": "optimized",
+"source-layer": "GEOJSON_4326",
+
       paint: {
         "line-color": "#ffffff",
         "line-width": 2,
@@ -495,11 +497,13 @@ map.addLayer({
   id: "kmz-labels",
   type: "symbol",
   source: "kmzSource",
-  "source-layer": "optimized",
+ "source-layer": "GEOJSON_4326",
+
 
   layout: {
     "symbol-placement": "point", // 👈 FORCE centroid
-    "text-field": ["get", "name"],
+   "text-field": ["get", "Parcel_num"],
+
     "text-size": 12,
     "text-anchor": "center",
     "text-allow-overlap": true,
