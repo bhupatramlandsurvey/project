@@ -460,12 +460,15 @@ useEffect(() => {
 
   map.once("load", () => {
     map.addSource("kmzSource", {
+      
       type: "vector",
       url:
         "pmtiles://" +
         import.meta.env.VITE_BACKEND_URL +
         "important/parcels.pmtiles",
     });
+    console.log("PMTiles source added");
+
 
     // fill (hidden)
     map.addLayer({
@@ -516,6 +519,7 @@ map.addLayer({
     "text-halo-width": 1.5,
   },
 });
+console.log("KMZ layers added");
 
   });
   map.on("click", "kmz-outline", (e) => {
