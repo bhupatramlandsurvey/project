@@ -54,55 +54,35 @@ const upload = multer({
 });
 
 /* ---------- KMZ → OPTIMIZED GEOJSON ---------- */
-async function generateOptimizedGeoJSON(kmzPath, geojsonOut, pmtilesOut) {
-  console.log("STEP 1: Reading KMZ");
 
-  const zip = new AdmZip(kmzPath);
+async function generateOptimizedGeoJSON(kmzPath, pmtilesOut) {
+  console.log("Starting streaming KMZ → PMTiles");
 
-  console.log("STEP 2: Extracting KML");
+  return new Promise((resolve, reject) => {
+    const cmd = `
+      ogr2ogr -f GeoJSONSeq /vsistdout/ ${kmzPath} |
+      tippecanoe \
+        --force \
+        --read-parallel \
+        --drop-densest-as-needed \
+        --extend-zooms-if-still-dropping \
+        --minimum-zoom=10 \
+        --maximum-zoom=16 \
+        -o ${pmtilesOut}
+    `;
 
-  const kmlEntry = zip
-    .getEntries()
-    .find((e) => e.entryName.toLowerCase().endsWith(".kml"));
-
-  if (!kmlEntry) throw new Error("No KML found");
-
-  const kmlText = kmlEntry.getData().toString("utf8");
-  const dom = new DOMParser().parseFromString(kmlText, "text/xml");
-
-  console.log("STEP 3: Converting to GeoJSON");
-
-  let geojson = toGeoJSON.kml(dom);
-
-  console.log("Features:", geojson.features.length);
-
-  geojson.features = geojson.features
-    .filter((f) => f && f.geometry)
-    .map((f) => {
-      if (f.geometry.type === "Polygon" || f.geometry.type === "MultiPolygon") {
-        return turf.simplify(f, { tolerance: 0.00005 });
-      }
-      return f;
-    });
-
-  console.log("STEP 4: Writing GeoJSON");
-
-  fs.writeFileSync(geojsonOut, JSON.stringify(geojson));
-
-  console.log("STEP 5: Starting tippecanoe");
-
-  await new Promise((resolve, reject) => {
-    exec(
-      `tippecanoe -o ${pmtilesOut} --force ${geojsonOut}`,
-      (err) => {
-        if (err) return reject(err);
+    exec(cmd, { maxBuffer: 1024 * 1024 }, (err) => {
+      if (err) {
+        console.error(err);
+        reject(err);
+      } else {
+        console.log("PMTiles created");
         resolve();
       }
-    );
+    });
   });
-
-  console.log("STEP 6: Tippecanoe finished");
 }
+
 
 
 
@@ -123,7 +103,8 @@ if (fs.existsSync(pmtilesPath)) fs.unlinkSync(pmtilesPath);
     fs.renameSync(tempPath, kmzPath);
 
     // 🔥 generate optimized geojson
-   await  generateOptimizedGeoJSON(kmzPath, geojsonPath, pmtilesPath);
+   await generateOptimizedGeoJSON(kmzPath, pmtilesPath);
+
 
     res.json({
   success: true,
@@ -164,7 +145,7 @@ router.get("/kmz-info", (req, res) => {
 router.get("/tile-status", (req, res) => {
   const fs = require("fs");
 
-const tilePath = path.join(__dirname, "../uploads/important/parcels.pmtiles");
+const tilePath = path.join(__dirname,"../uploads/important/parcels.pmtiles");
 
 
   if (fs.existsSync(tilePath)) {
