@@ -61,6 +61,12 @@ app.get("/socket-test", (req, res) => {
   io.emit("new-order", { test: true });
   res.send("ok");
 });
+app.get("/__testfile", (req, res) => {
+  res.sendFile(
+    "/var/www/project/server/uploads/processed/1770222995608-TourDiary (12).pdf"
+  );
+});
+
 
 app.get("/", (req, res) => {
   res.send("API is running......!");
