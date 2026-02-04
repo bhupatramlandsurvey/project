@@ -24,7 +24,7 @@ const ProcessedOrder = require("../models/ProcessedOrder");
 
 // ✅ Multer Setup (for processed files)
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, "uploads/processed/"),
+  destination: (req, file, cb) => cb(null, "/uploads/processed/"),
   filename: (req, file, cb) => cb(null, Date.now() + "-" + file.originalname),
 });
 const upload = multer({ storage });
@@ -154,7 +154,7 @@ router.put("/orders/:id", upload.array("processedFiles", 10), async (req, res) =
     // ✅ Build processed file list
     const processedFiles =
       req.files?.map((file) => ({
-        url: `uploads/processed/${file.filename}`,
+        url: `/uploads/processed/${file.filename}`,
         name: file.originalname,
         size: file.size,
       })) || [];
