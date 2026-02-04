@@ -28,8 +28,10 @@ const pmtilesRoute = require("./routes/pmtilesRoute");
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use("/uploads", express.static(path.resolve(__dirname, "uploads")));
-app.use("/important", express.static(path.resolve(__dirname, "uploads/important")));
+app.use("/uploads", express.static("/var/www/project/server/uploads"));
+
+app.use("/important", express.static("/var/www/project/server/uploads/important"));
+
 
 
 
