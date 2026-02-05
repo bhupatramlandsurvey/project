@@ -483,13 +483,17 @@ useEffect(() => {
 
   map.once("load", () => {
     map.addSource("kmzSource", {
-      
-      type: "vector",
-      url:
-        "pmtiles://" +
-        import.meta.env.VITE_BACKEND_URL +
-        "important/parcels.pmtiles",
-    });
+  type: "vector",
+  url:
+    "pmtiles://" +
+    import.meta.env.VITE_BACKEND_URL +
+    "important/parcels.pmtiles",
+
+  promoteId: {
+    GEOJSON_4326: "Parcel_num", // 👈 MUST match your layer + property
+  },
+});
+
     console.log("PMTiles source added");
 
 
@@ -527,7 +531,7 @@ map.addLayer({
   source: "kmzSource",
   "source-layer": "GEOJSON_4326",
 
-  minzoom: 12,
+  minzoom: 17,
 
   layout: {
     "symbol-placement": "point",
@@ -536,9 +540,6 @@ map.addLayer({
     "text-anchor": "center",
     "text-allow-overlap": false,
     "text-ignore-placement": false,
-
-    // 👇 prevents duplicates
-    "symbol-sort-key": ["get", "Parcel_num"],
   },
 
   paint: {
@@ -547,6 +548,7 @@ map.addLayer({
     "text-halo-width": 2,
   },
 });
+
 
 console.log("KMZ layers added");
 
