@@ -40,9 +40,13 @@ const loadDrawings = () => {
       drawRef.current.set(geo);
 
       // re-lock loaded features
-      geo.features.forEach((f) => {
-        drawRef.current.setFeatureProperty(f.id, "locked", true);
-      });
+     geo.features.forEach((f) => {
+  // lock ONLY polygons, allow lines to be selectable
+  if (f.geometry?.type === "Polygon") {
+    drawRef.current.setFeatureProperty(f.id, "locked", true);
+  }
+});
+
 if (geo.features.length) {
   const f = geo.features[0];
   selectedFeatureIdRef.current = f.id;
@@ -244,9 +248,17 @@ mapRef.current.on("draw.create", (e) => {
 });
 
 
-mapRef.current.on("draw.update", () => {
+mapRef.current.on("draw.update", (e) => {
   setShowMeasureBtn(true);
-  updateSegmentAndAreaLabels();
+
+  const f = e.features?.[0];
+  if (f) {
+    updateSegmentAndAreaLabels(f);
+  }
+
+  // 🔥 recompute distance / area live
+  updateMeasurementPanel();
+
   saveDrawings();
 });
 
@@ -331,15 +343,26 @@ const features = mapRef.current.queryRenderedFeatures(pt);
 
     updateSegmentAndAreaLabels(feature);
 
-    if (feature.geometry.type === "Polygon") {
-      const area = turf.area(feature);
-      if (area > 0.5) {
-        setMeasurement({
-          type: "area",
-          valueText: formatArea(area),
-        });
-      }
-    }
+if (feature.geometry.type === "Polygon") {
+  const area = turf.area(feature);
+  if (area > 0.5) {
+    setMeasurement({
+      type: "area",
+      valueText: formatArea(area),
+    });
+  }
+}
+
+if (feature.geometry.type === "LineString") {
+  const line = turf.lineString(feature.geometry.coordinates);
+  const meters = turf.length(line, { units: "kilometers" }) * 1000;
+
+  setMeasurement({
+    type: "distance",
+    valueText: formatDistance(meters),
+  });
+}
+
 
     return;
   }
@@ -477,9 +500,11 @@ useEffect(() => {
       source: "kmzSource",
       "source-layer": "GEOJSON_4326",
 
-      paint: {
-        "fill-opacity": 0,
-      },
+     paint: {
+  "fill-color": "#ffe100",   // yellow fill
+  "fill-opacity": 0,      // soft transparent yellow
+},
+
     });
 
     // outline
@@ -513,11 +538,12 @@ map.addLayer({
     "text-ignore-placement": true,
   },
 
-  paint: {
-    "text-color": "#ffffff",
-    "text-halo-color": "#000000",
-    "text-halo-width": 1.5,
-  },
+ paint: {
+  "text-color": "#ffe100",      // yellow text (matches polygon theme)
+  "text-halo-color": "#000000", // black outline for readability
+  "text-halo-width": 2,
+},
+
 });
 console.log("KMZ layers added");
 
@@ -537,11 +563,9 @@ console.log("KMZ layers added");
     return `${(meters / 1000).toFixed(3)} km`;
   };
 
-  const formatArea = (m2) => {
-    if (m2 < 1_000) return `${m2.toFixed(2)} m²`;
-    if (m2 < 1_000_000) return `${(m2 / 1000).toFixed(2)} sq.m`;
-    return `${(m2 / 1_000_000).toFixed(4)} sq.km`;
-  };
+const formatArea = (m2) => {
+  return `${m2.toFixed(2)} m²`;   // STRICT sq meters only
+};
 
   // clear segment markers
   const clearSegmentMarkers = () => {
@@ -665,7 +689,8 @@ if (area < 0.5) return;
 
     const centroid = turf.pointOnFeature(f).geometry.coordinates;
 
-    const el = createLabelEl(`Area: ${formatArea(area)}`, () => {
+    const el = createLabelEl("", () => {
+
       drawRef.current.delete(f.id);
       clearSegmentMarkers();
       clearAreaLabel();
@@ -675,12 +700,7 @@ if (area < 0.5) return;
 
     areaLabelMarkerRef.current = new maplibregl.Marker({ element: el })
       .setLngLat(centroid)
-      .addTo(mapRef.current);
-
-    setMeasurement({
-      type: "area",
-      valueText: formatArea(area),
-    });
+      .addTo(mapRef.current); 
   }
 };
 
@@ -785,8 +805,12 @@ if (area < 0.5) return;
 
     if (f.geometry.type === "Polygon") {
       const areaM2 = turf.area(f);
-      const areaKm2 = areaM2 / 1_000_000;
-      setMeasurement({ type: "area", valueText: `${areaKm2.toFixed(4)} sq.km` });
+
+setMeasurement({
+  type: "area",
+  valueText: `${areaM2.toFixed(2)} m²`,
+});
+
       // ensure final labels are present
       updateSegmentAndAreaLabels();
       return;
@@ -885,16 +909,30 @@ const toggleKmz = () => {
         <div className="flex gap-2 items-center">
           <div className="relative w-64">
             <input
-              className="border p-2 pl-10 rounded w-full"
-              placeholder="Search village..."
-              value={query}
-              onChange={(e) => {
-                const text = e.target.value;
-                setQuery(text);
-                clearTimeout(typingTimeout.current);
-                typingTimeout.current = setTimeout(() => fetchSuggestions(text), 350);
-              }}
-            />
+  className="border p-2 pl-10 pr-8 rounded w-full"
+  placeholder="Search village..."
+  value={query}
+  onChange={(e) => {
+    const text = e.target.value;
+    setQuery(text);
+    clearTimeout(typingTimeout.current);
+    typingTimeout.current = setTimeout(() => fetchSuggestions(text), 350);
+  }}
+/>
+
+{/* ❌ Clear input button */}
+{query && (
+  <button
+    onClick={() => {
+      setQuery("");
+      setSuggestions([]);
+    }}
+    className="absolute right-2 top-2.5 text-gray-400 hover:text-gray-700"
+  >
+    ✕
+  </button>
+)}
+
             {/* Search Icon */}
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500 absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18a7.5 7.5 0 006.15-3.35z" />
@@ -940,22 +978,7 @@ const toggleKmz = () => {
 
       {/* map */}
       <div className="relative w-full h-[650px]">
-                {showRecenter && (
-  <button
-    onClick={() => {
-      if (!lastUserLocation.current) return;
-      mapRef.current.flyTo({
-        center: lastUserLocation.current,
-        zoom: 16,
-        duration: 800,
-      });
-      setShowRecenter(false);
-    }}
-    className="absolute bottom-4 right-4 z-50 bg-white p-3 rounded-full shadow-lg"
-  >
-    📍
-  </button>
-)}
+               
         {/* Bottom-center Get Measurement button */}
         {showMeasureBtn && (
           <button
@@ -977,6 +1000,28 @@ const toggleKmz = () => {
             <div className="text-lg font-bold">{measurement.valueText}</div>
           </div>
         )}
+{/* Google Maps style current location button */}
+<button
+  onClick={() => {
+    if (!lastUserLocation.current) return;
+
+    mapRef.current.flyTo({
+      center: lastUserLocation.current,
+      zoom: 17,
+      duration: 800,
+    });
+  }}
+  className="absolute bottom-125 right-2.5 z-50 bg-white w-8 h-8 rounded-full shadow-lg flex items-center justify-center active:scale-95 transition"
+>
+ <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 576 512"
+  className="w-4.5 h-4.5"
+  fill="#2563eb"
+>
+  <path d="M288-16c17.7 0 32 14.3 32 32l0 18.3c98.1 14 175.7 91.6 189.7 189.7l18.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-18.3 0c-14 98.1-91.6 175.7-189.7 189.7l0 18.3c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-18.3C157.9 463.7 80.3 386.1 66.3 288L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l18.3 0C80.3 125.9 157.9 48.3 256 34.3L256 16c0-17.7 14.3-32 32-32zM128 256a160 160 0 1 0 320 0 160 160 0 1 0 -320 0zm160-96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z" />
+</svg>
+</button>
 
         <div ref={mapContainer} className="w-full h-full rounded-xl overflow-hidden shadow" />
 

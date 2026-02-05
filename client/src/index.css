@@ -51,19 +51,58 @@ body {
     opacity: 0;
   }
 }
+/* =========================
+   DRAW BUTTON COLORS
+========================= */
+
 /* Polygon button default */
 .mapbox-gl-draw_ctrl-draw-btn.mapbox-gl-draw_polygon {
-  background-color: #1f2933 !important;
+  background-color: #ebf5ff !important;
   color: white !important;
 }
 
-/* 🔥 When polygon tool is ACTIVE */
+/* Polygon ACTIVE */
 .mapbox-gl-draw_ctrl-draw-btn.mapbox-gl-draw_polygon.active {
-  background-color: #ef4444 !important;   /* dark red */
+  background-color: #ef4444 !important;   /* red */
   box-shadow: inset 0 0 0 2px #ef4444;
 }
 
-/* remove blue default outline */
+
+/* =========================
+   LINE BUTTON
+========================= */
+
+/* Line default */
+.mapbox-gl-draw_ctrl-draw-btn.mapbox-gl-draw_line {
+  background-color: #ebf5ff !important;
+  color: white !important;
+}
+
+/* 🔥 Line ACTIVE */
+.mapbox-gl-draw_ctrl-draw-btn.mapbox-gl-draw_line.active {
+  background-color: #ef4444 !important;   /* red when selected */
+  box-shadow: inset 0 0 0 2px #ef4444;
+}
+
+
+/* =========================
+   TRASH (optional)
+========================= */
+
+.mapbox-gl-draw_ctrl-draw-btn.mapbox-gl-draw_trash {
+  background-color: #ebf5ff !important;
+}
+
+.mapbox-gl-draw_ctrl-draw-btn.mapbox-gl-draw_trash.active {
+  background-color: #dc2626 !important;
+}
+
+
+/* =========================
+   REMOVE DEFAULT BLUE FOCUS
+========================= */
+
 .mapbox-gl-draw_ctrl-draw-btn:focus {
   outline: none !important;
+  box-shadow: none !important;
 }
