@@ -490,7 +490,7 @@ useEffect(() => {
 "source-layer": "GEOJSON_4326",
 
       paint: {
-        "line-color": "#ffffff",
+        "line-color": "#ffe100",
         "line-width": 2,
       },
     });
