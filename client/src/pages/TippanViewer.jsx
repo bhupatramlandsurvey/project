@@ -527,7 +527,7 @@ map.addLayer({
   source: "kmzSource",
   "source-layer": "GEOJSON_4326",
 
-  minzoom: 17,
+  minzoom: 12,
 
   layout: {
     "symbol-placement": "point",
