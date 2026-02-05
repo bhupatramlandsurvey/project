@@ -525,26 +525,29 @@ map.addLayer({
   id: "kmz-labels",
   type: "symbol",
   source: "kmzSource",
- "source-layer": "GEOJSON_4326",
+  "source-layer": "GEOJSON_4326",
 
+  minzoom: 17,
 
   layout: {
-    "symbol-placement": "point", // 👈 FORCE centroid
-   "text-field": ["get", "Parcel_num"],
-
+    "symbol-placement": "point",
+    "text-field": ["get", "Parcel_num"],
     "text-size": 12,
     "text-anchor": "center",
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
+    "text-allow-overlap": false,
+    "text-ignore-placement": false,
+
+    // 👇 prevents duplicates
+    "symbol-sort-key": ["get", "Parcel_num"],
   },
 
- paint: {
-  "text-color": "#ffe100",      // yellow text (matches polygon theme)
-  "text-halo-color": "#000000", // black outline for readability
-  "text-halo-width": 2,
-},
-
+  paint: {
+    "text-color": "#ffe100",
+    "text-halo-color": "#000",
+    "text-halo-width": 2,
+  },
 });
+
 console.log("KMZ layers added");
 
   });
