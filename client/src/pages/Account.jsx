@@ -237,7 +237,7 @@ Thank you.`
             onClick={() => togglePanel("about")}
           >
             <p className="text-sm">Version 1.0.0</p>
-            <p className="text-sm">© 2023 Bhupatram Land Surveys (OPC) Private Limited</p>
+            <p className="text-sm">© 2026 Bhupatram Land Surveys (OPC) Private Limited</p>
           </MenuItem>
 
           {/* Logout */}
