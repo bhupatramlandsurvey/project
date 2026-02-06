@@ -98,7 +98,7 @@ const metersBetween = (a, b) =>
   useEffect(() => {
     mapRef.current = new maplibregl.Map({
       container: mapContainer.current,
-      style: `https://api.maptiler.com/maps/hybrid/style.json?key=${MAPTILER_KEY}`,
+      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${MAPTILER_KEY}`,
       center: [78.9629, 20.5937],
       zoom: 5,
     });
