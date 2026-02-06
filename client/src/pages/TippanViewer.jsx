@@ -96,12 +96,16 @@ const metersBetween = (a, b) =>
 
   // ---------- map + draw init ----------
   useEffect(() => {
-    mapRef.current = new maplibregl.Map({
-      container: mapContainer.current,
-      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${MAPTILER_KEY}`,
-      center: [78.9629, 20.5937],
-      zoom: 5,
-    });
+mapRef.current = new maplibregl.Map({
+  container: mapContainer.current,
+  style: `https://api.maptiler.com/maps/hybrid/style.json?key=${MAPTILER_KEY}`,
+  center: [78.9629, 20.5937],
+  zoom: 5,
+
+  // 🔥 ADD THIS
+  pixelRatio: window.devicePixelRatio || 2,
+});
+
 
     mapRef.current.addControl(new maplibregl.NavigationControl(), "top-left");
 
