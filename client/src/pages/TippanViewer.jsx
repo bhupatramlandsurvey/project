@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 import { MapPinIcon, ArrowLeftIcon  } from "@heroicons/react/24/outline";
 import { Protocol } from "pmtiles";
 
-
 export default function TippanViewer() {
   const mapContainer = useRef(null);
   const mapRef = useRef(null);

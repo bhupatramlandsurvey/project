@@ -104,6 +104,29 @@ const [chatLoading, setChatLoading] = useState(false);
     navigate("/", { replace: true });
   };
 
+  const sendSupportMail = (user) => {
+  const name = user?.fullName || "Guest User";
+  const phone = user?.mobile || "Not provided";
+
+  const subject = encodeURIComponent("Need Assistance - Bhupatram App");
+
+  const body = encodeURIComponent(
+`Hello Support Team,
+
+I need assistance with your service.
+
+Name: ${name}
+Phone: ${phone}
+
+Issue:
+Please describe your problem here...
+
+Thank you.`
+  );
+
+  window.location.href = `mailto:contact@bhupatram.cloud?subject=${subject}&body=${body}`;
+};
+
   const togglePanel = (panel) => {
     setOpenPanel((prev) => (prev === panel ? null : panel));
   };
@@ -178,43 +201,16 @@ const [chatLoading, setChatLoading] = useState(false);
   isOpen={openPanel === "support"}
   onClick={() => togglePanel("support")}
 >
-  <p className="text-sm">Email: support@bhupatram.in</p>
+  <p className="text-sm">Email: support@bhupatram.cloud</p>
 
   {/* 🔥 ONLY WAY TO OPEN CHAT */}
- <button
-  disabled={chatLoading}
-  onClick={() => loadTawk(user, setChatLoading)}
-  className={`w-full mt-3 py-2 rounded flex items-center justify-center gap-2
-    ${chatLoading ? "bg-gray-400 cursor-not-allowed" : "bg-orange-400 hover:bg-orange-500"}
-    text-white transition`}
+<button
+  onClick={() => sendSupportMail(user)}
+  className="w-full mt-3 py-2 rounded bg-orange-400 hover:bg-orange-500 text-white transition"
 >
-  {chatLoading ? (
-    <>
-      <svg
-        className="w-4 h-4 animate-spin"
-        viewBox="0 0 24 24"
-        fill="none"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          strokeWidth="4"
-          className="opacity-25"
-        />
-        <path
-          fill="currentColor"
-          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-          className="opacity-75"
-        />
-      </svg>
-      Connecting to support…
-    </>
-  ) : (
-    "Start Live Chat"
-  )}
+  Send Support Message
 </button>
+
 
 </MenuItem>
 
