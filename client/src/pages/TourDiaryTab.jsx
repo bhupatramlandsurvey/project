@@ -202,6 +202,11 @@ const [header, setHeader] = useState({
     XLSX.writeFile(wb, "TourDiary.xlsx");
   };
 
+const formatDateDMY = (dateStr) => {
+  if (!dateStr) return "";
+  const [y, m, d] = dateStr.split("-");
+  return `${d}-${m}-${y}`;
+};
 
 const exportPDF = () => {
   const doc = new jsPDF({
@@ -383,7 +388,7 @@ const headerHeight = 50;
       13: { cellWidth: w.desc }
     },
     body: rows.map(r => [
-      r.date,
+     formatDateDMY(r.date),
       r.from,
       r.to,
       r.kind,
