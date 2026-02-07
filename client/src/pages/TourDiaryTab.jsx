@@ -202,50 +202,187 @@ const [header, setHeader] = useState({
     XLSX.writeFile(wb, "TourDiary.xlsx");
   };
 
+
 const exportPDF = () => {
-  const doc = new jsPDF("landscape");
+  const doc = new jsPDF({
+    orientation: "portrait",
+    unit: "mm",
+    format: "a3"
+  });
 
-  // 🔵 Add Heading
-  doc.setFontSize(16);
-  doc.setFont("helvetica", "bold");
+  // ===== GLOBAL STYLE =====
+  doc.setFont("times", "bold");          // slight bold everywhere
+  doc.setTextColor(0, 0, 0);             // pure black
+
+  /* =========================
+     TITLE
+  ========================= */
+  doc.setFontSize(14);
   doc.text(
-  header.officeTitle || "OFFICE OF THE COLLECTOR SURVEY AND LAND RECORDS",
-  14,
-  12
-);
+    header.officeTitle || "OFFICE OF THE COLLECTOR SURVEY AND LAND RECORDS",
+    148,
+    14,
+    { align: "center" }
+  );
 
-  doc.text("", 14, 20);
+  doc.setFontSize(10);
+  doc.text(`Monthly Tour Diary of Sri: ${header.name}`, 14, 28);
+  doc.text(`Designation: ${header.designation}`, 14, 36);
+  doc.text(`Mandal: ${header.mandal}`, 200, 28);
+  doc.text(`For the Month of: ${header.month}`, 200, 36);
 
-  // 🔵 Add sub-header (existing)
-  doc.setFontSize(12);
-  doc.setFont("helvetica", "normal");
-  doc.text(`Monthly Tour Diary of Sri: ${header.name}`, 14, 38);
-  doc.text(`Designation: ${header.designation}`, 14, 46);
-  doc.text(`Mandal: ${header.mandal}`, 200, 38);
-  doc.text(`Month: ${header.month}`, 200, 46);
+  /* =========================
+     HEADER GEOMETRY
+  ========================= */
+  const startY = 44;
+const headerHeight = 50;
+  const subHeaderHeight = 15;
 
-  // 🔵 Table
+  const centerY = startY + headerHeight / 2 + 4;
+  const kindCenterY = centerY + 6; // KIND OF JOURNEY slightly down
+  const workCenterY =
+    startY + subHeaderHeight + (headerHeight - subHeaderHeight) / 2 + 8;
+
+  const w = {
+    date: 19,
+    from: 32,
+    to: 32,
+    kind: 14,
+    dist: 14,
+    file: 20,
+    work: 8,    // narrow (2-char style)
+    desc: 90
+  };
+
+  // ===== LEFT MARGIN (REGISTER STYLE) =====
+  let x = 10;
+
+  /* =========================
+     DATE
+  ========================= */
+  doc.rect(x, startY, w.date, headerHeight);
+  doc.text("DATE", x + w.date / 2, startY + 12, { align: "center" });
+  x += w.date;
+
+  /* =========================
+     PLACE TO JOURNEY
+  ========================= */
+  doc.rect(x, startY, w.from + w.to, subHeaderHeight);
+  doc.text("PLACE TO JOURNEY", x + (w.from + w.to) / 2, startY + 12, {
+    align: "center"
+  });
+
+  doc.rect(x, startY + subHeaderHeight, w.from, headerHeight - subHeaderHeight);
+  doc.text("FROM", x + w.from / 2, startY + subHeaderHeight + 12, {
+    align: "center"
+  });
+
+  doc.rect(x + w.from, startY + subHeaderHeight, w.to, headerHeight - subHeaderHeight);
+  doc.text("TO", x + w.from + w.to / 2, startY + subHeaderHeight + 12, {
+    align: "center"
+  });
+
+  x += w.from + w.to;
+
+  /* =========================
+     KIND / DIST / FILE
+  ========================= */
+  doc.rect(x, startY, w.kind, headerHeight);
+  doc.text("KIND OF JOURNEY", x + w.kind / 2, kindCenterY, { angle: 90 });
+  x += w.kind;
+
+  doc.rect(x, startY, w.dist, headerHeight);
+  doc.text("DISTANCE", x + w.dist / 2, centerY, { angle: 90 });
+  x += w.dist;
+
+  doc.rect(x, startY, w.file, headerHeight);
+  doc.text("FILE NO", x + w.file / 2, centerY, { angle: 90 });
+  x += w.file;
+
+  /* =========================
+     NATURE OF WORK
+  ========================= */
+  const workTitles = [
+    "GOVT. LAND DEM",
+    "PATTA LAND DEM",
+    "SPOT INSPECTION",
+    "L.A / HOUSE SITES",
+    "SD WORK",
+    "COURT CASES",
+    "COPY OF TIPPONS"
+  ];
+
+  doc.rect(x, startY, w.work * workTitles.length, subHeaderHeight);
+  doc.text(
+    "NATURE OF WORK",
+    x + (w.work * workTitles.length) / 2,
+    startY + 12,
+    { align: "center" }
+  );
+
+  doc.setFontSize(7);
+  workTitles.forEach((t, i) => {
+    doc.rect(
+      x + i * w.work,
+      startY + subHeaderHeight,
+      w.work,
+      headerHeight - subHeaderHeight
+    );
+    doc.text(
+      t,
+      x + i * w.work + w.work / 2,
+      workCenterY,
+      { angle: 90 }
+    );
+  });
+  doc.setFontSize(9);
+
+  x += w.work * workTitles.length;
+
+  /* =========================
+     DESCRIPTION
+  ========================= */
+  doc.rect(x, startY, w.desc, headerHeight);
+  doc.text(
+    "BRIEF DESCRIPTION OF THE WORK ATTENDED",
+    x + w.desc / 2,
+    startY + 12,
+    { align: "center" }
+  );
+
+  /* =========================
+     TABLE BODY (ATTACHED)
+  ========================= */
   autoTable(doc, {
-    startY: 55,
-    head: [
-      [
-        "DATE",
-        "FROM",
-        "TO",
-        "KIND OF JOURNEY",
-        "DISTANCE",
-        "FILE NO",
-        "GOVT. LAND DEM",
-        "PATTA LAND DEM",
-        "SPOT INSPECTION",
-        "L.A/ HOUSE SITES",
-        "SD WORK",
-        "COURT CASES",
-        "COPY OF TIPPONS",
-        "BRIEF DESCRIPTION"
-      ]
-    ],
-    body: rows.map((r) => [
+    startY: startY + headerHeight, // 🔥 no gap
+    margin: { left: 10 },          // 🔥 aligned with header
+    theme: "grid",
+    styles: {
+      font: "times",
+      fontStyle: "bold",
+      fontSize: 9,
+      textColor: [0, 0, 0],
+      lineColor: [0, 0, 0],
+      lineWidth: 0.1,
+      cellPadding: 2
+    },
+    columnStyles: {
+      0: { cellWidth: w.date },
+      1: { cellWidth: w.from },
+      2: { cellWidth: w.to },
+      3: { cellWidth: w.kind },
+      4: { cellWidth: w.dist },
+      5: { cellWidth: w.file },
+      6: { cellWidth: w.work },
+      7: { cellWidth: w.work },
+      8: { cellWidth: w.work },
+      9: { cellWidth: w.work },
+      10: { cellWidth: w.work },
+      11: { cellWidth: w.work },
+      12: { cellWidth: w.work },
+      13: { cellWidth: w.desc }
+    },
+    body: rows.map(r => [
       r.date,
       r.from,
       r.to,
@@ -260,12 +397,14 @@ const exportPDF = () => {
       r.courtCases,
       r.copyTippons,
       r.description
-    ]),
-    theme: "grid"
+    ])
   });
 
-  doc.save("TourDiary.pdf");
+  doc.save("Monthly_Tour_Diary_A3.pdf");
 };
+
+
+
 
 
   return (
@@ -434,3 +573,10 @@ const exportPDF = () => {
     </div>
   );
 }
+
+
+
+
+
+
+// LAST UPDATED: 2026.02.07
