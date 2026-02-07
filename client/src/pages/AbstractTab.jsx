@@ -159,42 +159,140 @@ export default function AbstractTab() {
   // ------------------------------------
   // PDF EXPORT
   // ------------------------------------
-  const exportPDF = () => {
-    const doc = new jsPDF("landscape");
+const exportPDF = () => {
+  const doc = new jsPDF({
+    orientation: "portrait",
+    unit: "mm",
+    format: "a3"
+  });
 
-    doc.text(`Name: ${header.name}`, 14, 15);
-    doc.text(`Designation: ${header.designation}`, 14, 25);
+  // ===== GLOBAL STYLE =====
+  doc.setFont("times", "bold");
+  doc.setTextColor(0, 0, 0);
 
-    doc.text(`Pay: ${header.pay}`, 200, 15);
-    doc.text(`Month: ${header.month}`, 200, 25);
+  /* =========================
+     HEADER DETAILS (WITH LINES)
+  ========================= */
+  doc.setFontSize(11);
 
-    autoTable(doc, {
-      startY: 40,
-      head: [
-        [
-          "Sl.No",
-          "Nature of Work",
-          "Villages",
-          "Files",
-          "Sy Nos",
-          "Out Turn",
-          "Days"
-        ]
-      ],
-      body: rows.map((r, i) => [
-        i + 1,
-        r.nature,
-        r.villages,
-        r.files,
-        r.synos,
-        r.outturn,
-        r.days
-      ]),
-      theme: "grid"
-    });
+  doc.text("Name", 20, 30);
+  doc.text(":", 55, 30);
+  doc.line(60, 30, 180, 30);
+  doc.text(header.name || "", 62, 29);
 
-    doc.save("Abstract.pdf");
+  doc.text("Designation", 20, 42);
+  doc.text(":", 55, 42);
+  doc.line(60, 42, 180, 42);
+  doc.text(header.designation || "", 62, 41);
+
+  doc.text("Pay", 20, 54);
+  doc.text(":", 55, 54);
+  doc.line(60, 54, 180, 54);
+  doc.text(header.pay || "", 62, 53);
+
+  doc.text("For the Month", 20, 66);
+  doc.text(":", 55, 66);
+  doc.line(60, 66, 180, 66);
+  doc.text(header.month || "", 62, 65);
+
+  /* =========================
+     ABSTRACT TITLE
+  ========================= */
+  doc.setFontSize(14);
+  doc.text("ABSTRACT", 148, 90, { align: "center" });
+  doc.line(120, 92, 176, 92); // underline
+
+  /* =========================
+     TABLE HEADER GEOMETRY
+  ========================= */
+  const startY = 105;
+  const headerHeight = 45;
+  const centerY = startY + headerHeight / 2 + 3;
+
+ const verticalCenterY = centerY + 10; // move vertical headers slightly down
+
+
+  const w = {
+    sl: 18,
+    nature: 110,
+    villages: 20,
+    files: 20,
+    synos: 22,
+    outturn: 22,
+    days: 18
   };
+
+  let x = 20;
+
+  /* =========================
+     DRAW HEADER CELLS
+  ========================= */
+  doc.rect(x, startY, w.sl, headerHeight);
+  doc.text("Sl.No.", x + w.sl / 2, centerY, { angle: 90 });
+  x += w.sl;
+
+  doc.rect(x, startY, w.nature, headerHeight);
+  doc.text("Nature of Work", x + w.nature / 2, startY + 25, { align: "center" });
+  x += w.nature;
+
+  doc.rect(x, startY, w.villages, headerHeight);
+  doc.text("No. of Villages", x + w.villages / 2, verticalCenterY, { angle: 90 });
+  x += w.villages;
+
+  doc.rect(x, startY, w.files, headerHeight);
+  doc.text("No. of Files", x + w.files / 2, verticalCenterY, { angle: 90 });
+  x += w.files;
+
+  doc.rect(x, startY, w.synos, headerHeight);
+  doc.text("Total Sy.Nos", x + w.synos / 2, verticalCenterY, { angle: 90 });
+  x += w.synos;
+
+  doc.rect(x, startY, w.outturn, headerHeight);
+  doc.text("Sche. Out turn", x + w.outturn / 2, verticalCenterY, { angle: 90 });
+  x += w.outturn;
+
+  doc.rect(x, startY, w.days, headerHeight);
+  doc.text("No. of Days", x + w.days / 2, verticalCenterY, { angle: 90 });
+
+  /* =========================
+     TABLE BODY (ATTACHED)
+  ========================= */
+  autoTable(doc, {
+    startY: startY + headerHeight,
+    margin: { left: 20 },
+    theme: "grid",
+    styles: {
+      font: "times",
+      fontStyle: "bold",
+      fontSize: 10,
+      textColor: [0, 0, 0],
+      lineColor: [0, 0, 0],
+      lineWidth: 0.1,
+      cellPadding: 2
+    },
+    columnStyles: {
+      0: { cellWidth: w.sl },
+      1: { cellWidth: w.nature },
+      2: { cellWidth: w.villages },
+      3: { cellWidth: w.files },
+      4: { cellWidth: w.synos },
+      5: { cellWidth: w.outturn },
+      6: { cellWidth: w.days }
+    },
+    body: rows.map((r, i) => [
+      i + 1,
+      r.nature,
+      r.villages,
+      r.files,
+      r.synos,
+      r.outturn,
+      r.days
+    ])
+  });
+
+  doc.save("Abstract_A3.pdf");
+};
+
 
   return (
     <div >
