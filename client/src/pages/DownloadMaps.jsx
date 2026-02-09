@@ -186,6 +186,10 @@ export default function DownloadMaps() {
   const villages = Array.isArray(locationData?.[district]?.[division]?.[mandal])
     ? locationData[district][division][mandal]
     : locationData?.[district]?.[division]?.[mandal] || [];
+const sanitizeSurveyNumber = (value) => {
+  // remove space, comma, dot
+  return value.replace(/[ ,\.]/g, "");
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -570,7 +574,15 @@ const YEAR_OPTIONS = Array.from(
                     type="text"
                     placeholder="Enter Survey Number"
                     value={surveyNumber}
-                    onChange={(e) => setSurveyNumber(e.target.value)}
+                    onChange={(e) =>
+  setSurveyNumber(sanitizeSurveyNumber(e.target.value))
+}
+onKeyDown={(e) => {
+  if ([" ", ",", "."].includes(e.key)) {
+    e.preventDefault();
+  }
+}}
+
                     className="p-2.5 border rounded-xl"
                   />
                 </div>
@@ -689,7 +701,15 @@ const YEAR_OPTIONS = Array.from(
                 type="text"
                 placeholder="Enter Survey Number"
                 value={surveyNumber}
-                onChange={(e) => setSurveyNumber(e.target.value)}
+                onChange={(e) =>
+  setSurveyNumber(sanitizeSurveyNumber(e.target.value))
+}
+onKeyDown={(e) => {
+  if ([" ", ",", "."].includes(e.key)) {
+    e.preventDefault();
+  }
+}}
+
                 className="p-2.5 border rounded-xl"
               />
             </div>
@@ -824,7 +844,15 @@ const YEAR_OPTIONS = Array.from(
               type="text"
               placeholder="Enter Survey Number"
               value={surveyNumber}
-              onChange={(e) => setSurveyNumber(e.target.value)}
+              onChange={(e) =>
+  setSurveyNumber(sanitizeSurveyNumber(e.target.value))
+}
+onKeyDown={(e) => {
+  if ([" ", ",", "."].includes(e.key)) {
+    e.preventDefault();
+  }
+}}
+
               className="p-2.5 border rounded-xl"
             />
           </div>

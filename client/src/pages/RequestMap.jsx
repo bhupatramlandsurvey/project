@@ -54,10 +54,17 @@ const validateRequiredFields = () => {
   };
 
   // location always required
+    // location always required
   addIfMissing(district, "District");
   addIfMissing(division, "Division");
   addIfMissing(mandal, "Mandal");
   addIfMissing(village, "Village");
+
+  // 📂 Upload files required
+  if (!uploadFiles || uploadFiles.length === 0) {
+    missing.push("Upload Files");
+  }
+
 
   // Survey rules
   if (isDigitizationOrKML) {
@@ -115,6 +122,12 @@ useEffect(() => {
 
   setSelectedType(matchedType || "");
 }, [type]);
+
+const sanitizeSurveyNumber = (value) => {
+  // remove spaces, commas, dots
+  return value.replace(/[ ,\.]/g, "");
+};
+
 
 
 const handleSubmit = (e) => {
@@ -443,21 +456,30 @@ rzp.open();
         Survey Number <span className="text-red-500">*</span>
       </label>
       <input
-        type="text"
-        placeholder="Enter Survey Number"
-        value={surveyNumber}
-        onChange={(e) => setSurveyNumber(e.target.value)}
-        
-        className="p-2.5 border rounded-xl"
-      />
+  type="text"
+  placeholder="Enter Survey Number"
+  value={surveyNumber}
+  onChange={(e) =>
+    setSurveyNumber(
+      e.target.value.replace(/[ ,\.]/g, "")
+    )
+  }
+  onKeyDown={(e) => {
+    if ([" ", ",", "."].includes(e.key)) {
+      e.preventDefault();
+    }
+  }}
+  className="p-2.5 border rounded-xl"
+/>
+
     </div>
   )}
 
   {/* 📂 Multiple File Upload */}
   <div className="flex flex-col gap-1">
-    <label className="font-semibold text-gray-700 text-sm">
-      Upload Files <span className="text-gray-400">(optional)</span>
-    </label>
+   <label className="font-semibold text-gray-700 text-sm">
+  Upload Files <span className="text-red-500">*</span>
+</label>
 
     <input
       type="file"
