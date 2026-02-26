@@ -41,13 +41,13 @@ const options = [
     icon: MapIcon,
     color: "from-indigo-400 to-indigo-500",
   },
-  {
-    id: 3,
-    title: "Land Survey Request",
-    route: "/dashboard/land-survey-request",
-    icon: DocumentTextIcon,
-    color: "from-green-400 to-green-500",
-  },
+  // {
+  //   id: 3,
+  //   title: "Land Survey Request",
+  //   route: "/dashboard/land-survey-request",
+  //   icon: DocumentTextIcon,
+  //   color: "from-green-400 to-green-500",
+  // },
 ];
 
 export default function Home({ role }) {
