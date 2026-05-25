@@ -85,7 +85,7 @@ const metersBetween = (a, b) =>
 
   const typingTimeout = useRef(null);
   const LOCATIONIQ_KEY = "pk.edd1d1cc8b297c95f63273f032beaa41";
-  const MAPTILER_KEY = "weG4TMiEwg46F01w1Umy";
+  const MAPTILER_KEY = "C9Ny1nwpcPedPKCtwC1X";
 
 
 
